@@ -24,7 +24,7 @@ case 'index':
         $foto_perfil .= isset($sqlUser['user_photo']) ? $sqlUser['user_photo'].'?t='.time() : 'DEV/src/img/user.png?t='.time();
         $ruta         = (isset($activado)) ? $sqlUser['dir_ruta'] : "perfil/perfil.php";
         $modelo       = (isset($activado)) ? $sqlUser['mod_ruta'] : "perfil";
-        $submodelo    = (isset($activado)) ? $sqlUser['sub_ruta'] : "null";
+        $submodelo    = (isset($activado) && isset($sqlUser['submodelo'])) ? $sqlUser['submodelo'] : "null";
 
         $datos = $obj->name_empleado([$idUser]);
         if(isset($datos))

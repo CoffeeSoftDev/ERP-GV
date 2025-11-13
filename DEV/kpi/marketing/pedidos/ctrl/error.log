@@ -1,0 +1,2590 @@
+[ 2025-11-09 18:46:33 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  DELETE FROM rfwsmqex_marketing.producto_pedido WHERE pedido_id = ? = ?
+[ ERROR C.U.D. ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-11-09 18:46:27 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  DELETE FROM rfwsmqex_marketing.producto_pedido WHERE pedido_id = ? = ?
+[ ERROR C.U.D. ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-11-09 18:40:54 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  DELETE FROM rfwsmqex_marketing.producto_pedido WHERE pedido_id = ? = ?
+[ ERROR C.U.D. ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-11-09 18:40:27 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  DELETE FROM rfwsmqex_marketing.producto_pedido WHERE pedido_id = ? = ?
+[ ERROR C.U.D. ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-11-09 18:35:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  DELETE FROM rfwsmqex_marketing.producto_pedido WHERE pedido_id = ? = ?
+[ ERROR C.U.D. ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-11-09 18:35:06 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  DELETE FROM rfwsmqex_marketing.producto_pedido WHERE pedido_id = ? = ?
+[ ERROR C.U.D. ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-11-09 18:29:41 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  DELETE FROM rfwsmqex_marketing.producto_pedido WHERE pedido_id = ? = ?
+[ ERROR C.U.D. ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-11-09 18:08:49 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 18:08:41 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 18:08:30 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 18:07:33 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 18:03:47 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 18:03:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 18:01:04 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 17:55:51 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 17:55:17 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 17:54:41 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ?,cliente_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 17:54:26 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ?,cliente_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 17:53:25 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ?,cliente_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 17:53:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ?,cliente_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 13:59:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ?,cliente_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 13:46:59 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ?,cliente_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 13:46:45 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ?,cliente_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 13:24:09 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ?,cliente_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 13:24:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ?,cliente_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 13:23:17 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ?,cliente_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-09 13:23:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  UPDATE rfwsmqex_marketing.pedido SET monto = ?,envio_domicilio = ?,fecha_pedido = ?,canal_id = ?,red_social_id = ?,anuncio_id = ?,cliente_id = ? WHERE id = ?
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`pedido`, CONSTRAINT `pedido_ibfk_5` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE)
+
+
+[ 2025-11-07 19:27:51 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                id,
+                nombre,
+                active,
+                DATE_FORMAT(fecha_creacion, '%Y-%m-%d') AS fecha_creacion
+             FROM database_name.canal   WHERE active = ?  ORDER BY id DESC 
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'database_name'
+
+
+[ 2025-11-07 19:27:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                id,
+                nombre,
+                active,
+                DATE_FORMAT(fecha_creacion, '%Y-%m-%d') AS fecha_creacion
+             FROM database_name.canal   WHERE active = ?  ORDER BY id DESC 
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'database_name'
+
+
+[ 2025-11-07 19:26:55 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                id,
+                nombre,
+                active,
+                DATE_FORMAT(fecha_creacion, '%Y-%m-%d') AS fecha_creacion
+             FROM database_name.canal   WHERE active = ?  ORDER BY id DESC 
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'database_name'
+
+
+[ 2025-11-07 19:26:22 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                id,
+                nombre,
+                active,
+                DATE_FORMAT(fecha_creacion, '%Y-%m-%d') AS fecha_creacion
+             FROM database_name.canal   WHERE active = ?  ORDER BY id DESC 
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'database_name'
+
+
+[ 2025-11-07 19:25:31 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT id
+            FROM database_name.canal
+            WHERE LOWER(nombre) = LOWER(?)
+            AND active = 1
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'database_name'
+
+
+[ 2025-11-07 19:25:26 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT id
+            FROM database_name.canal
+            WHERE LOWER(nombre) = LOWER(?)
+            AND active = 1
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'database_name'
+
+
+[ 2025-11-07 19:25:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                id,
+                nombre,
+                active,
+                DATE_FORMAT(fecha_creacion, '%Y-%m-%d') AS fecha_creacion
+             FROM database_name.canal   WHERE active = ?  ORDER BY id DESC 
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'database_name'
+
+
+[ 2025-11-07 19:25:12 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                id,
+                nombre,
+                active,
+                DATE_FORMAT(fecha_creacion, '%Y-%m-%d') AS fecha_creacion
+             FROM database_name.canal   WHERE active = ?  ORDER BY id DESC 
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'database_name'
+
+
+[ 2025-11-07 19:24:55 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                id,
+                nombre,
+                active,
+                DATE_FORMAT(fecha_creacion, '%Y-%m-%d') AS fecha_creacion
+             FROM database_name.canal   WHERE active = ?  ORDER BY id DESC 
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'database_name'
+
+
+[ 2025-11-07 19:17:24 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                id,
+                nombre,
+                active,
+                DATE_FORMAT(fecha_creacion, '%Y-%m-%d') AS fecha_creacion
+             FROM database_name.canal   WHERE active = ?  ORDER BY id DESC 
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'database_name'
+
+
+[ 2025-11-07 19:17:23 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                id,
+                nombre,
+                active,
+                DATE_FORMAT(fecha_creacion, '%Y-%m-%d') AS fecha_creacion
+             FROM database_name.canal   WHERE active = ?  ORDER BY id DESC 
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'database_name'
+
+
+[ 2025-11-07 19:17:18 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                id,
+                nombre,
+                active,
+                DATE_FORMAT(fecha_creacion, '%Y-%m-%d') AS fecha_creacion
+             FROM database_name.canal   WHERE active = ?  ORDER BY id DESC 
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'database_name'
+
+
+[ 2025-11-07 07:01:34 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                producto.id,
+                producto.nombre,
+                producto.descripcion,
+                producto.udn_id,
+                udn.UDN as udn_nombre,
+                producto.active
+            FROM rfwsmqex_marketing.producto
+            LEFT JOIN udn ON producto.udn_id = udn.idUDN
+            WHERE producto.active = ?
+            ORDER BY producto.id DESC
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?
+            ORDER BY producto.id DESC' at line 10
+
+
+[ 2025-11-07 07:01:23 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                producto.id,
+                producto.nombre,
+                producto.descripcion,
+                producto.udn_id,
+                udn.UDN as udn_nombre,
+                producto.active
+            FROM rfwsmqex_marketing.producto
+            LEFT JOIN udn ON producto.udn_id = udn.idUDN
+            WHERE producto.active = ?
+            ORDER BY producto.id DESC
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?
+            ORDER BY producto.id DESC' at line 10
+
+
+[ 2025-11-07 07:00:24 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                producto.id,
+                producto.nombre,
+                producto.descripcion,
+                producto.udn_id,
+                udn.UDN as udn_nombre,
+                producto.active
+            FROM rfwsmqex_marketing.producto
+            LEFT JOIN udn ON producto.udn_id = udn.idUDN
+            WHERE producto.active = ?
+            ORDER BY producto.id DESC
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?
+            ORDER BY producto.id DESC' at line 10
+
+
+[ 2025-11-07 07:00:23 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                producto.id,
+                producto.nombre,
+                producto.descripcion,
+                producto.udn_id,
+                udn.UDN as udn_nombre,
+                producto.active
+            FROM rfwsmqex_marketing.producto
+            LEFT JOIN udn ON producto.udn_id = udn.idUDN
+            WHERE producto.active = ?
+            ORDER BY producto.id DESC
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?
+            ORDER BY producto.id DESC' at line 10
+
+
+[ 2025-11-07 06:59:03 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                producto.id,
+                producto.nombre,
+                producto.descripcion,
+                producto.udn_id,
+                udn.UDN as udn_nombre,
+                producto.active
+            FROM rfwsmqex_marketing.producto
+            LEFT JOIN rfwsmqex_marketing.udn ON producto.udn_id = udn.idUDN
+            WHERE producto.active = ? AND producto.udn_id = ?
+            ORDER BY producto.id DESC
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.udn' doesn't exist
+
+
+[ 2025-11-07 06:59:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                producto.id,
+                producto.nombre,
+                producto.descripcion,
+                producto.udn_id,
+                udn.UDN as udn_nombre,
+                producto.active
+            FROM rfwsmqex_marketing.producto
+            LEFT JOIN rfwsmqex_marketing.udn ON producto.udn_id = udn.idUDN
+            WHERE producto.active = ? AND producto.udn_id = ?
+            ORDER BY producto.id DESC
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.udn' doesn't exist
+
+
+[ 2025-11-07 06:57:41 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT producto.id,
+                          producto.nombre,
+                          producto.descripcion,
+                          producto.udn_id,
+                          udn.UDN as udn_nombre,
+                          producto.active FROM rfwsmqex_marketing.producto   LEFT JOIN rfwsmqex_marketing.udn ON producto.udn_id = udn.idUDN WHERE producto.active = ? AND producto.udn_id = ?  ORDER BY producto.id DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.udn' doesn't exist
+
+
+[ 2025-11-07 06:57:40 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT producto.id,
+                          producto.nombre,
+                          producto.descripcion,
+                          producto.udn_id,
+                          udn.UDN as udn_nombre,
+                          producto.active FROM rfwsmqex_marketing.producto   LEFT JOIN rfwsmqex_marketing.udn ON producto.udn_id = udn.idUDN WHERE producto.active = ? AND producto.udn_id = ?  ORDER BY producto.id DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.udn' doesn't exist
+
+
+[ 2025-11-07 06:29:04 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT producto.id,
+                          producto.nombre,
+                          producto.descripcion,
+                          producto.udn_id,
+                          udn.UDN as udn_nombre,
+                          producto.active FROM rfwsmqex_marketing.producto   LEFT JOIN rfwsmqex_marketing.udn ON producto.udn_id = udn.idUDN WHERE producto.active = ? AND producto.udn_id = ?  ORDER BY producto.id DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.udn' doesn't exist
+
+
+[ 2025-11-07 06:29:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT producto.id,
+                          producto.nombre,
+                          producto.descripcion,
+                          producto.udn_id,
+                          udn.UDN as udn_nombre,
+                          producto.active FROM rfwsmqex_marketing.producto   LEFT JOIN rfwsmqex_marketing.udn ON producto.udn_id = udn.idUDN WHERE producto.active = ? AND producto.udn_id = ?  ORDER BY producto.id DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.udn' doesn't exist
+
+
+[ 2025-11-07 06:28:23 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT producto.id,
+                          producto.nombre,
+                          producto.descripcion,
+                          producto.udn_id,
+                          udn.UDN as udn_nombre,
+                          producto.active FROM rfwsmqex_marketing.producto   LEFT JOIN rfwsmqex_marketing.udn ON producto.udn_id = udn.idUDN WHERE producto.active = ? AND producto.udn_id = ?  ORDER BY producto.id DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.udn' doesn't exist
+
+
+[ 2025-11-06 22:21:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT producto.id,
+                          producto.nombre,
+                          producto.descripcion,
+                          producto.udn_id,
+                          udn.UDN as udn_nombre,
+                          producto.active FROM rfwsmqex_marketing.producto   LEFT JOIN rfwsmqex_marketing.udn ON producto.udn_id = udn.idUDN WHERE producto.active = ? AND producto.udn_id = ?  ORDER BY producto.id DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.udn' doesn't exist
+
+
+[ 2025-11-06 22:07:49 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT producto.id,
+                          producto.nombre,
+                          producto.descripcion,
+                          producto.udn_id,
+                          udn.UDN as udn_nombre,
+                          producto.active FROM rfwsmqex_marketing.producto   LEFT JOIN rfwsmqex_marketing.udn ON producto.udn_id = udn.idUDN WHERE producto.active = ? AND producto.udn_id = ?  ORDER BY producto.id DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.udn' doesn't exist
+
+
+[ 2025-11-06 21:52:09 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT producto.id,
+                          producto.nombre,
+                          producto.descripcion,
+                          producto.udn_id,
+                          udn.UDN as udn_nombre,
+                          producto.active FROM rfwsmqex_marketing.producto   LEFT JOIN rfwsmqex_marketing.udn ON producto.udn_id = udn.idUDN WHERE producto.active = ? AND producto.udn_id = ?  ORDER BY producto.id DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.udn' doesn't exist
+
+
+[ 2025-11-06 21:49:37 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT producto.id,
+                          producto.nombre,
+                          producto.descripcion,
+                          producto.udn_id,
+                          udn.UDN as udn_nombre,
+                          producto.active FROM rfwsmqex_marketing.producto   LEFT JOIN rfwsmqex_marketing.udn ON producto.udn_id = udn.idUDN WHERE producto.active = ? AND producto.udn_id = ?  ORDER BY producto.id DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.udn' doesn't exist
+
+
+[ 2025-11-05 23:49:45 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT producto.id,
+                          producto.nombre,
+                          producto.descripcion,
+                          producto.udn_id,
+                          udn.UDN as udn_nombre,
+                          producto.active FROM rfwsmqex_marketing.producto   LEFT JOIN rfwsmqex_marketing.udn ON producto.udn_id = udn.idUDN WHERE producto.active = ? AND producto.udn_id = ?  ORDER BY producto.id DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.udn' doesn't exist
+
+
+[ 2025-11-05 23:45:18 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT producto.id,
+                          producto.nombre,
+                          producto.descripcion,
+                          producto.udn_id,
+                          udn.UDN as udn_nombre,
+                          producto.active FROM rfwsmqex_marketing.producto   LEFT JOIN rfwsmqex_marketing.udn ON producto.udn_id = udn.idUDN WHERE producto.active = ? AND producto.udn_id = ?  ORDER BY producto.id DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.udn' doesn't exist
+
+
+[ 2025-11-01 19:08:40 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT producto.id,
+                          producto.nombre,
+                          producto.descripcion,
+                          producto.udn_id,
+                          udn.UDN as udn_nombre,
+                          producto.active FROM rfwsmqex_marketing.producto   LEFT JOIN rfwsmqex_marketing.udn ON producto.udn_id = udn.idUDN WHERE producto.active = ?  ORDER BY producto.id DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.udn' doesn't exist
+
+
+[ 2025-10-20 23:28:39 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                c.nombre as canal,
+                c.id as canal_id,
+                COUNT(p.id) as total_pedidos,
+                SUM(p.monto) as total_monto,
+                AVG(p.monto) as promedio_monto,
+                (SUM(p.monto) / (
+                    SELECT SUM(monto) 
+                    FROM rfwsmqex_marketing.pedido 
+                    WHERE udn_id = ? AND YEAR(getChannelPerformance) = ? AND MONTH(getChannelPerformance) = ? AND active = 1
+                )) * 100 as porcentaje
+            FROM rfwsmqex_marketing.pedido p
+            JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            WHERE p.udn_id = ? 
+            AND YEAR(p.getChannelPerformance) = ? 
+            AND MONTH(p.getChannelPerformance) = ?
+            AND p.active = 1
+            AND c.active = 1
+            GROUP BY c.id, c.nombre
+            ORDER BY total_monto DESC
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'getChannelPerformance' in 'where clause'
+
+
+[ 2025-10-20 23:28:39 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                c.nombre as canal,
+                c.id as canal_id,
+                COUNT(p.id) as total_pedidos,
+                SUM(p.monto) as total_monto,
+                AVG(p.monto) as promedio_monto,
+                (SUM(p.monto) / (
+                    SELECT SUM(monto) 
+                    FROM rfwsmqex_marketing.pedido 
+                    WHERE udn_id = ? AND YEAR(getChannelPerformance) = ? AND MONTH(getChannelPerformance) = ? AND active = 1
+                )) * 100 as porcentaje
+            FROM rfwsmqex_marketing.pedido p
+            JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            WHERE p.udn_id = ? 
+            AND YEAR(p.getChannelPerformance) = ? 
+            AND MONTH(p.getChannelPerformance) = ?
+            AND p.active = 1
+            AND c.active = 1
+            GROUP BY c.id, c.nombre
+            ORDER BY total_monto DESC
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'getChannelPerformance' in 'where clause'
+
+
+[ 2025-10-20 23:28:28 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                c.nombre as canal,
+                c.id as canal_id,
+                COUNT(p.id) as total_pedidos,
+                SUM(p.monto) as total_monto,
+                AVG(p.monto) as promedio_monto,
+                (SUM(p.monto) / (
+                    SELECT SUM(monto) 
+                    FROM rfwsmqex_marketing.pedido 
+                    WHERE udn_id = ? AND YEAR(getChannelPerformance) = ? AND MONTH(getChannelPerformance) = ? AND active = 1
+                )) * 100 as porcentaje
+            FROM rfwsmqex_marketing.pedido p
+            JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            WHERE p.udn_id = ? 
+            AND YEAR(p.getChannelPerformance) = ? 
+            AND MONTH(p.getChannelPerformance) = ?
+            AND p.active = 1
+            AND c.active = 1
+            GROUP BY c.id, c.nombre
+            ORDER BY total_monto DESC
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'getChannelPerformance' in 'where clause'
+
+
+[ 2025-10-20 23:28:28 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                c.nombre as canal,
+                c.id as canal_id,
+                COUNT(p.id) as total_pedidos,
+                SUM(p.monto) as total_monto,
+                AVG(p.monto) as promedio_monto,
+                (SUM(p.monto) / (
+                    SELECT SUM(monto) 
+                    FROM rfwsmqex_marketing.pedido 
+                    WHERE udn_id = ? AND YEAR(getChannelPerformance) = ? AND MONTH(getChannelPerformance) = ? AND active = 1
+                )) * 100 as porcentaje
+            FROM rfwsmqex_marketing.pedido p
+            JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            WHERE p.udn_id = ? 
+            AND YEAR(p.getChannelPerformance) = ? 
+            AND MONTH(p.getChannelPerformance) = ?
+            AND p.active = 1
+            AND c.active = 1
+            GROUP BY c.id, c.nombre
+            ORDER BY total_monto DESC
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'getChannelPerformance' in 'where clause'
+
+
+[ 2025-10-20 23:28:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                c.nombre as canal,
+                c.id as canal_id,
+                COUNT(p.id) as total_pedidos,
+                SUM(p.monto) as total_monto,
+                AVG(p.monto) as promedio_monto,
+                (SUM(p.monto) / (
+                    SELECT SUM(monto) 
+                    FROM rfwsmqex_marketing.pedido 
+                    WHERE udn_id = ? AND YEAR(getChannelPerformance) = ? AND MONTH(getChannelPerformance) = ? AND active = 1
+                )) * 100 as porcentaje
+            FROM rfwsmqex_marketing.pedido p
+            JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            WHERE p.udn_id = ? 
+            AND YEAR(p.getChannelPerformance) = ? 
+            AND MONTH(p.getChannelPerformance) = ?
+            AND p.active = 1
+            AND c.active = 1
+            GROUP BY c.id, c.nombre
+            ORDER BY total_monto DESC
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'getChannelPerformance' in 'where clause'
+
+
+[ 2025-10-20 23:28:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                c.nombre as canal,
+                c.id as canal_id,
+                COUNT(p.id) as total_pedidos,
+                SUM(p.monto) as total_monto,
+                AVG(p.monto) as promedio_monto,
+                (SUM(p.monto) / (
+                    SELECT SUM(monto) 
+                    FROM rfwsmqex_marketing.pedido 
+                    WHERE udn_id = ? AND YEAR(getChannelPerformance) = ? AND MONTH(getChannelPerformance) = ? AND active = 1
+                )) * 100 as porcentaje
+            FROM rfwsmqex_marketing.pedido p
+            JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            WHERE p.udn_id = ? 
+            AND YEAR(p.getChannelPerformance) = ? 
+            AND MONTH(p.getChannelPerformance) = ?
+            AND p.active = 1
+            AND c.active = 1
+            GROUP BY c.id, c.nombre
+            ORDER BY total_monto DESC
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'getChannelPerformance' in 'where clause'
+
+
+[ 2025-10-20 23:27:21 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                c.nombre as canal,
+                c.id as canal_id,
+                COUNT(p.id) as total_pedidos,
+                SUM(p.monto) as total_monto,
+                AVG(p.monto) as promedio_monto,
+                (SUM(p.monto) / (
+                    SELECT SUM(monto) 
+                    FROM rfwsmqex_marketing.pedido 
+                    WHERE udn_id = ? AND YEAR(getChannelPerformance) = ? AND MONTH(getChannelPerformance) = ? AND active = 1
+                )) * 100 as porcentaje
+            FROM rfwsmqex_marketing.pedido p
+            JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            WHERE p.udn_id = ? 
+            AND YEAR(p.getChannelPerformance) = ? 
+            AND MONTH(p.getChannelPerformance) = ?
+            AND p.active = 1
+            AND c.active = 1
+            GROUP BY c.id, c.nombre
+            ORDER BY total_monto DESC
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'getChannelPerformance' in 'where clause'
+
+
+[ 2025-10-20 23:27:21 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                c.nombre as canal,
+                c.id as canal_id,
+                COUNT(p.id) as total_pedidos,
+                SUM(p.monto) as total_monto,
+                AVG(p.monto) as promedio_monto,
+                (SUM(p.monto) / (
+                    SELECT SUM(monto) 
+                    FROM rfwsmqex_marketing.pedido 
+                    WHERE udn_id = ? AND YEAR(getChannelPerformance) = ? AND MONTH(getChannelPerformance) = ? AND active = 1
+                )) * 100 as porcentaje
+            FROM rfwsmqex_marketing.pedido p
+            JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            WHERE p.udn_id = ? 
+            AND YEAR(p.getChannelPerformance) = ? 
+            AND MONTH(p.getChannelPerformance) = ?
+            AND p.active = 1
+            AND c.active = 1
+            GROUP BY c.id, c.nombre
+            ORDER BY total_monto DESC
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'getChannelPerformance' in 'where clause'
+
+
+[ 2025-10-20 23:13:07 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                (SELECT SUM(monto) FROM rfwsmqex_marketing.pedido 
+                 WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND active = 1) as venta_anio,
+                (SELECT COUNT(*) FROM rfwsmqex_marketing.pedido 
+                 WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND active = 1) as pedidos_anio,
+                (SELECT COUNT(DISTINCT cliente_id) FROM rfwsmqex_marketing.pedido 
+                 WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND active = 1) as clientes,
+                (SELECT AVG(monto) FROM rfwsmqex_marketing.pedido 
+                 WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND active = 1) as cheque_promedio,
+                (SELECT c.nombre FROM rfwsmqex_marketing.pedido p 
+                 JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id 
+                 WHERE p.udn_id = ? AND YEAR(p.fecha_creacion) = ? AND p.active = 1 
+                 GROUP BY c.id, c.nombre 
+                 ORDER BY SUM(p.monto) DESC LIMIT 1) as canal_principal
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-20 23:12:59 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                (SELECT SUM(monto) FROM rfwsmqex_marketing.pedido 
+                 WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND active = 1) as venta_anio,
+                (SELECT COUNT(*) FROM rfwsmqex_marketing.pedido 
+                 WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND active = 1) as pedidos_anio,
+                (SELECT COUNT(DISTINCT cliente_id) FROM rfwsmqex_marketing.pedido 
+                 WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND active = 1) as clientes,
+                (SELECT AVG(monto) FROM rfwsmqex_marketing.pedido 
+                 WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND active = 1) as cheque_promedio,
+                (SELECT c.nombre FROM rfwsmqex_marketing.pedido p 
+                 JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id 
+                 WHERE p.udn_id = ? AND YEAR(p.fecha_creacion) = ? AND p.active = 1 
+                 GROUP BY c.id, c.nombre 
+                 ORDER BY SUM(p.monto) DESC LIMIT 1) as canal_principal
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-20 23:12:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                (SELECT SUM(monto) FROM rfwsmqex_marketing.pedido 
+                 WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND active = 1) as venta_anio,
+                (SELECT COUNT(*) FROM rfwsmqex_marketing.pedido 
+                 WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND active = 1) as pedidos_anio,
+                (SELECT COUNT(DISTINCT cliente_id) FROM rfwsmqex_marketing.pedido 
+                 WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND active = 1) as clientes,
+                (SELECT AVG(monto) FROM rfwsmqex_marketing.pedido 
+                 WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND active = 1) as cheque_promedio,
+                (SELECT c.nombre FROM rfwsmqex_marketing.pedido p 
+                 JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id 
+                 WHERE p.udn_id = ? AND YEAR(p.fecha_creacion) = ? AND p.active = 1 
+                 GROUP BY c.id, c.nombre 
+                 ORDER BY SUM(p.monto) DESC LIMIT 1) as canal_principal
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-19 18:24:20 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT id, nombre as valor FROM rfwsmqex_marketing.udn   WHERE active = 1  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.udn' doesn't exist
+
+
+[ 2025-10-19 18:23:41 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                DAYNAME(fecha_creacion) as dia,
+                DAYOFWEEK(fecha_creacion) as dia_numero,
+                COUNT(*) as total_pedidos,
+                SUM(monto) as total_ventas,
+                AVG(monto) as promedio_dia,
+                COUNT(DISTINCT cliente_id) as clientes_unicos
+            FROM [name_bd].pedido 
+            WHERE udn_id = ? 
+            AND YEAR(fecha_creacion) = ? 
+            AND MONTH(fecha_creacion) = ?
+            AND active = 1
+            GROUP BY DAYNAME(fecha_creacion), DAYOFWEEK(fecha_creacion)
+            ORDER BY promedio_dia DESC
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[name_bd].pedido 
+            WHERE udn_id = 'null' 
+            AND YEAR(fech' at line 8
+
+
+[ 2025-10-19 18:23:41 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                DAYNAME(fecha_creacion) as dia,
+                DAYOFWEEK(fecha_creacion) as dia_numero,
+                COUNT(*) as total_pedidos,
+                SUM(monto) as total_ventas,
+                AVG(monto) as promedio_dia,
+                COUNT(DISTINCT cliente_id) as clientes_unicos
+            FROM [name_bd].pedido 
+            WHERE udn_id = ? 
+            AND YEAR(fecha_creacion) = ? 
+            AND MONTH(fecha_creacion) = ?
+            AND active = 1
+            GROUP BY DAYNAME(fecha_creacion), DAYOFWEEK(fecha_creacion)
+            ORDER BY promedio_dia DESC
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[name_bd].pedido 
+            WHERE udn_id = 'null' 
+            AND YEAR(fech' at line 8
+
+
+[ 2025-10-19 18:23:41 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                MONTH(fecha_creacion) as mes,
+                MONTHNAME(fecha_creacion) as nombre_mes,
+                COUNT(*) as total_pedidos,
+                SUM(monto) as total_ventas,
+                AVG(monto) as promedio_pedido
+            FROM [name_bd].pedido 
+            WHERE udn_id = ? 
+            AND YEAR(fecha_creacion) = ?
+            AND active = 1
+            GROUP BY MONTH(fecha_creacion), MONTHNAME(fecha_creacion)
+            ORDER BY MONTH(fecha_creacion)
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[name_bd].pedido 
+            WHERE udn_id = 'null' 
+            AND YEAR(fech' at line 7
+
+
+[ 2025-10-19 18:23:41 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                'A&B' as categoria,
+                COALESCE((SELECT SUM(monto) FROM [name_bd].pedido WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND active = 1), 0) as anio_actual,
+                COALESCE((SELECT SUM(monto) FROM [name_bd].pedido WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND active = 1), 0) as anio_anterior
+            UNION ALL
+            SELECT 
+                'Alimentos' as categoria,
+                COALESCE((SELECT SUM(p.monto) FROM [name_bd].pedido p 
+                         JOIN [name_bd].producto_pedido pp ON p.id = pp.pedido_id 
+                         JOIN [name_bd].producto pr ON pp.producto_id = pr.id 
+                         WHERE p.udn_id = ? AND YEAR(p.fecha_creacion) = ? AND pr.es_servicio = 0 AND p.active = 1), 0) as anio_actual,
+                COALESCE((SELECT SUM(p.monto) FROM [name_bd].pedido p 
+                         JOIN [name_bd].producto_pedido pp ON p.id = pp.pedido_id 
+                         JOIN [name_bd].producto pr ON pp.producto_id = pr.id 
+                         WHERE p.udn_id = ? AND YEAR(p.fecha_creacion) = ? AND pr.es_servicio = 0 AND p.active = 1), 0) as anio_anterior
+            UNION ALL
+            SELECT 
+                'Bebidas' as categoria,
+                COALESCE((SELECT SUM(p.monto) FROM [name_bd].pedido p 
+                         JOIN [name_bd].producto_pedido pp ON p.id = pp.pedido_id 
+                         JOIN [name_bd].producto pr ON pp.producto_id = pr.id 
+                         WHERE p.udn_id = ? AND YEAR(p.fecha_creacion) = ? AND pr.es_servicio = 1 AND p.active = 1), 0) as anio_actual,
+                COALESCE((SELECT SUM(p.monto) FROM [name_bd].pedido p 
+                         JOIN [name_bd].producto_pedido pp ON p.id = pp.pedido_id 
+                         JOIN [name_bd].producto pr ON pp.producto_id = pr.id 
+                         WHERE p.udn_id = ? AND YEAR(p.fecha_creacion) = ? AND pr.es_servicio = 1 AND p.active = 1), 0) as anio_anterior
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[name_bd].pedido WHERE udn_id = 'null' AND YEAR(fecha_creacion) = '2025' AND act' at line 3
+
+
+[ 2025-10-19 18:23:41 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                (SELECT SUM(monto) FROM [name_bd].pedido 
+                 WHERE udn_id = ? AND DATE(fecha_creacion) = CURDATE() - INTERVAL 1 DAY AND active = 1) as venta_dia,
+                (SELECT SUM(monto) FROM [name_bd].pedido 
+                 WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND MONTH(fecha_creacion) = ? AND active = 1) as venta_mes,
+                (SELECT COUNT(DISTINCT cliente_id) FROM [name_bd].pedido 
+                 WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND MONTH(fecha_creacion) = ? AND active = 1) as clientes,
+                (SELECT AVG(monto) FROM [name_bd].pedido 
+                 WHERE udn_id = ? AND YEAR(fecha_creacion) = ? AND MONTH(fecha_creacion) = ? AND active = 1) as cheque_promedio
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[name_bd].pedido 
+                 WHERE udn_id = 'null' AND DATE(fecha_creacio' at line 2
+
+
+[ 2025-10-19 18:23:41 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT id, nombre as valor FROM [name_bd].udn   WHERE active = 1  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '[name_bd].udn   WHERE active = 1  ORDER BY nombre ASC' at line 1
+
+
+[ 2025-10-19 17:25:26 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.canal (nombre,fecha_creacion,active) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_creacion' in 'field list'
+
+
+[ 2025-10-19 17:24:22 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.canal (nombre,fecha_creacion,active) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_creacion' in 'field list'
+
+
+[ 2025-10-19 17:19:52 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                id,
+                nombre,
+                active,
+                DATE_FORMAT(fecha_creacion, '%Y-%m-%d') AS fecha_creacion
+             FROM rfwsmqex_marketing.canal   WHERE active = ?  ORDER BY id DESC 
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_creacion' in 'field list'
+
+
+[ 2025-10-19 17:19:48 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                id,
+                nombre,
+                active,
+                DATE_FORMAT(fecha_creacion, '%Y-%m-%d') AS fecha_creacion
+             FROM rfwsmqex_marketing.canal   WHERE active = ?  ORDER BY id DESC 
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_creacion' in 'field list'
+
+
+[ 2025-10-19 17:19:11 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                id,
+                nombre,
+                active,
+                DATE_FORMAT(fecha_creacion, '%Y-%m-%d') AS fecha_creacion
+             FROM rfwsmqex_marketing.canal   WHERE active = ?  ORDER BY id DESC 
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'fecha_creacion' in 'field list'
+
+
+[ 2025-10-19 17:14:09 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                id,
+                nombre,
+                active,
+                DATE_FORMAT(fecha_creacion, '%Y-%m-%d') AS fecha_creacion
+             FROM database_name.canal   WHERE active = ?  ORDER BY id DESC 
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'database_name'
+
+
+[ 2025-10-19 17:14:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                id,
+                nombre,
+                active,
+                DATE_FORMAT(fecha_creacion, '%Y-%m-%d') AS fecha_creacion
+             FROM database_name.canal   WHERE active = ?  ORDER BY id DESC 
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database 'database_name'
+
+
+[ 2025-10-19 02:51:26 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.campaña_id' in 'on clause'
+
+
+[ 2025-10-19 02:51:24 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.campaña_id' in 'on clause'
+
+
+[ 2025-10-16 21:22:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                fecha_pedido,
+                 fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha_creacion' in field list is ambiguous
+
+
+[ 2025-10-16 21:22:32 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                fecha_pedido,
+                 fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha_creacion' in field list is ambiguous
+
+
+[ 2025-10-16 21:18:47 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                fecha_pedido,
+                 fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha_creacion' in field list is ambiguous
+
+
+[ 2025-10-16 21:18:46 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                fecha_pedido,
+                 fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha_creacion' in field list is ambiguous
+
+
+[ 2025-10-16 21:17:58 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT 
+                pedido.*,
+                cliente.nombre AS cliente_nombre,
+                cliente.telefono AS cliente_telefono,
+                cliente.correo AS cliente_correo,
+                cliente.fecha_cumpleaños AS cliente_cumpleaños,
+                canal.nombre AS canal_nombre,
+                campana.nombre AS campana_nombre
+             FROM rfwsmqex_marketing.pedido   LEFT JOIN rfwsmqex_marketing.cliente ON pedido.cliente_id = cliente.id LEFT JOIN rfwsmqex_marketing.canal ON pedido.canal_id = canal.id LEFT JOIN rfwsmqex_marketing.campana ON pedido.campana_id = campana.id WHERE pedido.id = ?   
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.campana' doesn't exist
+
+
+[ 2025-10-16 21:15:58 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                DATE_FORMAT(p.fecha_pedido, '%d/%m/%Y') AS fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-16 21:15:56 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                DATE_FORMAT(p.fecha_pedido, '%d/%m/%Y') AS fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-16 21:15:56 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                DATE_FORMAT(p.fecha_pedido, '%d/%m/%Y') AS fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-16 21:15:56 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                DATE_FORMAT(p.fecha_pedido, '%d/%m/%Y') AS fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-16 21:15:55 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                DATE_FORMAT(p.fecha_pedido, '%d/%m/%Y') AS fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-16 21:15:55 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                DATE_FORMAT(p.fecha_pedido, '%d/%m/%Y') AS fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-16 21:15:55 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                DATE_FORMAT(p.fecha_pedido, '%d/%m/%Y') AS fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-16 21:15:54 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                DATE_FORMAT(p.fecha_pedido, '%d/%m/%Y') AS fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-16 21:15:54 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                DATE_FORMAT(p.fecha_pedido, '%d/%m/%Y') AS fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-16 21:15:54 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                DATE_FORMAT(p.fecha_pedido, '%d/%m/%Y') AS fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-16 21:15:54 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                DATE_FORMAT(p.fecha_pedido, '%d/%m/%Y') AS fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-16 21:15:53 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                DATE_FORMAT(p.fecha_pedido, '%d/%m/%Y') AS fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-16 21:15:53 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                DATE_FORMAT(p.fecha_pedido, '%d/%m/%Y') AS fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+           
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-16 21:14:59 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                DATE_FORMAT(p.fecha_pedido, '%d/%m/%Y') AS fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+            WHERE
+             -- DATE(p.fecha_pedido) BETWEEN ? AND ? AND
+              p.udn_id = ? 
+            AND p.active = 1
+            ORDER BY p.fecha_creacion DESC
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-16 21:14:58 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                DATE_FORMAT(p.fecha_pedido, '%d/%m/%Y') AS fecha_pedido,
+                DATE_FORMAT(p.fecha_creacion, '%d/%m/%Y %H:%i') AS fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+            WHERE
+             -- DATE(p.fecha_pedido) BETWEEN ? AND ? AND
+              p.udn_id = ? 
+            AND p.active = 1
+            ORDER BY p.fecha_creacion DESC
+        
+[ ERROR READ] :: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+
+
+[ 2025-10-16 20:53:50 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                p.fecha_pedido,
+                p.fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+            WHERE p.fecha_pedido BETWEEN ? AND ? 
+            AND p.udn_id = ? 
+            AND p.active = 1
+            ORDER BY p.fecha_creacion DESC
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.campaña_id' in 'on clause'
+
+
+[ 2025-10-16 20:53:30 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.pedido (monto,envio_domicilio,fecha_pedido,campaña_id,canal_id,cliente_id,udn_id,red_social_id,active) VALUES (?,?,?,?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'campaña_id' in 'field list'
+
+
+[ 2025-10-16 20:49:57 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                p.fecha_pedido,
+                p.fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+            WHERE p.fecha_pedido BETWEEN ? AND ? 
+            AND p.udn_id = ? 
+            AND p.active = 1
+            ORDER BY p.fecha_creacion DESC
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.campaña_id' in 'on clause'
+
+
+[ 2025-10-16 20:37:39 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                p.fecha_pedido,
+                p.fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+            WHERE p.fecha_pedido BETWEEN ? AND ? 
+            AND p.udn_id = ? 
+            AND p.active = 1
+            ORDER BY p.fecha_creacion DESC
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.campaña_id' in 'on clause'
+
+
+[ 2025-10-16 20:37:37 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                p.fecha_pedido,
+                p.fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campaña ca ON p.campaña_id = ca.id
+            WHERE p.fecha_pedido BETWEEN ? AND ? 
+            AND p.udn_id = ? 
+            AND p.active = 1
+            ORDER BY p.fecha_creacion DESC
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.campaña_id' in 'on clause'
+
+
+[ 2025-10-16 14:29:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.pedido (monto,fecha_pedido,hora_entrega,envio_domicilio,cliente_id,canal_id,campaña_id,red_social_id,udn_id,active) VALUES (?,?,?,?,?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'hora_entrega' in 'field list'
+
+
+[ 2025-10-16 14:28:47 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.pedido (monto,fecha_pedido,hora_entrega,envio_domicilio,cliente_id,canal_id,campaña_id,red_social_id,udn_id,active) VALUES (?,?,?,?,?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'hora_entrega' in 'field list'
+
+
+[ 2025-10-16 14:26:33 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.pedido (fecha_pedido,canal_id,monto,envio_domicilio,campana_id,red_social_id,fecha_creacion,udn_id,active,pago_verificado) VALUES (?,?,?,?,?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'campana_id' in 'field list'
+
+
+[ 2025-10-16 14:25:19 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.pedido (cliente_nombre,cliente_telefono,cliente_correo,cliente_cumpleaños,fecha_pedido,hora_entrega,canal_id,monto,envio_domicilio,campana_id,red_social_id,notas,fecha_creacion,udn_id,active,pago_verificado,cliente_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cliente_nombre' in 'field list'
+
+
+[ 2025-10-16 14:19:17 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.pedido (cliente_nombre,cliente_telefono,cliente_correo,cliente_cumpleaños,fecha_pedido,hora_entrega,canal_id,monto,envio_domicilio,campana_id,red_social_id,notas,fecha_creacion,udn_id,active,pago_verificado,cliente_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cliente_nombre' in 'field list'
+
+
+[ 2025-10-16 14:18:50 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.pedido (cliente_nombre,cliente_telefono,cliente_correo,cliente_cumpleaños,fecha_pedido,hora_entrega,canal_id,monto,envio_domicilio,campana_id,red_social_id,notas,fecha_creacion,udn_id,active,pago_verificado,cliente_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cliente_nombre' in 'field list'
+
+
+[ 2025-10-16 14:18:46 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.pedido (cliente_nombre,cliente_telefono,cliente_correo,cliente_cumpleaños,fecha_pedido,hora_entrega,canal_id,monto,envio_domicilio,campana_id,red_social_id,notas,fecha_creacion,udn_id,active,pago_verificado,cliente_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cliente_nombre' in 'field list'
+
+
+[ 2025-10-16 14:14:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.pedido (cliente_nombre,cliente_telefono,cliente_correo,cliente_cumpleaños,fecha_pedido,hora_entrega,canal_id,monto,envio_domicilio,campana_id,red_social_id,notas,fecha_creacion,udn_id,active,pago_verificado,cliente_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cliente_nombre' in 'field list'
+
+
+[ 2025-10-16 14:13:46 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.pedido (cliente_nombre,cliente_telefono,cliente_correo,cliente_cumpleaños,fecha_pedido,hora_entrega,canal_id,monto,envio_domicilio,campana_id,red_social_id,notas,fecha_creacion,user_id,udn_id,active,pago_verificado,cliente_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cliente_nombre' in 'field list'
+
+
+[ 2025-10-16 14:12:24 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.pedido (cliente_nombre,cliente_telefono,cliente_correo,cliente_cumpleaños,fecha_pedido,hora_entrega,canal_id,monto,envio_domicilio,campana_id,red_social_id,notas,fecha_creacion,user_id,udn_id,active,pago_verificado,cliente_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cliente_nombre' in 'field list'
+
+
+[ 2025-10-16 14:12:17 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.pedido (cliente_nombre,cliente_telefono,cliente_correo,cliente_cumpleaños,fecha_pedido,hora_entrega,canal_id,monto,envio_domicilio,campana_id,red_social_id,notas,fecha_creacion,user_id,udn_id,active,pago_verificado,cliente_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cliente_nombre' in 'field list'
+
+
+[ 2025-10-16 13:44:25 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, name as valor, description, icon, color, status, created_at FROM rfwsmqex_marketing.social_networks   WHERE 1=1 AND status = ?  ORDER BY name ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.social_networks' doesn't exist
+
+
+[ 2025-10-16 13:44:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, name as valor, description, icon, color, status, created_at FROM rfwsmqex_marketing.social_networks   WHERE 1=1 AND status = ?  ORDER BY name ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.social_networks' doesn't exist
+
+
+[ 2025-10-16 13:38:23 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM rfwsmqex_marketing.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.campana' doesn't exist
+
+
+[ 2025-10-16 13:31:20 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.monto,
+                p.fecha_pedido,
+                p.fecha_creacion,
+                p.envio_domicilio,
+                p.active,
+                c.nombre AS canal_nombre,
+                rs.nombre AS red_social_nombre,
+                rs.color AS red_social_color,
+                ca.nombre AS campana_nombre,
+                ca.estrategia AS campana_estrategia
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON p.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.campana ca ON p.campana_id = ca.id
+            WHERE p.fecha_pedido BETWEEN ? AND ? 
+            AND p.udn_id = ? 
+            AND p.active = 1
+            ORDER BY p.fecha_creacion DESC
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.campana' doesn't exist
+
+
+[ 2025-10-16 13:30:19 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT 
+                pedido.id,
+                pedido.monto,
+                pedido.fecha_pedido,
+                pedido.fecha_creacion,
+                pedido.envio_domicilio,
+                pedido.active,
+                canal.nombre AS canal_nombre,
+                red_social.nombre AS red_social_nombre,
+                red_social.color AS red_social_color,
+                campana.nombre AS campana_nombre,
+                campana.estrategia AS campana_estrategia
+             FROM rfwsmqex_marketing.pedido   LEFT JOIN rfwsmqex_marketing.canal ON pedido.canal_id = canal.id LEFT JOIN rfwsmqex_marketing.red_social ON pedido.red_social_id = red_social.id LEFT JOIN rfwsmqex_marketing.campana ON pedido.campana_id = campana.id WHERE pedido.fecha_pedido BETWEEN ? AND ? AND pedido.udn_id = ? AND pedido.active = 1  ORDER BY pedido.fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.campana' doesn't exist
+
+
+[ 2025-10-16 13:30:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT 
+                pedido.id,
+                pedido.monto,
+                pedido.fecha_pedido,
+                pedido.fecha_creacion,
+                pedido.envio_domicilio,
+                pedido.active,
+                canal.nombre AS canal_nombre,
+                red_social.nombre AS red_social_nombre,
+                red_social.color AS red_social_color,
+                campana.nombre AS campana_nombre,
+                campana.estrategia AS campana_estrategia
+             FROM rfwsmqex_marketing.pedido   LEFT JOIN rfwsmqex_marketing.canal ON pedido.canal_id = canal.id LEFT JOIN rfwsmqex_marketing.red_social ON pedido.red_social_id = red_social.id LEFT JOIN rfwsmqex_marketing.campana ON pedido.campana_id = campana.id WHERE pedido.fecha_pedido BETWEEN ? AND ? AND pedido.udn_id = ? AND pedido.active = 1  ORDER BY pedido.fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.campana' doesn't exist
+
+
+[ 2025-10-16 13:30:11 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT 
+                pedido.id,
+                pedido.monto,
+                pedido.fecha_pedido,
+                pedido.fecha_creacion,
+                pedido.envio_domicilio,
+                pedido.active,
+                canal.nombre AS canal_nombre,
+                red_social.nombre AS red_social_nombre,
+                red_social.color AS red_social_color,
+                campana.nombre AS campana_nombre,
+                campana.estrategia AS campana_estrategia
+             FROM rfwsmqex_marketing.pedido   LEFT JOIN rfwsmqex_marketing.canal ON pedido.canal_id = canal.id LEFT JOIN rfwsmqex_marketing.red_social ON pedido.red_social_id = red_social.id LEFT JOIN rfwsmqex_marketing.campana ON pedido.campana_id = campana.id WHERE pedido.fecha_pedido BETWEEN ? AND ? AND pedido.udn_id = ? AND pedido.active = 1  ORDER BY pedido.fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.campana' doesn't exist
+
+
+[ 2025-10-16 13:27:52 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT 
+                pedidos_orders.id,
+                pedidos_orders.amount,
+                pedidos_orders.date_order,
+                pedidos_orders.time_order,
+                pedidos_orders.date_create,
+                pedidos_orders.home_delivery,
+                pedidos_orders.arrived_establishment,
+                pedidos_orders.payment_verified,
+                pedidos_orders.note,
+                pedidos_orders.active,
+                pedidos_clients.name AS client_name,
+                pedidos_clients.phone AS client_phone,
+                pedidos_clients.email AS client_email,
+                pedidos_clients.date_birthday AS client_birthday,
+                pedidos_channel.name AS channel_name
+             FROM rfwsmqex_marketing.pedidos_orders   LEFT JOIN rfwsmqex_marketing.pedidos_clients ON pedidos_orders.client_id = pedidos_clients.id LEFT JOIN rfwsmqex_marketing.pedidos_channel ON pedidos_orders.channel_id = pedidos_channel.id WHERE pedidos_orders.date_order BETWEEN ? AND ? AND pedidos_orders.subsidiaries_id = ? AND pedidos_orders.active = 1  ORDER BY pedidos_orders.date_create DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.pedidos_orders' doesn't exist
+
+
+[ 2025-10-16 13:27:31 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT 
+                pedido.id,
+                pedido.monto,
+                pedido.fecha_pedido,
+                pedido.hora_entrega,
+                pedido.fecha_creacion,
+                pedido.envio_domicilio,
+                pedido.llego_establecimiento,
+                pedido.pago_verificado,
+                pedido.notas,
+                pedido.active,
+                cliente.nombre AS cliente_nombre,
+                cliente.telefono AS cliente_telefono,
+                cliente.correo AS cliente_correo,
+                cliente.fecha_cumpleaños AS cliente_cumpleaños,
+                canal.nombre AS canal_nombre,
+                red_social.nombre AS red_social_nombre,
+                red_social.icono AS red_social_icono,
+                red_social.color AS red_social_color
+             FROM rfwsmqex_marketing.pedido   LEFT JOIN rfwsmqex_marketing.cliente ON pedido.cliente_id = cliente.id LEFT JOIN rfwsmqex_marketing.canal ON pedido.canal_id = canal.id LEFT JOIN rfwsmqex_marketing.red_social ON pedido.red_social_id = red_social.id WHERE pedido.fecha_pedido BETWEEN ? AND ? AND pedido.udn_id = ? AND pedido.active = 1  ORDER BY pedido.fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pedido.hora_entrega' in 'field list'
+
+
+[ 2025-10-16 13:25:35 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT 
+                pedido.id,
+                pedido.monto,
+                pedido.fecha_pedido,
+                pedido.hora_entrega,
+                pedido.fecha_creacion,
+                pedido.envio_domicilio,
+                pedido.llego_establecimiento,
+                pedido.pago_verificado,
+                pedido.notas,
+                pedido.active,
+                cliente.nombre AS cliente_nombre,
+                cliente.telefono AS cliente_telefono,
+                cliente.correo AS cliente_correo,
+                cliente.fecha_cumpleaños AS cliente_cumpleaños,
+                canal.nombre AS canal_nombre,
+                red_social.nombre AS red_social_nombre,
+                red_social.icono AS red_social_icono,
+                red_social.color AS red_social_color
+             FROM rfwsmqex_marketing.pedido   LEFT JOIN rfwsmqex_marketing.cliente ON pedido.cliente_id = cliente.id LEFT JOIN rfwsmqex_marketing.canal ON pedido.canal_id = canal.id LEFT JOIN rfwsmqex_marketing.red_social ON pedido.red_social_id = red_social.id WHERE pedido.fecha_pedido BETWEEN ? AND ? AND pedido.udn_id = ? AND pedido.active = 1  ORDER BY pedido.fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'pedido.hora_entrega' in 'field list'
+
+
+[ 2025-10-16 13:23:17 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT 
+                pedido.id,
+                pedido.monto,
+                pedido.fecha_pedido,
+                pedido.hora_entrega,
+                pedido.fecha_creacion,
+                pedido.envio_domicilio,
+                pedido.llego_establecimiento,
+                pedido.pago_verificado,
+                pedido.notas,
+                pedido.active,
+                cliente.nombre AS cliente_nombre,
+                cliente.telefono AS cliente_telefono,
+                cliente.correo AS cliente_correo,
+                cliente.fecha_cumpleaños AS cliente_cumpleaños,
+                canal.nombre AS canal_nombre,
+                red_social.nombre AS red_social_nombre,
+                red_social.icono AS red_social_icono,
+                red_social.color AS red_social_color
+             FROM database_name.pedido   LEFT JOIN database_name.cliente ON pedido.cliente_id = cliente.id LEFT JOIN database_name.canal ON pedido.canal_id = canal.id LEFT JOIN database_name.red_social ON pedido.red_social_id = red_social.id WHERE pedido.fecha_pedido BETWEEN ? AND ? AND pedido.udn_id = ? AND pedido.active = 1  ORDER BY pedido.fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.pedido' doesn't exist
+
+
+[ 2025-10-16 13:23:03 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 13:23:03 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 13:23:03 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+
+[ 2025-10-16 13:18:36 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 13:18:36 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 13:18:36 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+
+[ 2025-10-16 12:59:33 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT 
+                pedido.id,
+                pedido.monto,
+                pedido.fecha_pedido,
+                pedido.hora_entrega,
+                pedido.fecha_creacion,
+                pedido.envio_domicilio,
+                pedido.llego_establecimiento,
+                pedido.pago_verificado,
+                pedido.notas,
+                pedido.active,
+                cliente.nombre AS cliente_nombre,
+                cliente.telefono AS cliente_telefono,
+                cliente.correo AS cliente_correo,
+                cliente.fecha_cumpleaños AS cliente_cumpleaños,
+                canal.nombre AS canal_nombre,
+                red_social.nombre AS red_social_nombre,
+                red_social.icono AS red_social_icono,
+                red_social.color AS red_social_color
+             FROM database_name.pedido   LEFT JOIN database_name.cliente ON pedido.cliente_id = cliente.id LEFT JOIN database_name.canal ON pedido.canal_id = canal.id LEFT JOIN database_name.red_social ON pedido.red_social_id = red_social.id WHERE pedido.fecha_pedido BETWEEN ? AND ? AND pedido.udn_id = ? AND pedido.active = 1  ORDER BY pedido.fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.pedido' doesn't exist
+
+
+[ 2025-10-16 12:59:32 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 12:59:31 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 12:59:31 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+
+[ 2025-10-16 12:54:08 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 12:54:08 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 12:54:08 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+
+[ 2025-10-16 12:53:45 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 12:53:45 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 12:53:45 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+
+[ 2025-10-16 12:52:35 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 12:52:35 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 12:52:35 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+
+[ 2025-10-16 12:52:32 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 12:52:32 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 12:52:32 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+
+[ 2025-10-16 12:52:31 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 12:52:31 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 12:52:31 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+
+[ 2025-10-16 12:52:09 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 12:52:08 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 12:52:08 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+
+[ 2025-10-16 12:52:07 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 12:52:07 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 12:52:07 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+
+[ 2025-10-16 12:51:24 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 12:51:24 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 12:51:24 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+
+[ 2025-10-16 12:51:23 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 12:51:23 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 12:51:23 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+
+[ 2025-10-16 12:51:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT 
+                pedido.id,
+                pedido.monto,
+                pedido.fecha_pedido,
+                pedido.hora_entrega,
+                pedido.fecha_creacion,
+                pedido.envio_domicilio,
+                pedido.llego_establecimiento,
+                pedido.pago_verificado,
+                pedido.notas,
+                pedido.active,
+                cliente.nombre AS cliente_nombre,
+                cliente.telefono AS cliente_telefono,
+                cliente.correo AS cliente_correo,
+                cliente.fecha_cumpleaños AS cliente_cumpleaños,
+                canal.nombre AS canal_nombre,
+                red_social.nombre AS red_social_nombre,
+                red_social.icono AS red_social_icono,
+                red_social.color AS red_social_color
+             FROM database_name.pedido   LEFT JOIN database_name.cliente ON pedido.cliente_id = cliente.id LEFT JOIN database_name.canal ON pedido.canal_id = canal.id LEFT JOIN database_name.red_social ON pedido.red_social_id = red_social.id WHERE pedido.fecha_pedido BETWEEN ? AND ? AND pedido.udn_id = ? AND pedido.active = 1  ORDER BY pedido.fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.pedido' doesn't exist
+
+
+[ 2025-10-16 12:51:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 12:51:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 12:51:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+
+[ 2025-10-16 12:50:33 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 12:50:33 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 12:50:33 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+
+[ 2025-10-16 11:51:08 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  
+            SELECT 
+                c.nombre AS canal_nombre,
+                COUNT(p.id) AS total_pedidos,
+                SUM(p.monto) AS total_ventas
+            FROM database_name.pedido p
+            LEFT JOIN database_name.canal c ON p.canal_id = c.id
+            WHERE p.udn_id = ?
+            AND YEAR(p.fecha_pedido) = ?
+            AND MONTH(p.fecha_pedido) = ?
+            AND p.active = 1
+            GROUP BY c.id, c.nombre
+            ORDER BY total_ventas DESC
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.pedido' doesn't exist
+
+
+[ 2025-10-16 11:51:08 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  
+            SELECT 
+                COUNT(*) AS total_pedidos,
+                SUM(monto) AS ingresos_totales,
+                AVG(monto) AS cheque_promedio,
+                SUM(CASE WHEN pago_verificado = 1 THEN 1 ELSE 0 END) AS pagos_verificados,
+                SUM(CASE WHEN llego_establecimiento = 1 THEN 1 ELSE 0 END) AS llegadas_confirmadas
+            FROM database_name.pedido
+            WHERE udn_id = ?
+            AND YEAR(fecha_pedido) = ?
+            AND MONTH(fecha_pedido) = ?
+            AND active = 1
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.pedido' doesn't exist
+
+
+[ 2025-10-16 11:51:08 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  
+            SELECT 
+                c.nombre AS canal_nombre,
+                COUNT(p.id) AS total_pedidos,
+                SUM(p.monto) AS total_ventas
+            FROM database_name.pedido p
+            LEFT JOIN database_name.canal c ON p.canal_id = c.id
+            WHERE p.udn_id = ?
+            AND YEAR(p.fecha_pedido) = ?
+            AND MONTH(p.fecha_pedido) = ?
+            AND p.active = 1
+            GROUP BY c.id, c.nombre
+            ORDER BY total_ventas DESC
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.pedido' doesn't exist
+
+
+[ 2025-10-16 11:51:07 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  
+            SELECT 
+                COUNT(*) AS total_pedidos,
+                SUM(monto) AS ingresos_totales,
+                AVG(monto) AS cheque_promedio,
+                SUM(CASE WHEN pago_verificado = 1 THEN 1 ELSE 0 END) AS pagos_verificados,
+                SUM(CASE WHEN llego_establecimiento = 1 THEN 1 ELSE 0 END) AS llegadas_confirmadas
+            FROM database_name.pedido
+            WHERE udn_id = ?
+            AND YEAR(fecha_pedido) = ?
+            AND MONTH(fecha_pedido) = ?
+            AND active = 1
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.pedido' doesn't exist
+
+
+[ 2025-10-16 11:51:07 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 11:51:07 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 11:51:07 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+
+[ 2025-10-16 11:50:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  
+            SELECT 
+                c.nombre AS canal_nombre,
+                COUNT(p.id) AS total_pedidos,
+                SUM(p.monto) AS total_ventas
+            FROM database_name.pedido p
+            LEFT JOIN database_name.canal c ON p.canal_id = c.id
+            WHERE p.udn_id = ?
+            AND YEAR(p.fecha_pedido) = ?
+            AND MONTH(p.fecha_pedido) = ?
+            AND p.active = 1
+            GROUP BY c.id, c.nombre
+            ORDER BY total_ventas DESC
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.pedido' doesn't exist
+
+
+[ 2025-10-16 11:50:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  
+            SELECT 
+                COUNT(*) AS total_pedidos,
+                SUM(monto) AS ingresos_totales,
+                AVG(monto) AS cheque_promedio,
+                SUM(CASE WHEN pago_verificado = 1 THEN 1 ELSE 0 END) AS pagos_verificados,
+                SUM(CASE WHEN llego_establecimiento = 1 THEN 1 ELSE 0 END) AS llegadas_confirmadas
+            FROM database_name.pedido
+            WHERE udn_id = ?
+            AND YEAR(fecha_pedido) = ?
+            AND MONTH(fecha_pedido) = ?
+            AND active = 1
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.pedido' doesn't exist
+
+
+[ 2025-10-16 11:50:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  
+            SELECT 
+                c.nombre AS canal_nombre,
+                COUNT(p.id) AS total_pedidos,
+                SUM(p.monto) AS total_ventas
+            FROM database_name.pedido p
+            LEFT JOIN database_name.canal c ON p.canal_id = c.id
+            WHERE p.udn_id = ?
+            AND YEAR(p.fecha_pedido) = ?
+            AND MONTH(p.fecha_pedido) = ?
+            AND p.active = 1
+            GROUP BY c.id, c.nombre
+            ORDER BY total_ventas DESC
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.pedido' doesn't exist
+
+
+[ 2025-10-16 11:50:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  
+            SELECT 
+                COUNT(*) AS total_pedidos,
+                SUM(monto) AS ingresos_totales,
+                AVG(monto) AS cheque_promedio,
+                SUM(CASE WHEN pago_verificado = 1 THEN 1 ELSE 0 END) AS pagos_verificados,
+                SUM(CASE WHEN llego_establecimiento = 1 THEN 1 ELSE 0 END) AS llegadas_confirmadas
+            FROM database_name.pedido
+            WHERE udn_id = ?
+            AND YEAR(fecha_pedido) = ?
+            AND MONTH(fecha_pedido) = ?
+            AND active = 1
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.pedido' doesn't exist
+
+
+[ 2025-10-16 11:50:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.campana   WHERE active = ?  ORDER BY fecha_creacion DESC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.campana' doesn't exist
+
+
+[ 2025-10-16 11:50:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.producto   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.producto' doesn't exist
+
+
+[ 2025-10-16 11:50:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT id, nombre AS valor FROM database_name.canal   WHERE active = ?  ORDER BY nombre ASC 
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'database_name.canal' doesn't exist
+
+

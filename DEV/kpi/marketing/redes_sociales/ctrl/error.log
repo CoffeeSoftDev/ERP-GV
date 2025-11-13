@@ -1,0 +1,1001 @@
+[ 2025-10-19 01:46:32 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                h.red_social_id,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            WHERE h.id = ?
+            AND h.active = 1
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'field list'
+
+
+[ 2025-10-19 01:45:55 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                h.red_social_id,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            WHERE h.id = ?
+            AND h.active = 1
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'field list'
+
+
+[ 2025-10-19 00:42:58 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                h.red_social_id,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            WHERE h.id = ?
+            AND h.active = 1
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'field list'
+
+
+[ 2025-10-18 07:13:56 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 07:04:18 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 07:04:18 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 07:04:18 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 07:04:18 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 07:04:18 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 07:02:51 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 07:02:51 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 07:02:51 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 07:02:51 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 07:02:51 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 06:56:53 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:56:53 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 06:56:53 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 06:56:53 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 06:56:53 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 06:56:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:56:41 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:56:34 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:56:34 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 06:56:34 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 06:56:34 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 06:56:04 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:56:04 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 06:56:04 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 06:56:04 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO rfwsmqex_marketing.metrica_historial_red (historial_id,metrica_id,cantidad) VALUES (?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`rfwsmqex_marketing`.`metrica_historial_red`, CONSTRAINT `metrica_historial_red_ibfk_2` FOREIGN KEY (`historial_id`) REFERENCES `historial_red` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+
+
+[ 2025-10-18 06:55:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:54:54 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:54:53 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:54:37 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:53:53 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:51:24 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:51:19 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:51:11 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:44:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:43:57 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:43:53 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:43:26 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:42:20 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:42:11 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:41:54 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-18 06:41:38 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-17 22:48:49 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-17 22:42:09 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-17 21:51:48 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+
+[ 2025-10-17 21:24:46 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT 
+                h.id,
+                h.año,
+                h.mes,
+                h.fecha_creacion,
+                rs.nombre AS social_network_name,
+                rs.icono AS social_network_icon,
+                rs.color AS social_network_color,
+                GROUP_CONCAT(
+                    CONCAT(m.nombre, ':', mh.cantidad) 
+                    SEPARATOR '|'
+                ) AS metrics_data
+            FROM rfwsmqex_marketing.historial_red h
+            LEFT JOIN rfwsmqex_marketing.red_social rs ON h.red_social_id = rs.id
+            LEFT JOIN rfwsmqex_marketing.metrica_historial_red mh ON h.id = mh.historial_id
+            LEFT JOIN rfwsmqex_marketing.metrica_red m ON mh.metrica_id = m.id
+            WHERE h.udn_id = ?
+            AND h.active = 1
+            GROUP BY h.id, h.año, h.mes, h.fecha_creacion, rs.nombre, rs.icono, rs.color
+            ORDER BY h.fecha_creacion DESC
+            LIMIT 10
+        
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'h.red_social_id' in 'on clause'
+
+

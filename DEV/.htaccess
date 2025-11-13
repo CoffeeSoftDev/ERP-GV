@@ -10,6 +10,6 @@
 
 Options +FollowSymLinks
 RewriteEngine on
-RewriteBase /ERP24/
+RewriteBase /DEV/
 RewriteRule ^/$ index.php [L]
 RewriteRule ^salir$ acceso/ctrl/ctrl-logout.php [L]

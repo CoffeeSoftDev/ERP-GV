@@ -1,0 +1,3 @@
+[10-Nov-2025 15:54:29 America/Mexico_City] PHP Warning:  A non-numeric value encountered in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php on line 278
+[10-Nov-2025 15:54:29 America/Mexico_City] PHP Warning:  A non-numeric value encountered in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php on line 282
+[10-Nov-2025 15:54:29 America/Mexico_City] PHP Warning:  mktime() expects parameter 4 to be int, string given in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php on line 345

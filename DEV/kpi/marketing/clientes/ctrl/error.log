@@ -1,0 +1,149 @@
+[ 2025-11-12 11:48:14 ]
+[ UNIX_USR ] :: rfwsmqex
+[ WINDOWS_USR ] :: %USERNAME%
+[ INFO ] ::  SELECT 
+                cliente.id,
+                cliente.nombre,
+                cliente.apellido_paterno,
+                cliente.apellido_materno,
+                cliente.vip,
+                cliente.telefono,
+                cliente.correo,
+                cliente.fecha_cumpleaños,
+                DATE_FORMAT(cliente.fecha_creacion, '%d/%m/%Y %H:%i') as fecha_creacion,
+                cliente.udn_id,
+                cliente.active,
+                udn.UDN as udn_nombre,
+                udn.color,
+                udn.Abreviatura as udn_abreviatura
+             FROM rfwsmqex_marketing.cliente   LEFT JOIN udn ON cliente.udn_id = udn.idUDN WHERE 1=1 AND cliente.active = ?  ORDER BY cliente.id DESC 
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cliente.apellido_paterno' in 'SELECT'
+
+
+[ 2025-11-10 17:08:27 ]
+[ UNIX_USR ] :: rfwsmqex
+[ WINDOWS_USR ] :: %USERNAME%
+[ INFO ] ::  SELECT 
+                cliente.id,
+                cliente.nombre,
+                cliente.apellido_paterno,
+                cliente.apellido_materno,
+                cliente.vip,
+                cliente.telefono,
+                cliente.correo,
+                cliente.fecha_cumpleaños,
+                DATE_FORMAT(cliente.fecha_creacion, '%d/%m/%Y %H:%i') as fecha_creacion,
+                cliente.udn_id,
+                cliente.active,
+                udn.UDN as udn_nombre,
+                udn.color,
+                udn.Abreviatura as udn_abreviatura
+             FROM rfwsmqex_marketing.cliente   LEFT JOIN udn ON cliente.udn_id = udn.idUDN WHERE 1=1 AND cliente.active = ?  ORDER BY cliente.id DESC 
+[ ERROR READ] :: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'cliente.apellido_paterno' in 'SELECT'
+
+
+[ 2025-11-10 14:06:33 ]
+[ UNIX_USR ] :: rfwsmqex
+[ WINDOWS_USR ] :: %USERNAME%
+[ INFO ] ::  SELECT * FROM rfwsmqex_marketing.domicilio_cliente   WHERE cliente_id = ? AND es_principal = 1   
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.domicilio_cliente' doesn't exist
+
+
+[ 2025-11-10 14:06:29 ]
+[ UNIX_USR ] :: rfwsmqex
+[ WINDOWS_USR ] :: %USERNAME%
+[ INFO ] ::  SELECT * FROM rfwsmqex_marketing.domicilio_cliente   WHERE cliente_id = ? AND es_principal = 1   
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.domicilio_cliente' doesn't exist
+
+
+[ 2025-11-10 13:56:48 ]
+[ UNIX_USR ] :: rfwsmqex
+[ WINDOWS_USR ] :: %USERNAME%
+[ INFO ] ::  SELECT * FROM rfwsmqex_marketing.domicilio_cliente   WHERE cliente_id = ? AND es_principal = 1   
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.domicilio_cliente' doesn't exist
+
+
+[ 2025-10-30 10:45:44 ]
+[ UNIX_USR ] :: rfwsmqex
+[ WINDOWS_USR ] :: %USERNAME%
+[ INFO ] ::  SELECT * FROM rfwsmqex_marketing.domicilio_cliente   WHERE cliente_id = ? AND es_principal = 1   
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.domicilio_cliente' doesn't exist
+
+
+[ 2025-10-30 10:45:27 ]
+[ UNIX_USR ] :: rfwsmqex
+[ WINDOWS_USR ] :: %USERNAME%
+[ INFO ] ::  SELECT * FROM rfwsmqex_marketing.domicilio_cliente   WHERE cliente_id = ? AND es_principal = 1   
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.domicilio_cliente' doesn't exist
+
+
+[ 2025-10-30 10:45:14 ]
+[ UNIX_USR ] :: rfwsmqex
+[ WINDOWS_USR ] :: %USERNAME%
+[ INFO ] ::  SELECT * FROM rfwsmqex_marketing.domicilio_cliente   WHERE cliente_id = ? AND es_principal = 1   
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.domicilio_cliente' doesn't exist
+
+
+[ 2025-10-30 10:45:08 ]
+[ UNIX_USR ] :: rfwsmqex
+[ WINDOWS_USR ] :: %USERNAME%
+[ INFO ] ::  SELECT * FROM rfwsmqex_marketing.domicilio_cliente   WHERE cliente_id = ? AND es_principal = 1   
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.domicilio_cliente' doesn't exist
+
+
+[ 2025-10-21 14:21:52 ]
+[ UNIX_USR ] :: rfwsmqex
+[ WINDOWS_USR ] :: %USERNAME%
+[ INFO ] ::  SELECT * FROM rfwsmqex_marketing.domicilio_cliente   WHERE cliente_id = ? AND es_principal = 1   
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_marketing.domicilio_cliente' doesn't exist
+
+
+[ 2025-10-18 11:49:19 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  
+            SELECT 
+                p.id,
+                p.fecha_pedido,
+                p.monto,
+                p.envio_domicilio,
+                c.nombre as canal_nombre,
+                u.UDN as udn_nombre
+            FROM rfwsmqex_marketing.pedido p
+            LEFT JOIN rfwsmqex_marketing.canal c ON p.canal_id = c.id
+            LEFT JOIN udn u ON p.udn_id = u.idUDN
+            WHERE p.cliente_id = ?
+            ORDER BY p.fecha_pedido DESC
+            LIMIT ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''10'' at line 13
+
+
+[ 2025-10-18 11:49:05 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  
+            SELECT 
+                c.id,
+                c.nombre,
+                c.apellido_paterno,
+                c.apellido_materno,
+                c.vip,
+                c.telefono,
+                u.UDN as udn_nombre,
+                COUNT(p.id) as total_pedidos,
+                SUM(p.monto) as monto_total,
+                AVG(p.monto) as ticket_promedio,
+                MAX(p.fecha_pedido) as ultima_compra
+            FROM rfwsmqex_marketing.cliente c
+            LEFT JOIN udn u ON c.udn_id = u.idUDN
+            LEFT JOIN rfwsmqex_marketing.pedido p ON c.id = p.cliente_id
+            WHERE c.active = 1
+            GROUP BY c.id
+            HAVING total_pedidos > 0
+            ORDER BY monto_total DESC
+            LIMIT ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''10'' at line 20
+
+

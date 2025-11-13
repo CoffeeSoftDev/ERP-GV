@@ -1,0 +1,48 @@
+[21-Oct-2025 10:37:14 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined method ctrl::getTotalMonthOrders() in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php:324
+Stack trace:
+#0 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(33): ctrl->detailsCard('5', '1', '2025')
+#1 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(420): ctrl->apiPromediosDiarios()
+#2 {main}
+  thrown in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php on line 324
+[21-Oct-2025 10:37:16 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined method ctrl::getTotalMonthOrders() in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php:324
+Stack trace:
+#0 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(33): ctrl->detailsCard('5', '10', '2025')
+#1 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(420): ctrl->apiPromediosDiarios()
+#2 {main}
+  thrown in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php on line 324
+[21-Oct-2025 10:44:56 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined method ctrl::getTotalMonthOrders() in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php:324
+Stack trace:
+#0 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(33): ctrl->detailsCard('5', '10', '2025')
+#1 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(420): ctrl->apiPromediosDiarios()
+#2 {main}
+  thrown in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php on line 324
+[21-Oct-2025 10:45:04 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined method ctrl::getTotalMonthOrders() in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php:324
+Stack trace:
+#0 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(33): ctrl->detailsCard('5', '10', '2025')
+#1 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(420): ctrl->apiPromediosDiarios()
+#2 {main}
+  thrown in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php on line 324
+[21-Oct-2025 10:45:10 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined method ctrl::getTotalMonthOrders() in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php:324
+Stack trace:
+#0 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(33): ctrl->detailsCard('5', '1', '2025')
+#1 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(420): ctrl->apiPromediosDiarios()
+#2 {main}
+  thrown in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php on line 324
+[21-Oct-2025 10:47:21 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined method ctrl::getTotalMonthOrders() in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php:324
+Stack trace:
+#0 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(33): ctrl->detailsCard('5', '10', '2025')
+#1 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(420): ctrl->apiPromediosDiarios()
+#2 {main}
+  thrown in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php on line 324
+[21-Oct-2025 10:47:32 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined method ctrl::getTotalMonthOrders() in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php:324
+Stack trace:
+#0 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(33): ctrl->detailsCard('5', '1', '2025')
+#1 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(420): ctrl->apiPromediosDiarios()
+#2 {main}
+  thrown in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php on line 324
+[21-Oct-2025 10:47:38 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to undefined method ctrl::getTotalMonthOrders() in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php:324
+Stack trace:
+#0 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(33): ctrl->detailsCard('5', '10', '2025')
+#1 /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php(420): ctrl->apiPromediosDiarios()
+#2 {main}
+  thrown in /home/rfwsmqex/public_html/DEV/kpi/marketing/pedidos/ctrl/ctrl-dashboard-order.php on line 324

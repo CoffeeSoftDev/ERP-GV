@@ -132,6 +132,7 @@ public function _Select($array,$string = false){
             $group = "GROUP BY $by";
         }
         
+        $order = "";
         if (!empty($array["order"])) {
             $orderClauses = [];
             foreach ($array["order"] as $key => $value) {
