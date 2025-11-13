@@ -1,0 +1,32 @@
+[26-Jun-2024 18:46:34 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::set_charset() in /home/rfwsmqex/public_html/ERP2/conf/_Conect.php:21
+Stack trace:
+#0 /home/rfwsmqex/public_html/ERP2/conf/_CRUD.php(54): Conection->connect()
+#1 /home/rfwsmqex/public_html/ERP2/acceso/ctrl-sidebar.php(27): CRUD->_Read('SELECT\r\n       ...', Array)
+#2 /home/rfwsmqex/public_html/ERP2/acceso/ctrl-sidebar.php(38): Sidebar->allDirectory(Array)
+#3 {main}
+  thrown in /home/rfwsmqex/public_html/ERP2/conf/_Conect.php on line 21
+[26-Jun-2024 18:46:49 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method PDO::set_charset() in /home/rfwsmqex/public_html/ERP2/conf/_Conect.php:21
+Stack trace:
+#0 /home/rfwsmqex/public_html/ERP2/conf/_CRUD.php(54): Conection->connect()
+#1 /home/rfwsmqex/public_html/ERP2/acceso/ctrl-sidebar.php(27): CRUD->_Read('SELECT\r\n       ...', Array)
+#2 /home/rfwsmqex/public_html/ERP2/acceso/ctrl-sidebar.php(38): Sidebar->allDirectory(Array)
+#3 {main}
+  thrown in /home/rfwsmqex/public_html/ERP2/conf/_Conect.php on line 21
+[20-Jan-2025 15:50:38 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/rfwsmqex/public_html/ERP24/conf/_CRUD.php:57
+Stack trace:
+#0 /home/rfwsmqex/public_html/ERP24/acceso/ctrl-sidebar.php(27): CRUD->_Read('SELECT\r\n       ...', Array)
+#1 /home/rfwsmqex/public_html/ERP24/acceso/ctrl-sidebar.php(38): Sidebar->allDirectory(Array)
+#2 {main}
+  thrown in /home/rfwsmqex/public_html/ERP24/conf/_CRUD.php on line 57
+[04-Feb-2025 10:36:26 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/rfwsmqex/public_html/ERP24/conf/_CRUD.php:57
+Stack trace:
+#0 /home/rfwsmqex/public_html/ERP24/acceso/ctrl-sidebar.php(27): CRUD->_Read('SELECT\r\n       ...', Array)
+#1 /home/rfwsmqex/public_html/ERP24/acceso/ctrl-sidebar.php(38): Sidebar->allDirectory(Array)
+#2 {main}
+  thrown in /home/rfwsmqex/public_html/ERP24/conf/_CRUD.php on line 57
+[05-Sep-2025 11:39:18 America/Mexico_City] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/rfwsmqex/public_html/ERP24/conf/_CRUD.php:57
+Stack trace:
+#0 /home/rfwsmqex/public_html/ERP24/acceso/ctrl-sidebar.php(27): CRUD->_Read('SELECT\r\n       ...', Array)
+#1 /home/rfwsmqex/public_html/ERP24/acceso/ctrl-sidebar.php(38): Sidebar->allDirectory(Array)
+#2 {main}
+  thrown in /home/rfwsmqex/public_html/ERP24/conf/_CRUD.php on line 57

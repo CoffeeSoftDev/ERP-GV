@@ -1,0 +1,80 @@
+{
+    "elementos": [
+        {
+            "elemento": "input",
+            "label": "Texto *",
+            "labelClass": { "class": "fw-bold" },
+            "divPadre": { "class": "col-12 col-sm-2 col-md-3 mb-3" },
+            "atributos": {
+                "type": "text",
+                "tipo": "texto",
+                "name": "texto",
+                "class": "form-control",
+                "placeholder": "",
+                "required": "required"
+            }
+        },
+        {
+            "elemento": "input",
+            "label": "Texto y número *",
+            "labelClass": { "class": "fw-bold" },
+            "divPadre": { "class": "col-12 col-sm-2 col-md-3 mb-3" },
+            "atributos": {
+                "type": "text",
+                "tipo": "textoNum",
+                "name": "textoNum",
+                "class": "form-control",
+                "placeholder": "",
+                "required": "required"
+            }
+        },
+        {
+            "elemento": "input",
+            "label": "Correo electrónico *",
+            "labelClass": { "class": "fw-bold" },
+            "divPadre": { "class": "col-12 col-sm-2 col-md-3 mb-3" },
+            "atributos": {
+                "type": "text",
+                "tipo": "correo",
+                "name": "correo",
+                "class": "form-control",
+                "placeholder": "correo@correo.com",
+                "required": "required",
+                "value": ""
+            },
+            "group": true,
+            "atributosGroup": [
+                {
+                    "tipo": "span",
+                    "texto": "<i class=\"icon-at\"></i>",
+                    "posicion": "l",
+                    "atributos": {}
+                }
+            ]
+        },
+        {
+            "elemento": "select",
+            "label": "Select *",
+            "labelClass": { "class": "fw-bold" },
+            "divPadre": { "class": "col-12 col-sm-2 col-md-3 mb-3" },
+            "atributos": {
+                "name": "select",
+                "class": "form-select",
+                "required": "required"
+            },
+            "option": [
+                { "id": 1, "valor": "one" },
+                { "id": 2, "valor": "two" },
+                { "id": 3, "valor": "three" }
+            ]
+        },
+        {
+            "elemento": "button",
+            "atributos": {
+                "type": "submit",
+                "class": "col-12 col-sm-8 col-md-4 btn btn-primary"
+            },
+            "value": "Guardar"
+        }
+    ]
+}

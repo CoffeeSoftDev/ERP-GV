@@ -1,0 +1,6 @@
+#resultadoConsulta {
+    background-color: var(--disabled2);
+    white-space: pre-wrap; /* Permite saltos de línea y ajuste de texto */
+    word-wrap: break-word; /* Rompe palabras largas si no caben en una línea */
+    overflow-y: auto; /* Agrega un desplazamiento vertical si es necesario */
+}

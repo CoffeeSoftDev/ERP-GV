@@ -1,0 +1,13 @@
+@import url(editarColaborador.css);
+@import url(reclutamiento.css);
+
+#btnAnadirColab {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  /* border-radius: 50%; */
+}
+
+#btnAnadirColab i {
+  font-size: 1.2em;
+}

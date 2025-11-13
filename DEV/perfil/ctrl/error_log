@@ -1,0 +1,4 @@
+[12-Jul-2025 11:41:46 America/Mexico_City] PHP Warning:  array_merge(): Argument #1 is not an array in /home/rfwsmqex/public_html/DEV/perfil/ctrl/ctrl-perfil.php on line 15
+[21-Aug-2025 13:19:26 America/Mexico_City] PHP Warning:  array_merge(): Argument #1 is not an array in /home/rfwsmqex/public_html/DEV/perfil/ctrl/ctrl-perfil.php on line 15
+[26-Sep-2025 13:09:06 America/Mexico_City] PHP Warning:  array_merge(): Expected parameter 1 to be an array, null given in /home/rfwsmqex/public_html/DEV/perfil/ctrl/ctrl-perfil.php on line 15
+[02-Oct-2025 10:21:10 America/Mexico_City] PHP Warning:  array_merge(): Expected parameter 1 to be an array, null given in /home/rfwsmqex/public_html/DEV/perfil/ctrl/ctrl-perfil.php on line 15

@@ -1,0 +1,94 @@
+:root {
+    --aliceblue: #fafcff;
+    --aliceblue_other: #DDDDDD;
+
+    --middle: #aad3eb;
+    
+    --soft: rgb(249, 115, 22);
+
+    --primary: #003360;
+    --primary9: rgb(0, 51, 96, 0.9);
+    --primary8: rgb(0, 51, 96, 0.8);
+    --primary7: rgb(0, 51, 96, 0.7);
+    --primary6: rgb(0, 51, 96, 0.6);
+    --primary5: rgb(0, 51, 96, 0.5);
+    --primary4: rgb(0, 51, 96, 0.4);
+    --primary3: rgb(0, 51, 96, 0.3);
+    --primary2: rgb(0, 51, 96, 0.2);
+    --primary1: rgb(0, 51, 96, 0.1); 
+    
+    --secondary:#F24444;
+    --secondary9:rgba(242, 68, 68,0.9);
+    --secondary8:rgba(242, 68, 68,0.8);
+    --secondary7:rgba(242, 68, 68,0.7);
+    --secondary6:rgba(242, 68, 68,0.6);
+    --secondary5:rgba(242, 68, 68,0.5);
+    --secondary4:rgba(242, 68, 68,0.4);
+    --secondary3:rgba(242, 68, 68,0.3);
+    --secondary2:rgba(242, 68, 68,0.2);
+    --secondary1:rgba(242, 68, 68,0.1);
+    
+    --info: #0078D7;
+    --info9: rgba(0, 120, 215, 0.9);
+    --info8: rgba(0, 120, 215, 0.8);
+    --info7: rgba(0, 120, 215, 0.7);
+    --info6: rgba(0, 120, 215, 0.6);
+    --info5: rgba(0, 120, 215, 0.5);
+    --info4: rgba(0, 120, 215, 0.4);
+    --info3: rgba(0, 120, 215, 0.3);
+    --info2: rgba(0, 120, 215, 0.2);
+    --info1: rgba(0, 120, 215, 0.1);
+
+    --success: #7aab20;
+    --success9: rgb(122, 171, 32, 0.9);
+    --success8: rgb(122, 171, 32, 0.8);
+    --success7: rgb(122, 171, 32, 0.7);
+    --success6: rgb(122, 171, 32, 0.6);
+    --success5: rgb(122, 171, 32, 0.5);
+    --success4: rgb(122, 171, 32, 0.4);
+    --success3: rgb(122, 171, 32, 0.3);
+    --success2: rgb(122, 171, 32, 0.2);
+    --success1: rgb(122, 171, 32, 0.1);
+
+
+    --danger: #9e1b32;
+    --danger9: rgb(158, 27, 50, 0.9);
+    --danger8: rgb(158, 27, 50, 0.8);
+    --danger7: rgb(158, 27, 50, 0.7);
+    --danger6: rgb(158, 27, 50, 0.6);
+    --danger5: rgb(158, 27, 50, 0.5);
+    --danger4: rgb(158, 27, 50, 0.4);
+    --danger3: rgb(158, 27, 50, 0.3);
+    --danger2: rgb(158, 27, 50, 0.2);
+    --danger1: rgb(158, 27, 50, 0.1);
+
+    --warning: #FFC107;
+    --warning9: rgb(255, 193, 7, 0.9);
+    --warning8: rgb(255, 193, 7, 0.8);
+    --warning7: rgb(255, 193, 7, 0.7);
+    --warning6: rgb(255, 193, 7, 0.6);
+    --warning5: rgb(255, 193, 7, 0.5);
+    --warning4: rgb(255, 193, 7, 0.4);
+    --warning3: rgb(255, 193, 7, 0.3);
+    --warning2: rgb(254, 239, 209, 0.4);
+    --warning1: rgb(255, 193, 7, 0.1);
+
+    --disabled: #494c50;
+    --disabled9: rgb(73, 76, 80, 0.9);
+    --disabled8: rgb(73, 76, 80, 0.8);
+    --disabled7: rgb(73, 76, 80, 0.7);
+    --disabled6: rgb(73, 76, 80, 0.6);
+    --disabled5: rgb(73, 76, 80, 0.5);
+    --disabled4: rgb(73, 76, 80, 0.4);
+    --disabled3: rgb(73, 76, 80, 0.3);
+    --disabled2: rgb(73, 76, 80, 0.2);
+    --disabled1: rgb(73, 76, 80, 0.1);
+
+    --default:#F2F5F9;
+     --default1:#E6E6E6;
+
+    --bgsuccesslight:rgb(191, 231, 199);
+    --bgdangerlight:rgb(246, 192, 199);
+
+    --bgalert: rgb(248, 203, 173);
+}  
