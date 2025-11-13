@@ -71,7 +71,7 @@ function redireccion(modelo) {
     const HASH = HREF.pathname.split("/").filter(Boolean);
     const ERP = HASH[0];
 
-    window.location.href = HREF.origin + "/" + ERP + "/" + modelo;
+    window.location.href = HREF.origin + "/" + ERP + "/kpi/marketing/ventas/" ;
 }
 // RECUPERAR CONTRASEÑA
 function modalForgot() {
