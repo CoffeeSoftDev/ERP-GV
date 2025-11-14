@@ -9,8 +9,8 @@ class mdl extends CRUD {
     public $util;
 
     function __construct() {
-        $this->bd  = "rfwsmqex_gvsl_finanzas.";
-        $this->bd2 = "rfwsmqex_gvsl_finanzas.";
+        $this->bd  = "_rfwsmqex_gvsl_finanzas.";
+        $this->bd2 = "_rfwsmqex_gvsl_finanzas.";
 
         $this->util = new Utileria();
     }
@@ -74,6 +74,22 @@ class mdl extends CRUD {
         ";
         $result = $this->_Read($query, $array);
         return !empty($result) ? $result[0] : ['AyB' => 0, 'Alimentos' => 0, 'Bebidas' => 0];
+    }
+
+    public function getComparativaChequePromedioPorRango($array) {
+        $query = "
+            SELECT
+            SUM(V.AyB) as AyB,
+            SUM(V.alimentos) as Alimentos,
+            SUM(V.bebidas) as Bebidas,
+            SUM(V.noHabitaciones) as totalClientes
+            FROM {$this->bd}soft_restaurant_ventas V
+            JOIN {$this->bd}soft_folio F ON V.soft_folio = F.id_folio
+            WHERE F.id_udn = ?
+            AND DATE(F.fecha_folio) BETWEEN ? AND ?
+        ";
+        $result = $this->_Read($query, $array);
+        return !empty($result) ? $result[0] : ['AyB' => 0, 'Alimentos' => 0, 'Bebidas' => 0, 'totalClientes' => 0];
     }
 
 
@@ -179,6 +195,42 @@ class mdl extends CRUD {
             'totalGeneral' => 0,
             'totalGralAyB' => 0,
             'totalHabitaciones' => 0
+        ];
+    }
+
+    function ingresosPorRango($array){
+
+        $query = "
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            {$this->bd}soft_folio
+            INNER JOIN {$this->bd}soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        ";
+
+        $sql = $this->_Read($query, $array);
+
+        return !empty($sql) ? $sql[0] : [
+            'totalHospedaje' => 0,
+            'totalAyB' => 0,
+            'totalAlimentos' => 0,
+            'totalBebidas' => 0,
+            'totalDiversos' => 0,
+            'totalGeneral' => 0,
+            'totalGralAyB' => 0,
+            'totalHabitaciones' => 0,
+            'totalDias' => 0
         ];
     }
 

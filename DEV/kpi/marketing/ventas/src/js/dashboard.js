@@ -439,6 +439,20 @@ class Dashboard extends Templates {
             .append($("<h2>", { class: "text-lg font-bold", text: opts.title }))
             .append($("<p>", { class: "text-sm text-gray-500", text: opts.subtitle }));
 
+        // Validar si hay datos
+        if (!opts.data || opts.data.length === 0) {
+            const emptyMessage = $("<div>", { 
+                class: "flex flex-col items-center justify-center py-8 text-gray-400"
+            })
+            .append($("<i>", { class: "fas fa-inbox text-4xl mb-3" }))
+            .append($("<p>", { class: "text-lg font-semibold", text: "No hay información disponible" }))
+            .append($("<p>", { class: "text-sm", text: "No se encontraron datos para el período seleccionado" }));
+            
+            container.append(header, emptyMessage);
+            $("#" + opts.parent).html(container);
+            return;
+        }
+
         // Lista
         const list = $("<div>", { class: "space-y-3" });
 
@@ -539,6 +553,43 @@ class Dashboard extends Templates {
         }
     }
 
+    generateYearOptions() {
+        const currentYear = moment().year();
+        const years = [];
+
+        for (let i = 1; i < 3; i++) {
+            const year = currentYear - i;
+            years.push({
+                id: year,
+                valor: year.toString()
+            });
+        }
+
+        return years;
+    }
+
+    initDateRangePicker() {
+        const startDate = moment().startOf("month");
+        const endDate = moment();
+
+        $("#iptDateRange").daterangepicker({
+            startDate: startDate,
+            endDate: endDate,
+            ranges: {
+                "Mes Actual": [moment().startOf("month"), moment()],
+                "Última semana": [moment().subtract(7, "days"), moment()],
+                "Últimas 2 semanas": [moment().subtract(14, "days"), moment()],
+                "Últimas 3 semanas": [moment().subtract(21, "days"), moment()],
+                "Últimas 4 semanas": [moment().subtract(28, "days"), moment()],
+                "Mes Anterior": [moment().subtract(1, "month").startOf("month"), moment().subtract(1, "month").endOf("month")],
+                "Año actual": [moment().startOf("year"), moment()],
+                "Año anterior": [moment().subtract(1, "year").startOf("year"), moment().subtract(1, "year").endOf("year")]
+            }
+        }, (start, end) => {
+            this.renderDashboard();
+        });
+    }
+
 
 }
 
@@ -552,20 +603,6 @@ class FinanceDashboard extends Dashboard {
         this.layout();
     }
 
-    generateYearOptions() {
-        const currentYear = moment().year();
-        const years = [];
-        
-        for (let i = 0; i < 5; i++) {
-            const year = currentYear - i;
-            years.push({
-                id: year,
-                valor: year.toString()
-            });
-        }
-        
-        return years;
-    }
 
     layout() {
 
@@ -613,7 +650,7 @@ class FinanceDashboard extends Dashboard {
                     ]
                 },
                 { type: "grafico", id: "ventasDiasSemana", title: "Ventas por Día de la Semana" },
-                { type: "grafico", id: "Tendencia", title: "Tendencia de Ventas" },
+                { type: "grafico", id: "Tendencia", title: "Tendencia de Ventas diaria " },
 
 
             ]
@@ -684,11 +721,10 @@ class FinanceDashboard extends Dashboard {
                     onchange: `dashboard.renderDashboard()`,
                 },
                 {
-                    opc: "div",
-                    id: "dateRangePicker",
+                    opc: "input-calendar",
+                    id: "iptDateRange",
                     lbl: "Período de consulta",
-                    class: "col-sm-4",
-                    html: `<input type="text" id="iptDateRange" class="form-control" />`
+                    class: "col-sm-3",
                 },
                 {
                     opc: "select",
@@ -702,187 +738,111 @@ class FinanceDashboard extends Dashboard {
         });
     }
 
-    initDateRangePicker() {
-        const startDate = moment().subtract(7, "days");
-        const endDate = moment().subtract(1, "days");
-
-        $("#iptDateRange").daterangepicker({
-            startDate: startDate,
-            endDate: endDate,
-            ranges: {
-                "Última semana": [moment().subtract(7, "days"), moment().subtract(1, "days")],
-                "Últimas 2 semanas": [moment().subtract(14, "days"), moment().subtract(1, "days")],
-                "Últimas 3 semanas": [moment().subtract(21, "days"), moment().subtract(1, "days")],
-                "Últimas 4 semanas": [moment().subtract(28, "days"), moment().subtract(1, "days")],
-                "Mes Actual": [moment().startOf("month"), moment().subtract(1, "days")],
-                "Mes Anterior": [moment().subtract(1, "month").startOf("month"), moment().subtract(1, "month").endOf("month")],
-                "Año actual": [moment().startOf("year"), moment().subtract(1, "days")],
-                "Año anterior": [moment().subtract(1, "year").startOf("year"), moment().subtract(1, "year").endOf("year")]
-            }
-        }, (start, end) => {
-            this.renderDashboard();
-        });
-    }
-
+  
     async renderDashboard() {
-        try {
-            this.handleCategoryChange($('#idFilterBar #udn').val());
+      
+            const unidad_negocio = $('#filterBar #udn').val();
+            let   rangePicker    = getDataRangePicker("iptDateRange");
+         
+            const yearBase       = parseInt($('#filterBar #yearComparison').val());
+            const fi             = rangePicker.fi;
+            const ff             = rangePicker.ff;
 
-            const udn = $('#filterBar #udn').val();
-            if (!udn) {
-                console.warn('UDN no seleccionada');
-                return;
-            }
-
-            const dateRangeText = $('#iptDateRange').val();
-            if (!dateRangeText || dateRangeText.trim() === '') {
-                console.error('Rango de fechas inválido');
-                alert({
-                    icon: "error",
-                    text: "Por favor selecciona un rango de fechas válido"
-                });
-                return;
-            }
-
-            const yearComparison = $('#filterBar #yearComparison').val();
+            const fiBase         = moment(fi).year(yearBase).format('YYYY-MM-DD');
+            const ffBase         = moment(ff).year(yearBase).format('YYYY-MM-DD');
             
-            const [startDateStr, endDateStr] = dateRangeText.split(' - ');
-            const startDate = moment(startDateStr, 'MM/DD/YYYY');
-            const endDate = moment(endDateStr, 'MM/DD/YYYY');
-            
-            if (!startDate.isValid() || !endDate.isValid()) {
-                console.error('Formato de fecha inválido');
-                alert({
-                    icon: "error",
-                    text: "Formato de fecha inválido. Por favor selecciona un rango válido."
-                });
-                return;
-            }
+            let   mkt            = await useFetch({
+                url: api_dashboard,
+                data: {
+                    opc   : "apiPromediosDiarios",
+                    udn   : unidad_negocio,
+                    fi    : fi,
+                    ff    : ff,
+                    fiBase: fiBase,
+                    ffBase: ffBase,
+                },
+            });
 
-            if (startDate.isAfter(endDate)) {
-                alert({
-                    icon: "error",
-                    text: "La fecha de inicio debe ser anterior a la fecha de fin"
-                });
-                return;
-            }
-            
-            const fi = startDate.format('YYYY-MM-DD');
-            const ff = endDate.format('YYYY-MM-DD');
-            const anio1 = startDate.year();
-            const mes1 = startDate.month() + 1;
-            const anio2 = parseInt(yearComparison);
-            const mes2 = mes1;
+            this.showCards(mkt.dashboard);
 
-        let mkt = await useFetch({
-            url: api_dashboard,
-            data: {
-                opc: "apiPromediosDiarios",
-                udn: udn,
-                fi: fi,
-                ff: ff,
-                anio1: anio1,
-                mes1: mes1,
-                anio2: anio2,
-                mes2: mes2,
-            },
-        });
+      
 
-        let ventas = await useFetch({
-            url: api,
-            data: {
-                opc: "apiPromediosDiarios",
-                udn: udn,
-                fi: fi,
-                ff: ff,
-                anio1: anio1,
-                mes1: mes1,
-                anio2: anio2,
-                mes2: mes2,
-            },
-        });
+        this.renderRankingTop(mkt.topWeek)
 
 
 
-        // init Cards.
 
-        this.showCards(mkt.dashboard);
+            // this.barChart({
+            //     parent: 'containerChequePro',
+            //     id: 'chartComparativo',
+            //     title: 'Comparativa de Cheque Promedio por Categoría',
+            //     labels: mkt.barras.labels,
+            //     dataA: mkt.barras.A,
+            //     dataB: mkt.barras.B,
+            //     yearA: moment(fiBase).year(),
+            //     yearB: moment(fi).year(),
+            //     type: "price"
+            // });
 
-        // Graficos cheque promedio.
+            this.linearChart({
+                parent: "barProductMargen",
+                id: "chartLinear",
+                title: `📈 Ventas Diarias del Período`,
+                data: mkt.linear
+            });
 
-        this.layoutDailyAverageCheck();
-        this.layoutChequePromedio();
+         
+          
+       
 
-        // Graficos ventas.
-
-        this.chequeComparativo({
-            data: mkt.barras.dataset,
-            anioA: anio2,
-            anioB: anio1,
-        });
-
-        // Grafico Linear.
-        this.comparativaIngresosDiarios({ data: ventas.linear });
+            // this.topChequePromedioSemanal({
+            //     parent: "rankingChequePromedio",
+            //     title: "💰 Ranking Cheque Promedio Semanal",
+            //     subtitle: "Cheque promedio por día de la semana",
+            //     data: mkt.topWeekCheque
+            // });
 
        
-        this.ventasPorDiaSemana(ventas.barDays);
-
-
-        this.topDiasSemana({
-            parent: "Tendencia",
-            title: "📊 Ranking por Promedio Semanal",
-            subtitle: "Promedio de ventas por día de la semana en el mes seleccionado",
-            data: ventas.topWeek
-        });
-
-        this.topChequePromedioSemanal({
-            parent: "rankingChequePromedio",
-            title: "💰 Ranking Cheque Promedio Semanal",
-            subtitle: "Promedio de cheque por día de la semana en el mes seleccionado",
-            data: mkt.topWeekCheque || []
-        });
-
-        this.renderClientesPorSemana();
-
-        } catch (error) {
-            console.error('Error al cargar dashboard:', error);
-            alert({
-                icon: "error",
-                title: "Error",
-                text: "No se pudieron cargar los datos del dashboard. Por favor intenta nuevamente."
-            });
-        }
     }
 
     showGraphicsCategory(category) {
         if (category === 'sales') {
-            // Mostrar gráficos de ventas
             $('#containerChequePro').show();
             $('#barProductMargen1').show();
             $('#ventasDiasSemana').show();
             $('#Tendencia').show();
-            // Ocultar gráficos de cheque promedio
             $('#clientesPorSemana').hide();
             $('#linearChequePromedio').hide();
             $('#dailyAverageCheck').hide();
             $('#rankingChequePromedio').hide();
           
         } else if (category === 'daily') {
-            // Mostrar gráficos de cheque promedio
-            $('#linearChequePromedio').show();
-            $('#dailyAverageCheck').show();
-            $('#rankingChequePromedio').show();
-            $('#clientesPorSemana').show();
-
-            // Ocultar gráficos de ventas
             $('#containerChequePro').hide();
             $('#barProductMargen1').hide();
             $('#ventasDiasSemana').hide();
             $('#Tendencia').hide();
+            $('#clientesPorSemana').show();
+            $('#linearChequePromedio').show();
+            $('#dailyAverageCheck').show();
+            $('#rankingChequePromedio').show();
         }
     }
 
-    // Cards.
+    layoutDailyAverageCheck() {
+        this.createfilterBar({
+            parent: `filterBarDailyAverageCheck`,
+            data: [
+                {
+                    opc: "select",
+                    id: "category",
+                    lbl: "Categorías",
+                    class: "col-sm-4",
+                    onchange: `dashboard.renderDailyAverageCheck()`,
+                },
+            ],
+        });
+    }
+
     showCards(data) {
         this.infoCard({
             parent: "cardDashboard",
@@ -1355,6 +1315,20 @@ class FinanceDashboard extends Dashboard {
             yearA: mkt.yearA,
             yearB: mkt.yearB,
             type: "number"
+        });
+    }
+
+    // Ranking por promedio semanal.
+    renderRankingTop(data){
+        const periodoConsulta = $('#iptDateRange').val();
+        let rangePicker = getDataRangePicker("iptDateRange");
+        const mesAnio = moment(rangePicker.fi).format('MMMM [del] YYYY');
+
+        this.topDiasSemana({
+            parent: "Tendencia",
+            title: `📊 Ranking por Promedio Semanal ${mesAnio}`,
+            subtitle: `Promedio de ventas por día de la semana del ${periodoConsulta}`,
+            data: data
         });
     }
 
