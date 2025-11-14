@@ -552,6 +552,21 @@ class FinanceDashboard extends Dashboard {
         this.layout();
     }
 
+    generateYearOptions() {
+        const currentYear = moment().year();
+        const years = [];
+        
+        for (let i = 0; i < 5; i++) {
+            const year = currentYear - i;
+            years.push({
+                id: year,
+                valor: year.toString()
+            });
+        }
+        
+        return years;
+    }
+
     layout() {
 
         this.dashboardComponent({
@@ -647,6 +662,7 @@ class FinanceDashboard extends Dashboard {
 
 
         setTimeout(() => {
+            this.initDateRangePicker();
             this.renderDashboard();
             this.showGraphicsCategory('sales');
         }, 500);
@@ -669,68 +685,102 @@ class FinanceDashboard extends Dashboard {
                 },
                 {
                     opc: "div",
-                    id: "containerPeriodo1",
-                    lbl: "Consultar con:",
-                    class: "col-lg-3 col-sm-4",
-                    html: `
-                        <input 
-                            type="month" 
-                            id="periodo1" 
-                            class="form-control"
-                            style="width: 100%; min-width: 100%; display: block;"
-                            onchange="dashboard.renderDashboard()"
-                        />
-                    `
+                    id: "dateRangePicker",
+                    lbl: "Período de consulta",
+                    class: "col-sm-4",
+                    html: `<input type="text" id="iptDateRange" class="form-control" />`
                 },
                 {
-                    opc: "div",
-                    id: "containerPeriodo2",
-                    lbl: "Comparar con:",
-                    class: "col-lg-3 col-sm-4 ",
-                    html: `
-                        <input 
-                            type="month" 
-                            id="periodo2" 
-                            class="form-control"
-                            onchange="dashboard.renderDashboard()"
-                        />
-                    `
-                },
+                    opc: "select",
+                    id: "yearComparison",
+                    lbl: "Comparar con año",
+                    class: "col-sm-3",
+                    data: this.generateYearOptions(),
+                    onchange: `dashboard.renderDashboard()`
+                }
             ],
         });
+    }
 
-        const currentYear = moment().year();
-        const currentMonth = moment().month() + 1;
-        const lastYear = currentYear - 1;
+    initDateRangePicker() {
+        const startDate = moment().subtract(7, "days");
+        const endDate = moment().subtract(1, "days");
 
-        const periodo1 = `${currentYear}-${String(currentMonth).padStart(2, '0')}`;
-        const periodo2 = `${lastYear}-${String(currentMonth).padStart(2, '0')}`;
-
-        $('#containerPeriodo1').removeClass('col-lg-3 col-sm-4');
-        $('#containerPeriodo2').removeClass('col-lg-3 col-sm-4');
-
-        setTimeout(() => {
-            $(`#filterBar #periodo1`).val(periodo1);
-            $(`#filterBar #periodo2`).val(periodo2);
-        }, 100);
+        $("#iptDateRange").daterangepicker({
+            startDate: startDate,
+            endDate: endDate,
+            ranges: {
+                "Última semana": [moment().subtract(7, "days"), moment().subtract(1, "days")],
+                "Últimas 2 semanas": [moment().subtract(14, "days"), moment().subtract(1, "days")],
+                "Últimas 3 semanas": [moment().subtract(21, "days"), moment().subtract(1, "days")],
+                "Últimas 4 semanas": [moment().subtract(28, "days"), moment().subtract(1, "days")],
+                "Mes Actual": [moment().startOf("month"), moment().subtract(1, "days")],
+                "Mes Anterior": [moment().subtract(1, "month").startOf("month"), moment().subtract(1, "month").endOf("month")],
+                "Año actual": [moment().startOf("year"), moment().subtract(1, "days")],
+                "Año anterior": [moment().subtract(1, "year").startOf("year"), moment().subtract(1, "year").endOf("year")]
+            }
+        }, (start, end) => {
+            this.renderDashboard();
+        });
     }
 
     async renderDashboard() {
+        try {
+            this.handleCategoryChange($('#idFilterBar #udn').val());
 
-        this.handleCategoryChange($('#idFilterBar #udn').val());
+            const udn = $('#filterBar #udn').val();
+            if (!udn) {
+                console.warn('UDN no seleccionada');
+                return;
+            }
 
+            const dateRangeText = $('#iptDateRange').val();
+            if (!dateRangeText || dateRangeText.trim() === '') {
+                console.error('Rango de fechas inválido');
+                alert({
+                    icon: "error",
+                    text: "Por favor selecciona un rango de fechas válido"
+                });
+                return;
+            }
 
-        let udn           = $('#filterBar #udn').val();
-        let periodo1      = $('#filterBar #periodo1').val();
-        let [anio1, mes1] = periodo1.split('-');
-        let periodo2      = $('#filterBar #periodo2').val();
-        let [anio2, mes2] = periodo2.split('-');
+            const yearComparison = $('#filterBar #yearComparison').val();
+            
+            const [startDateStr, endDateStr] = dateRangeText.split(' - ');
+            const startDate = moment(startDateStr, 'MM/DD/YYYY');
+            const endDate = moment(endDateStr, 'MM/DD/YYYY');
+            
+            if (!startDate.isValid() || !endDate.isValid()) {
+                console.error('Formato de fecha inválido');
+                alert({
+                    icon: "error",
+                    text: "Formato de fecha inválido. Por favor selecciona un rango válido."
+                });
+                return;
+            }
+
+            if (startDate.isAfter(endDate)) {
+                alert({
+                    icon: "error",
+                    text: "La fecha de inicio debe ser anterior a la fecha de fin"
+                });
+                return;
+            }
+            
+            const fi = startDate.format('YYYY-MM-DD');
+            const ff = endDate.format('YYYY-MM-DD');
+            const anio1 = startDate.year();
+            const mes1 = startDate.month() + 1;
+            const anio2 = parseInt(yearComparison);
+            const mes2 = mes1;
 
         let mkt = await useFetch({
             url: api_dashboard,
             data: {
                 opc: "apiPromediosDiarios",
                 udn: udn,
+                fi: fi,
+                ff: ff,
                 anio1: anio1,
                 mes1: mes1,
                 anio2: anio2,
@@ -743,6 +793,8 @@ class FinanceDashboard extends Dashboard {
             data: {
                 opc: "apiPromediosDiarios",
                 udn: udn,
+                fi: fi,
+                ff: ff,
                 anio1: anio1,
                 mes1: mes1,
                 anio2: anio2,
@@ -765,8 +817,8 @@ class FinanceDashboard extends Dashboard {
 
         this.chequeComparativo({
             data: mkt.barras.dataset,
-            anioA: mkt.barras.anioA,
-            anioB: mkt.barras.anioB,
+            anioA: anio2,
+            anioB: anio1,
         });
 
         // Grafico Linear.
@@ -792,7 +844,14 @@ class FinanceDashboard extends Dashboard {
 
         this.renderClientesPorSemana();
 
-
+        } catch (error) {
+            console.error('Error al cargar dashboard:', error);
+            alert({
+                icon: "error",
+                title: "Error",
+                text: "No se pudieron cargar los datos del dashboard. Por favor intenta nuevamente."
+            });
+        }
     }
 
     showGraphicsCategory(category) {
