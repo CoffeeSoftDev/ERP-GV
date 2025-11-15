@@ -3,7 +3,7 @@
 	EL CRUD (Create, READ, UPDATE Y DELETE) se ha establecido en este archivo,
 	para facilitar el llamado de las diferentes Querys a la base de datos
 */
-require('_Conect.php');
+require('_Conect2.php');
 
 class CRUD extends Conection {
 /* Función CUD (Create, Update y Delete)
