@@ -603,7 +603,6 @@ class FinanceDashboard extends Dashboard {
         this.layout();
     }
 
-
     layout() {
 
         this.dashboardComponent({
@@ -658,21 +657,7 @@ class FinanceDashboard extends Dashboard {
 
         this.filterBar();
 
-        this.createfilterBar({
-            parent: `filterBarProductMargen`,
-            data: [
-                {
-                    opc: "select",
-                    id: "category",
-                    lbl: "Categorias",
-                    class: "col-sm-4",
-                    // data:,
-                    onchange: `dashboard.comparativaByCategory()`,
-                },
-
-            ],
-        });
-
+   
         this.tabLayout({
             parent: `CategoryDashboard`,
             id: `tabs${this.PROJECT_NAME}`,
@@ -701,6 +686,7 @@ class FinanceDashboard extends Dashboard {
         setTimeout(() => {
             this.initDateRangePicker();
             this.renderDashboard();
+          
             this.showGraphicsCategory('sales');
         }, 500);
 
@@ -736,11 +722,26 @@ class FinanceDashboard extends Dashboard {
                 }
             ],
         });
+
+        this.createfilterBar({
+            parent: `filterBarProductMargen`,
+            data: [
+                {
+                    opc: "select",
+                    id: "category",
+                    lbl: "Categorias",
+                    class: "col-sm-4",
+                    // data:,
+                    onchange: `dashboard.comparativaByCategory()`,
+                },
+
+            ],
+        });
     }
 
   
     async renderDashboard() {
-      
+            this.handleCategoryChange($('#idFilterBar #udn').val());
             const unidad_negocio = $('#filterBar #udn').val();
             let   rangePicker    = getDataRangePicker("iptDateRange");
          
@@ -763,45 +764,27 @@ class FinanceDashboard extends Dashboard {
                 },
             });
 
+            console.log(mkt)
+
             this.showCards(mkt.dashboard);
 
-      
+    
+        // Graficos ventas (Ingresos).
+
+        this.renderComparativeSales({
+            parent: 'containerChequePro',
+            data  : mkt.barras.dataset,
+            anioA : mkt.barras.anioA,
+            anioB : mkt.barras.anioB,
+        });
+
+        this.comparativaByCategory()
+
+        this.ventasPorDiaSemana(mkt.barDays);
 
         this.renderRankingTop(mkt.topWeek)
 
-
-
-
-            // this.barChart({
-            //     parent: 'containerChequePro',
-            //     id: 'chartComparativo',
-            //     title: 'Comparativa de Cheque Promedio por Categoría',
-            //     labels: mkt.barras.labels,
-            //     dataA: mkt.barras.A,
-            //     dataB: mkt.barras.B,
-            //     yearA: moment(fiBase).year(),
-            //     yearB: moment(fi).year(),
-            //     type: "price"
-            // });
-
-            this.linearChart({
-                parent: "barProductMargen",
-                id: "chartLinear",
-                title: `📈 Ventas Diarias del Período`,
-                data: mkt.linear
-            });
-
-         
-          
-       
-
-            // this.topChequePromedioSemanal({
-            //     parent: "rankingChequePromedio",
-            //     title: "💰 Ranking Cheque Promedio Semanal",
-            //     subtitle: "Cheque promedio por día de la semana",
-            //     data: mkt.topWeekCheque
-            // });
-
+        // Graficos cheque Promedio.
        
     }
 
@@ -1046,7 +1029,7 @@ class FinanceDashboard extends Dashboard {
     }
 
     // graphigs.
-    chequeComparativo(options) {
+    renderComparativeSales(options) {
         const defaults = {
             parent: "containerChequePro",
             id: "chart",
@@ -1061,18 +1044,19 @@ class FinanceDashboard extends Dashboard {
         const opts = Object.assign({}, defaults, options);
         const isPrice = opts.type === "price";
 
-        const periodo1 = $('#filterBar #periodo1').val();
-        const [anio1, mesNum1] = periodo1.split('-');
-        const mes1 = moment().month(parseInt(mesNum1) - 1).format('MMMM');
-
-        const periodo2 = $('#filterBar #periodo2').val();
-        const [anio2, mesNum2] = periodo2.split('-');
-        const mes2 = moment().month(parseInt(mesNum2) - 1).format('MMMM');
+        const rangePicker = getDataRangePicker("iptDateRange");
+        const startDate = moment(rangePicker.fi);
+        
+        const anio1 = opts.anioB;
+        const mes1 = startDate.format('MMMM');
+        
+        const anio2 = opts.anioA;
+        const mes2 = startDate.format('MMMM');
 
         const container = $("<div>", { class: opts.class });
         const title = $("<h2>", {
             class: "text-lg font-bold mb-2",
-            text: `Comparativa: ${mes1} ${anio1} vs ${mes2} ${anio2}`
+            text: `Comparativa ventas: (${mes2} ${anio2}) vs (${mes1}-${anio1})`
         });
         const canvasWrapper = $("<div>", {
             class: "w-full",
@@ -1095,12 +1079,12 @@ class FinanceDashboard extends Dashboard {
                 labels: opts.data.labels,
                 datasets: [
                     {
-                        label: `${mes2} ${anio2}`,
+                        label: `${anio2} (Comparación)`,
                         data: opts.data.B,
                         backgroundColor: "#8CC63F"
                     },
                     {
-                        label: `${mes1} ${anio1}`,
+                        label: `${anio1} (Actual)`,
                         data: opts.data.A,
                         backgroundColor: "#103B60"
                     },
@@ -1163,18 +1147,18 @@ class FinanceDashboard extends Dashboard {
     }
 
     comparativaIngresosDiarios(options) {
-        let periodo1 = $('#filterBar #periodo1').val();
-        let [anio1, mesNum1] = periodo1.split('-');
-        let mes1 = moment().month(parseInt(mesNum1) - 1).format('MMMM');
-
-        let periodo2 = $('#filterBar #periodo2').val();
-        let [anio2, mesNum2] = periodo2.split('-');
-        let mes2 = moment().month(parseInt(mesNum2) - 1).format('MMMM');
+        const rangePicker = getDataRangePicker("iptDateRange");
+        const yearComparison = parseInt($('#filterBar #yearComparison').val());
+        const startDate = moment(rangePicker.fi);
+        
+        const anio1 = startDate.year();
+        const anio2 = yearComparison;
+        const mes = startDate.format('MMMM');
 
         this.linearChart({
             parent: "barProductMargen",
             id: "chartLine",
-            title: `📈 Comparativa de ventas :  ${mes2} ${anio2}  vs ${mes1} ${anio1} `,
+            title: `📈 Comparativa de ventas: ${mes}-${anio1} vs ${mes}-${anio2}`,
             data: options.data
         });
 
@@ -1190,27 +1174,30 @@ class FinanceDashboard extends Dashboard {
     }
 
     async comparativaByCategory() {
-        let udn = $('#filterBar #udn').val();
-        let periodo1 = $('#filterBar #periodo1').val();
-        let [anio1, mes1] = periodo1.split('-');
-        let periodo2 = $('#filterBar #periodo2').val();
-        let [anio2, mes2] = periodo2.split('-');
+        const udn = $('#filterBar #udn').val();
+        const rangePicker = getDataRangePicker("iptDateRange");
+        const yearBase = parseInt($('#filterBar #yearComparison').val());
+        
+        const fi = rangePicker.fi;
+        const ff = rangePicker.ff;
+        
+        const fiBase = moment(fi).year(yearBase).format('YYYY-MM-DD');
+        const ffBase = moment(ff).year(yearBase).format('YYYY-MM-DD');
 
-        let name_category = $('#filterBarProductMargen #category option:selected').text();
+        const name_category = $('#filterBarProductMargen #category option:selected').text();
 
         let mkt = await useFetch({
-            url: api,
+            url: api_dashboard,
             data: {
                 opc: "comparativaByCategory",
                 udn: udn,
-                category: name_category ,
-                anio1: anio1,
-                mes1: mes1,
-                anio2: anio2,
-                mes2: mes2,
+                category: name_category,
+                fi: fi,
+                ff: ff,
+                fiBase: fiBase,
+                ffBase: ffBase,
             },
         });
-
 
         this.linearChart({
             parent: "barProductMargen",
@@ -1337,17 +1324,17 @@ class FinanceDashboard extends Dashboard {
     // auxiliar.
 
     getFilterDate() {
-        let periodo1 = $('#filterBar #periodo1').val();
-        let [year1, month1] = periodo1.split('-');
-
-        let periodo2 = $('#filterBar #periodo2').val();
-        let [year2, month2] = periodo2.split('-');
+        const rangePicker = getDataRangePicker("iptDateRange");
+        const yearComparison = parseInt($('#filterBar #yearComparison').val());
+        const startDate = moment(rangePicker.fi);
 
         return {
-            year1,
-            month1,
-            year2,
-            month2
+            year1: startDate.year(),
+            month1: startDate.month() + 1,
+            year2: yearComparison,
+            month2: startDate.month() + 1,
+            fi: rangePicker.fi,
+            ff: rangePicker.ff
         };
     }
 }

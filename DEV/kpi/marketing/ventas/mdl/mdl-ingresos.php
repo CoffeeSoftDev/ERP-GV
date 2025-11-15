@@ -20,7 +20,7 @@ class mdl extends CRUD {
             SELECT idUDN AS id, UDN AS valor
             FROM udn
             WHERE Stado = 1 AND idUDN NOT IN (8, 10, 7)
-            ORDER BY UDN ASC
+            ORDER BY idUDN desc
         ";
         return $this->_Read($query, null);
     }
@@ -29,10 +29,8 @@ class mdl extends CRUD {
         $query = "
             SELECT idUDN AS id, UDN AS valor
             FROM udn
-            WHERE Stado = 1 AND idUDN NOT IN (6,8,10,7)
-            ORDER BY 
-                CASE WHEN idUDN = 1 THEN 1 ELSE 0 END ASC,
-                UDN ASC
+            WHERE Stado = 1 AND idUDN NOT IN (8, 10, 7)
+            ORDER BY idUDN ASC
         ";
         return $this->_Read($query, null);
     }

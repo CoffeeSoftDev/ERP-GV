@@ -9,8 +9,8 @@ class mdl extends CRUD {
     public $util;
 
     function __construct() {
-        $this->bd  = "_rfwsmqex_gvsl_finanzas.";
-        $this->bd2 = "_rfwsmqex_gvsl_finanzas.";
+        $this->bd  = "rfwsmqex_gvsl_finanzas.";
+        $this->bd2 = "rfwsmqex_gvsl_finanzas.";
 
         $this->util = new Utileria();
     }
@@ -20,7 +20,7 @@ class mdl extends CRUD {
             SELECT idUDN AS id, UDN AS valor
             FROM udn
             WHERE Stado = 1 AND idUDN NOT IN (8, 10, 7)
-            ORDER BY UDN DESC
+            ORDER BY idUDN ASC
         ";
         return $this->_Read($query, null);
     }
@@ -30,7 +30,7 @@ class mdl extends CRUD {
             SELECT idUDN AS id, UDN AS valor
             FROM udn
             WHERE Stado = 1 AND idUDN NOT IN (1,6,8, 10, 7)
-            ORDER BY UDN asc
+            ORDER BY UDN DESC
         ";
         return $this->_Read($query, null);
     }
@@ -82,6 +82,11 @@ class mdl extends CRUD {
             SUM(V.AyB) as AyB,
             SUM(V.alimentos) as Alimentos,
             SUM(V.bebidas) as Bebidas,
+            SUM(V.guarniciones) as Guarniciones,
+            SUM(V.domicilio) as Domicilio,
+            SUM(V.Diversos) as Diversos,
+            SUM(V.sales) as Sales,
+            SUM(V.Hospedaje) as Hospedaje,
             SUM(V.noHabitaciones) as totalClientes
             FROM {$this->bd}soft_restaurant_ventas V
             JOIN {$this->bd}soft_folio F ON V.soft_folio = F.id_folio
@@ -89,7 +94,17 @@ class mdl extends CRUD {
             AND DATE(F.fecha_folio) BETWEEN ? AND ?
         ";
         $result = $this->_Read($query, $array);
-        return !empty($result) ? $result[0] : ['AyB' => 0, 'Alimentos' => 0, 'Bebidas' => 0, 'totalClientes' => 0];
+        return !empty($result) ? $result[0] : [
+            'AyB' => 0,
+            'Alimentos' => 0,
+            'Bebidas' => 0,
+            'Guarniciones' => 0,
+            'Domicilio' => 0,
+            'Diversos' => 0,
+            'Sales' => 0,
+            'Hospedaje' => 0,
+            'totalClientes' => 0
+        ];
     }
 
 

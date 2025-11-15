@@ -260,6 +260,67 @@ class ctrl extends mdl {
         }
     }
 
+    // Graficos Ventas.
+
+    
+    function comparativaByCategory() {
+        $udn = $_POST['udn'];
+        $fi = $_POST['fi'];
+        $ff = $_POST['ff'];
+        $fiBase = $_POST['fiBase'];
+        $ffBase = $_POST['ffBase'];
+        $categoria = strtolower(trim($_POST['category'] ?? 'todas'));
+
+        $yearActual = date('Y', strtotime($fi));
+        $yearBase = date('Y', strtotime($fiBase));
+
+        $datosActual = $this->apiIngresosTotalesByRange($udn, $fi, $ff, $categoria);
+        $datosBase = $this->apiIngresosTotalesByRange($udn, $fiBase, $ffBase, $categoria);
+
+        $labels = array_map(function ($d) {
+            return date('d', strtotime($d['fecha']));
+        }, $datosActual);
+
+        $tooltips = array_map(function ($d) {
+            return formatSpanishDay($d['fecha']) . ' ' . date('d', strtotime($d['fecha']));
+        }, $datosActual);
+
+        $valuesActual = array_map(fn($d) => floatval($d['total'] ?? 0), $datosActual);
+        $valuesBase = array_map(fn($d) => floatval($d['total'] ?? 0), $datosBase);
+
+        return [
+            'labels'  => $labels,
+            'tooltip' => $tooltips,
+            'datasets' => [
+                [
+                    'label' => $yearBase,
+                    'data'  => $valuesBase,
+                    'borderColor' => "#8CC63F",
+                    'backgroundColor' => "rgba(140, 198, 63, 0.2)",
+                    'fill' => true,
+                    'tension' => 0.3,
+                    'pointRadius' => 4,
+                    'pointBackgroundColor' => "#8CC63F"
+                ],
+                [
+                    'label' => $yearActual,
+                    'data'  => $valuesActual,
+                    'borderColor' => "#103B60",
+                    'backgroundColor' => "rgba(16, 59, 96, 0.2)",
+                    'fill' => true,
+                    'tension' => 0.3,
+                    'pointRadius' => 4,
+                    'pointBackgroundColor' => "#103B60"
+                ]
+            ]
+        ];
+    }
+
+
+
+
+
+
 
     // Graficos cheque promedio.
     function apiIngresosTotales($udn, $anio, $mes) {
@@ -365,7 +426,120 @@ class ctrl extends mdl {
             $fi->modify('+1 day');
         }
 
-        return ['data' => $__row];
+        return $__row;
+    }
+
+    function apiIngresosTotalesByRange($udn, $fi, $ff, $categoria) {
+        $fechaInicio = new DateTime($fi);
+        $fechaFin = new DateTime($ff);
+
+        $__row = [];
+        $idRow = 0;
+        
+        $categoriaSeleccionada = strtolower(trim($categoria));
+
+        while ($fechaInicio <= $fechaFin) {
+            $idRow++;
+            $fecha = $fechaInicio->format('Y-m-d');
+
+            $softVentas = $this->getsoftVentas([$udn, $fecha]);
+
+            if ($softVentas === null) {
+                $softVentas = [
+                    'id_venta'       => null,
+                    'noHabitaciones' => 0,
+                    'Hospedaje'      => 0,
+                    'AyB'            => 0,
+                    'Diversos'       => 0,
+                    'alimentos'      => 0,
+                    'bebidas'        => 0,
+                    'guarniciones'   => 0,
+                    'sales'          => 0,
+                    'domicilio'      => 0
+                ];
+            }
+
+            $row = [
+                'id'    => $idRow,
+                'fecha' => $fecha,
+                'estado' => $softVentas['id_venta'] ? 'Capturado' : 'Pendiente'
+            ];
+
+            if ($udn == 1) {
+                $row['clientes'] = $softVentas['noHabitaciones'];
+                
+                if ($categoriaSeleccionada == 'todas' || $categoriaSeleccionada == '') {
+                    $row['Hospedaje'] = $softVentas['Hospedaje'];
+                    $row['AyB']       = $softVentas['AyB'];
+                    $row['Alimentos'] = $softVentas['Alimentos'];
+                    $row['Bebidas']   = $softVentas['Bebidas'];
+                    $row['Diversos']  = $softVentas['Diversos'];
+                    $row['total']     = $softVentas['Hospedaje'] + $softVentas['AyB'] + $softVentas['Diversos'];
+                } elseif ($categoriaSeleccionada == 'hospedaje') {
+                    $row['Hospedaje'] = $softVentas['Hospedaje'];
+                    $row['total']     = $softVentas['Hospedaje'];
+                } elseif ($categoriaSeleccionada == 'ayb') {
+                    $row['AyB']   = $softVentas['AyB'];
+                    $row['total'] = $softVentas['AyB'];
+                } elseif ($categoriaSeleccionada == 'diversos' ||$categoriaSeleccionada == 'miscelaneos') {
+                    $row['Diversos'] = $softVentas['Diversos'];
+                    $row['total']    = $softVentas['Diversos'];
+                }
+                
+                elseif ($categoriaSeleccionada == 'alimentos') {
+                    $row['alimentos'] = $softVentas['alimentos'];
+                    $row['total']    = $softVentas['alimentos'];
+                }
+                elseif ($categoriaSeleccionada == 'bebidas') {
+                    $row['bebidas'] = $softVentas['bebidas'];
+                    $row['total']   = $softVentas['bebidas'];
+                }
+
+            } elseif ($udn == 5) {
+                $row['clientes'] = $softVentas['noHabitaciones'];
+                
+                if ($categoriaSeleccionada == 'todas' || $categoriaSeleccionada == '') {
+                    $row['alimentos']    = $softVentas['alimentos'];
+                    $row['bebidas']      = $softVentas['bebidas'];
+                    $row['guarniciones'] = $softVentas['guarniciones'];
+                    $row['sales']        = $softVentas['sales'];
+                    $row['domicilio']    = $softVentas['domicilio'];
+                    $row['total']        = $softVentas['alimentos'] + $softVentas['bebidas'] + $softVentas['guarniciones'] + $softVentas['sales'] + $softVentas['domicilio'];
+                } elseif ($categoriaSeleccionada == 'alimentos' || $categoriaSeleccionada == 'cortes') {
+                    $row['alimentos'] = $softVentas['alimentos'];
+                    $row['total']     = $softVentas['alimentos'];
+                } elseif ($categoriaSeleccionada == 'bebidas') {
+                    $row['bebidas'] = $softVentas['bebidas'];
+                    $row['total']   = $softVentas['bebidas'];
+                } elseif ($categoriaSeleccionada == 'guarniciones') {
+                    $row['guarniciones'] = $softVentas['guarniciones'];
+                    $row['total']        = $softVentas['guarniciones'];
+                } elseif ($categoriaSeleccionada == 'sales' || $categoriaSeleccionada == 'sales y condimentos') {
+                    $row['sales'] = $softVentas['sales'];
+                    $row['total'] = $softVentas['sales'];
+                }
+
+            } else {
+                $row['clientes'] = $softVentas['noHabitaciones'];
+                
+                if ($categoriaSeleccionada == 'todas' || $categoriaSeleccionada === '') {
+                    $row['alimentos'] = $softVentas['alimentos'];
+                    $row['bebidas']   = $softVentas['bebidas'];
+                    $row['total']     = $softVentas['alimentos'] + $softVentas['bebidas'];
+                } elseif ($categoriaSeleccionada == 'alimentos') {
+                    $row['alimentos'] = $softVentas['alimentos'];
+                    $row['total']     = $softVentas['alimentos'];
+                } elseif ($categoriaSeleccionada == 'bebidas') {
+                    $row['bebidas'] = $softVentas['bebidas'];
+                    $row['total']   = $softVentas['bebidas'];
+                }
+            }
+
+            $__row[] = $row;
+            $fechaInicio->modify('+1 day');
+        }
+
+        return $__row;
     }
     
     function getDailyCheck() {
@@ -674,7 +848,6 @@ class ctrl extends mdl {
 
         $udn = isset($_POST['udn']) ? (int) $_POST['udn'] : 1;
         
-        // Obtener rangos de fechas
         $fi = isset($_POST['fi']) ? $_POST['fi'] : date('Y-m-d');
         $ff = isset($_POST['ff']) ? $_POST['ff'] : date('Y-m-d');
         $fiBase = isset($_POST['fiBase']) ? $_POST['fiBase'] : date('Y-m-d', strtotime('-1 year'));
@@ -686,23 +859,60 @@ class ctrl extends mdl {
         $yearNow = (int) $fechaActual->format('Y');
         $yearOld = (int) $fechaBase->format('Y');
 
-        // Usar rangos de fechas en lugar de mes/año
         $dataA = $this->getComparativaChequePromedioPorRango([$udn, $fi, $ff]);
         $dataB = $this->getComparativaChequePromedioPorRango([$udn, $fiBase, $ffBase]);
 
-        $dataset = [
-            'labels' => ['A&B', 'Alimentos', 'Bebidas'],
-            'A' => [
-                (float) $dataA['AyB'],
-                (float) $dataA['Alimentos'],
-                (float) $dataA['Bebidas']
-            ],
-            'B' => [
-                (float) $dataB['AyB'],
-                (float) $dataB['Alimentos'],
-                (float) $dataB['Bebidas']
-            ]
-        ];
+        $dataset = [];
+
+        if ($udn == 1) {
+            $dataset = [
+                'labels' => ['Hospedaje', 'A&B', 'Alimentos', 'Bebidas', 'Diversos'],
+                'A' => [
+                    round((float) $dataA['Hospedaje'], 2),
+                    round((float) $dataA['AyB'], 2),
+                    round((float) $dataA['Alimentos'], 2),
+                    round((float) $dataA['Bebidas'], 2),
+                    round((float) $dataA['Diversos'], 2)
+                ],
+                'B' => [
+                    round((float) $dataB['Hospedaje'], 2),
+                    round((float) $dataB['AyB'], 2),
+                    round((float) $dataB['Alimentos'], 2),
+                    round((float) $dataB['Bebidas'], 2),
+                    round((float) $dataB['Diversos'], 2)
+                ]
+            ];
+        } elseif ($udn == 5) {
+            $dataset = [
+                'labels' => ['Alimentos', 'Bebidas', 'Guarniciones', 'Sales', 'Domicilio'],
+                'A' => [
+                    round((float) $dataA['Alimentos'], 2),
+                    round((float) $dataA['Bebidas'], 2),
+                    round((float) $dataA['Guarniciones'], 2),
+                    round((float) $dataA['Sales'], 2),
+                    round((float) $dataA['Domicilio'], 2)
+                ],
+                'B' => [
+                    round((float) $dataB['Alimentos'], 2),
+                    round((float) $dataB['Bebidas'], 2),
+                    round((float) $dataB['Guarniciones'], 2),
+                    round((float) $dataB['Sales'], 2),
+                    round((float) $dataB['Domicilio'], 2)
+                ]
+            ];
+        } else {
+            $dataset = [
+                'labels' => ['Alimentos', 'Bebidas'],
+                'A' => [
+                    round((float) $dataA['Alimentos'], 2),
+                    round((float) $dataA['Bebidas'], 2)
+                ],
+                'B' => [
+                    round((float) $dataB['Alimentos'], 2),
+                    round((float) $dataB['Bebidas'], 2)
+                ]
+            ];
+        }
 
         return [
             'dataset' => $dataset,

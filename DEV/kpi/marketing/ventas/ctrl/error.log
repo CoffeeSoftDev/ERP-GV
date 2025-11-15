@@ -1,3 +1,3383 @@
+[ 2025-11-14 20:28:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 20:28:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 20:28:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 20:28:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 20:28:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 20:28:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 20:28:13 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 20:28:09 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT idVenta as id, Name_Venta as valor FROM _rfwsmqex_gvsl_finanzas.ventas     ORDER BY Name_Venta ASC 
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:21 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:21 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:17 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:17 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:16 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:15 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  INSERT INTO _rfwsmqex_gvsl_finanzas.soft_folio (fecha_folio,id_udn,file_productos_vendidos,file_ventas_dia,monto_productos_vendidos,monto_ventas_dia) VALUES (?,?,?,?,?,?)
+[ ERROR C.U.D. ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:14 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT * FROM _rfwsmqex_gvsl_finanzas.soft_folio   WHERE fecha_folio = ? AND id_udn = ?   
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:11 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:11 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:11 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:11 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:10 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:09 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:09 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:09 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:09 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:09 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:09 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:09 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:08 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:08 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:08 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:08 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:07 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:07 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:07 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT SUM(t.suite) AS total_suites_unicas
+            FROM _rfwsmqex_gvsl_finanzas.turno t
+            WHERE t.fecha_turno = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 19:17:04 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT idVenta as id, Name_Venta as valor FROM _rfwsmqex_gvsl_finanzas.ventas     ORDER BY Name_Venta ASC 
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:02 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:01 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+            SUM(V.AyB) as AyB,
+            SUM(V.alimentos) as Alimentos,
+            SUM(V.bebidas) as Bebidas,
+            SUM(V.noHabitaciones) as totalClientes
+            FROM _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas V
+            JOIN _rfwsmqex_gvsl_finanzas.soft_folio F ON V.soft_folio = F.id_folio
+            WHERE F.id_udn = ?
+            AND DATE(F.fecha_folio) BETWEEN ? AND ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+            SUM(V.AyB) as AyB,
+            SUM(V.alimentos) as Alimentos,
+            SUM(V.bebidas) as Bebidas,
+            SUM(V.noHabitaciones) as totalClientes
+            FROM _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas V
+            JOIN _rfwsmqex_gvsl_finanzas.soft_folio F ON V.soft_folio = F.id_folio
+            WHERE F.id_udn = ?
+            AND DATE(F.fecha_folio) BETWEEN ? AND ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                FORMAT(SUM(F.monto_productos_vendidos), 2, 'es_MX') AS total
+            FROM _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas V
+            JOIN _rfwsmqex_gvsl_finanzas.soft_folio F ON V.soft_folio = F.id_folio
+            WHERE F.fecha_folio = DATE_SUB(CURDATE(), INTERVAL 1 DAY)
+            AND F.id_udn = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:50:00 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:59 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:59 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:59 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:59 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:59 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:59 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:59 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:59 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:45 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:45 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:45 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:44 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                soft_folio.id_folio,
+                soft_folio.fecha_folio,
+                soft_folio.id_udn,
+                alimentos, bebidas, guarniciones, domicilio, sales,
+                id_venta, noHabitaciones, Hospedaje, AyB, Diversos
+            FROM
+                _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas
+                ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+                AND DATE_FORMAT(fecha_folio,'%Y-%m-%d') = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+            SUM(V.AyB) as AyB,
+            SUM(V.alimentos) as Alimentos,
+            SUM(V.bebidas) as Bebidas,
+            SUM(V.noHabitaciones) as totalClientes
+            FROM _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas V
+            JOIN _rfwsmqex_gvsl_finanzas.soft_folio F ON V.soft_folio = F.id_folio
+            WHERE F.id_udn = ?
+            AND DATE(F.fecha_folio) BETWEEN ? AND ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:43 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+            SUM(V.AyB) as AyB,
+            SUM(V.alimentos) as Alimentos,
+            SUM(V.bebidas) as Bebidas,
+            SUM(V.noHabitaciones) as totalClientes
+            FROM _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas V
+            JOIN _rfwsmqex_gvsl_finanzas.soft_folio F ON V.soft_folio = F.id_folio
+            WHERE F.id_udn = ?
+            AND DATE(F.fecha_folio) BETWEEN ? AND ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:42 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                FORMAT(SUM(F.monto_productos_vendidos), 2, 'es_MX') AS total
+            FROM _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas V
+            JOIN _rfwsmqex_gvsl_finanzas.soft_folio F ON V.soft_folio = F.id_folio
+            WHERE F.fecha_folio = DATE_SUB(CURDATE(), INTERVAL 1 DAY)
+            AND F.id_udn = ?
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:42 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:42 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:42 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:42 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:42 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:42 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:42 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:42 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:42 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:42 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:42 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:42 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:42 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
+[ 2025-11-14 18:49:42 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  
+            SELECT
+                SUM(Hospedaje) as totalHospedaje,
+                SUM(AyB) as totalAyB,
+                SUM(alimentos) as totalAlimentos,
+                SUM(bebidas) as totalBebidas,
+                SUM(Diversos) as totalDiversos,
+                (SUM(Hospedaje) + SUM(AyB) + SUM(Diversos)) AS totalGeneral,
+                (SUM(alimentos) + SUM(bebidas) ) AS totalGralAyB,
+                SUM(noHabitaciones) as totalHabitaciones,
+                COUNT(DISTINCT DATE(fecha_folio)) as totalDias
+            FROM
+            _rfwsmqex_gvsl_finanzas.soft_folio
+            INNER JOIN _rfwsmqex_gvsl_finanzas.soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio asc
+        
+[ ERROR READ] :: SQLSTATE[42000]: Syntax error or access violation: 1049 Unknown database '_rfwsmqex_gvsl_finanzas'
+
+
 [ 2025-11-14 16:38:39 ]
 [ UNIX_USR ] :: nt authority\system
 [ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
