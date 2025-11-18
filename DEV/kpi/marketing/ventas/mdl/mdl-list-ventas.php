@@ -3,13 +3,13 @@ require_once '../../../../conf/_CRUD2.php';
 require_once '../../../../conf/_Utileria.php';
 
 
-class mdl extends CRUD {
+class mdlVentas extends CRUD2 {
     protected $util;
     public $bd;
 
     public function __construct() {
         $this->util = new Utileria;
-        $this->bd = "_rfwsmqex_gvsl_finanzas.";
+        $this->bd = "rfwsmqex_gvsl_finanzas.";
     }
 
     function listSales($array) {

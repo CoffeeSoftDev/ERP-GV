@@ -9,8 +9,8 @@ class mdl extends CRUD {
     public $util;
 
     function __construct() {
-        $this->bd  = "_rfwsmqex_gvsl_finanzas.";
-        $this->bd2 = "_rfwsmqex_gvsl_finanzas.";
+        $this->bd  = "rfwsmqex_gvsl_finanzas.";
+        $this->bd2 = "rfwsmqex_gvsl_finanzas.";
 
         $this->util = new Utileria();
     }
@@ -348,5 +348,45 @@ class mdl extends CRUD {
         $sql = $this->_Read($query, $array);
 
         return !empty($sql) ? $sql[0] : null;
+    }
+
+    function getIngresosDayOfWeekByRange($array){
+
+        $query = "
+            SELECT
+                Hospedaje,
+                AyB,
+                Diversos,
+                noHabitaciones,
+                alimentos,
+                bebidas,
+                guarniciones,
+                sales,
+                domicilio,
+                (alimentos + bebidas) as totalGral,
+
+                CASE
+                    WHEN noHabitaciones != 0 THEN alimentos / noHabitaciones
+                    ELSE 0
+                END AS promedio_alimentos,
+
+                CASE
+                    WHEN noHabitaciones != 0 THEN bebidas / noHabitaciones
+                    ELSE 0
+                END AS promedio_bebidas,
+
+                (Hospedaje + AyB + Diversos) as total,
+
+                DATE_FORMAT(fecha_folio,'%Y-%m-%d') as fecha,
+                soft_folio.fecha_folio
+            FROM
+            {$this->bd}soft_folio
+            INNER JOIN {$this->bd}soft_restaurant_ventas ON soft_restaurant_ventas.soft_folio = soft_folio.id_folio
+            WHERE id_udn = ?
+            AND DATE(fecha_folio) BETWEEN ? AND ?
+            ORDER BY fecha_folio ASC
+        ";
+
+       return $this->_Read($query, $array);
     }
 }

@@ -71,28 +71,69 @@ class ctrl extends mdl {
                     $__row[] = [
                         'id'               => $noDias,
                         'fecha'            => $key['fecha'],
-                        'Dia de la semana' => $Days,
-                        'Hospedaje'        => evaluar($key['Hospedaje']),
-                        'AyB'              => evaluar($key['AyB']),
-                        'Diversos'         => evaluar($key['Diversos']),
-                        'No habitaciones'  => $key['noHabitaciones'],
-                        'Total'            => evaluar($key['total']),
+                        'Dia de la semana' => [
+                            'html'  => $Days,
+                            'class' => 'text-center '
+                        ],
+                        'Hospedaje'        => [
+                            'html'  => evaluar($key['Hospedaje']),
+                            'class' => 'text-end '
+                        ],
+                        'AyB'              => [
+                            'html'  => evaluar($key['AyB']),
+                            'class' => 'text-end '
+                        ],
+                        'Diversos'         => [
+                            'html'  => evaluar($key['Diversos']),
+                            'class' => 'text-end '
+                        ],
+                        'No habitaciones'  => [
+                            'html'  => $key['noHabitaciones'],
+                            'class' => 'text-center '
+                        ],
+                        'Total'            => [
+                            'html'  => evaluar($key['total']),
+                            'class' => 'text-end '
+                        ],
                         'opc'              => 0
                     ];
                 } elseif ($_POST['udn'] == 5) {
                     $totalFields['alimentos']    += $key['alimentos'];
                     $totalFields['bebidas']      += $key['bebidas'];
                     $totalFields['complementos'] += $key['complementos'];
-                    $totalFields['total']        += $key['total'];
+                    $totalFields['total']        += $key['total_gral'];
+                    $totalFields['sales']        += $key['sales'];
+                    $totalFields['clientes']     += $key['noHabitaciones'];
 
                     $__row[] = [
                         'id'               => $noDias,
                         'fecha'            => $key['fecha'],
-                        'Dia de la semana' => $Days,
-                        'alimentos'        => evaluar($key['alimentos']),
-                        'bebidas'          => evaluar($key['bebidas']),
-                        'complementos'     => evaluar($key['complementos']),
-                        'Total'            => evaluar($key['total']),
+                        'Dia de la semana' => [
+                            'html'  => $Days,
+                            'class' => 'text-center '
+                        ],
+                        'alimentos'        => [
+                            'html'  => evaluar($key['alimentos']),
+                            'class' => 'text-end '
+                        ],
+                        'bebidas'          => [
+                            'html'  => evaluar($key['bebidas']),
+                            'class' => 'text-end '
+                        ],
+                        'complementos'     => [
+                            'html'  => evaluar($key['complementos']),
+                            'class' => 'text-end '
+                        ],
+                        'Sales'     => [
+                            'html'  => evaluar($key['sales']),
+                            'class' => 'text-end '
+                        ],
+                        'No habitaciones'  => ['html'=>$key['noHabitaciones'],'class'=>' text-center '],
+
+                        'Total'            => [
+                            'html'  => evaluar($key['total_gral']),
+                            'class' => 'text-end '
+                        ],
                         'opc'              => 0
                     ];
                 } else {
@@ -104,11 +145,23 @@ class ctrl extends mdl {
                     $__row[] = [
                         'id'               => $noDias,
                         'fecha'            => $key['fecha'],
-                        'Dia de la semana' => $Days,
-                        'alimentos'        => evaluar($key['alimentos']),
-                        'bebidas'          => evaluar($key['bebidas']),
-                        'No habitaciones'  => ['html'=>$key['noHabitaciones'],'class'=>'text-center'],
-                        'total'            => evaluar($key['totalGral']),
+                        'Dia de la semana' => [
+                            'html'  => $Days,
+                            'class' => 'text-center '
+                        ],
+                        'alimentos'        => [
+                            'html'  => evaluar($key['alimentos']),
+                            'class' => 'text-end '
+                        ],
+                        'bebidas'          => [
+                            'html'  => evaluar($key['bebidas']),
+                            'class' => 'text-end '
+                        ],
+                        'No habitaciones'  => ['html'=>$key['noHabitaciones'],'class'=>' text-center '],
+                        'total'            => [
+                            'html'  => evaluar($key['totalGral']),
+                            'class' => 'text-end '
+                        ],
                         'opc'              => 0
                     ];
                 }
@@ -127,11 +180,26 @@ class ctrl extends mdl {
                 'id'               => '',
                 'fecha'            => 'Totales',
                 'Dia de la semana' => '',
-                'Hospedaje'        => evaluar($totalFields['Hospedaje']),
-                'AyB'              => evaluar($totalFields['AyB']),
-                'Diversos'         => evaluar($totalFields['Diversos']),
-                'No habitaciones'  => $totalFields['noHabitaciones'],
-                'Total'            => evaluar($totalFields['total']),
+                'Hospedaje'        => [
+                    'html'  => evaluar($totalFields['Hospedaje']),
+                    'class' => 'text-end '
+                ],
+                'AyB'              => [
+                    'html'  => evaluar($totalFields['AyB']),
+                    'class' => 'text-end '
+                ],
+                'Diversos'         => [
+                    'html'  => evaluar($totalFields['Diversos']),
+                    'class' => 'text-end '
+                ],
+                'No habitaciones'  => [
+                    'html'  => $totalFields['noHabitaciones'],
+                    'class' => 'text-center'
+                ],
+                'Total'            => [
+                    'html'  => evaluar($totalFields['total']),
+                    'class' => 'text-end '
+                ],
                 'opc'              => 1
             ];
         } elseif ($_POST['udn'] == 5) {
@@ -139,10 +207,30 @@ class ctrl extends mdl {
                 'id'               => '',
                 'fecha'            => 'Totales',
                 'Dia de la semana' => '',
-                'alimentos'        => evaluar($totalFields['alimentos']),
-                'bebidas'          => evaluar($totalFields['bebidas']),
-                'complementos'     => evaluar($totalFields['complementos']),
-                'Total'            => evaluar($totalFields['total']),
+                'alimentos'        => [
+                    'html'  => evaluar($totalFields['alimentos']),
+                    'class' => 'text-end '
+                ],
+                'bebidas'          => [
+                    'html'  => evaluar($totalFields['bebidas']),
+                    'class' => 'text-end '
+                ],
+                'complementos'     => [
+                    'html'  => evaluar($totalFields['complementos']),
+                    'class' => 'text-end '
+                ],
+                'sales'     => [
+                    'html'  => evaluar($totalFields['sales']),
+                    'class' => 'text-end '
+                ],
+                'clientes'     => [
+                    'html'  => $totalFields['clientes'],
+                    'class' => 'text-center '
+                ],
+                'Total'            => [
+                    'html'  => evaluar($totalFields['total']),
+                    'class' => 'text-end '
+                ],
                 'opc'              => 1
             ];
         } else {
@@ -150,10 +238,19 @@ class ctrl extends mdl {
                 'id'               => '',
                 'fecha'            => 'Totales',
                 'Dia de la semana' => '',
-                'alimentos'        => evaluar($totalFields['alimentos']),
-                'bebidas'          => evaluar($totalFields['bebidas']),
-                'No habitaciones'  => ['html'=>$totalFields['noHabitaciones'],'class'=>'text-center'],
-                'total'            => evaluar($totalFields['totalGral']),
+                'alimentos'        => [
+                    'html'  => evaluar($totalFields['alimentos']),
+                    'class' => 'text-end '
+                ],
+                'bebidas'          => [
+                    'html'  => evaluar($totalFields['bebidas']),
+                    'class' => 'text-end '
+                ],
+                'No habitaciones'  => ['html'=>$totalFields['noHabitaciones'],'class'=>'text-center '],
+                'total'            => [
+                    'html'  => evaluar($totalFields['totalGral']),
+                    'class' => 'text-end '
+                ],
                 'opc'              => 1
             ];
         }
@@ -227,73 +324,16 @@ class ctrl extends mdl {
                 ];
             }
 
-            $__row[] = array_merge($row, $grupo);
-            $fi->modify('+1 day');
-        }
-
-        return [
-            "row"      => $__row,
-            "thead"    => $this->getSalesTitle(),
-            "frm_head" => "<strong>Conectado a: </strong> {$this->bd}"
-        ];
-    }
-
-    function lsIngresosCaptura2() {
-        $fi = new DateTime($_POST['anio'].'-' . $_POST['mes'] . '-01');
-        $hoy = clone $fi;
-        $hoy->modify('last day of this month');
-
-        $__row = [];
-
-        while ($fi <= $hoy) {
-            $idRow++;
-            $fecha = $fi->format('Y-m-d');
-
-
-            $softVentas = $this->getsoftVentas([$_POST['udn'], $fecha]);
-            $idVentas   = $softVentas['id_venta'];
-
-            $row = [
-                'id'     => $idRow,
-                'fecha'  => $fecha,
-                'dia'    => formatSpanishDay($fecha),
-                'Estado' => $softVentas['id_venta']
-                    ? '<i class="icon-ok-circled-2 text-success"></i>'
-                    : '<i class="icon-info-circled-3 text-orange-500"></i>',
-            ];
-
-            if ($_POST['udn'] == 1) {
-                $total = $softVentas['Hospedaje'] + $softVentas['AyB'] + $softVentas['Diversos'];
-                $grupo = $this->createdGroups(['noHabitaciones', 'Hospedaje', 'AyB', 'Diversos'], $softVentas, $idVentas);
-                $grupo['total'] = evaluar($total);
-                $grupo['opc'] = 0;
-            } elseif ($_POST['udn'] == 5) {
-                $total          = $softVentas['alimentos'] + $softVentas['bebidas'] + $softVentas['guarniciones'] + $softVentas['sales'] + $softVentas['domicilio'];
-                $grupo          = createdGroups(['noHabitaciones', 'alimentos', 'bebidas', 'guarniciones', 'sales', 'domicilio'], $softVentas, $idVentas);
-                $grupo['total'] = evaluar($total);
-                $grupo['opc']   = 0;
-
-            } else {
-                $grupo = [
-                     'No habitaciones' => createElement('input', [
-                        'name' => 'noHabitaciones',
-                        'value' => $softVentas['noHabitaciones'],
-                        'onkeyup' => "ingresosDiarios.setVentas(event, $idVentas)"
-                    ]),
-                    'alimentos' => createElement('input', [
-                        'name' => 'alimentos',
-                        'value' => number_format($softVentas['alimentos'], 2, '.', ''),
-                        'onkeyup' => "ingresosDiarios.setVentas(event, $idVentas)"
-                    ]),
-                    'bebidas' => createElement('input', [
-                        'name' => 'bebidas',
-                        'value' => number_format($softVentas['bebidas'], 2, '.', ''),
-                        'onkeyup' => "ingresosDiarios.setVentas(event, $idVentas)"
-                    ]),
-
-                    'Total' => evaluar($softVentas['bebidas'] + $softVentas['alimentos']),
-                    'opc' => 0
+            if ($softVentas['id_venta']) {
+                $row['a'] = [
+                    [
+                        'class'   => 'btn btn-sm btn-primary',
+                        'html'    => '<i class="icon-pencil"></i>',
+                        'onclick' => 'sales.editSale(' . $softVentas['id_venta'] . ')'
+                    ]
                 ];
+            } else {
+                $row['a'] = [];
             }
 
             $__row[] = array_merge($row, $grupo);
@@ -301,8 +341,8 @@ class ctrl extends mdl {
         }
 
         return [
-            "row" => $__row,
-            "thead" => $this->getSalesTitle(),
+            "row"      => $__row,
+            "thead"    => $this->getSalesTitle(),
             "frm_head" => "<strong>Conectado a: </strong> {$this->bd}"
         ];
     }
@@ -414,7 +454,8 @@ class ctrl extends mdl {
         ];
     }
 
-   
+    // Comparativas mensuales.
+
 
     function comparativaByCategory() {
         $anioNow = $_POST['anio1'];
@@ -1485,6 +1526,94 @@ class ctrl extends mdl {
 
 
 
+    // Edición de ventas
+
+    function getSale() {
+        $id = $_POST['id'];
+        $status = 404;
+        $message = 'Registro no encontrado';
+        $data = null;
+
+        $sale = $this->getSaleById([$id]);
+
+        if ($sale) {
+            $status = 200;
+            $message = 'Registro encontrado';
+            $data = $sale;
+        }
+
+        return [
+            'status' => $status,
+            'message' => $message,
+            'data' => $data
+        ];
+    }
+
+    function editSale() {
+        $id = $_POST['id'];
+        $status = 500;
+        $message = 'Error al actualizar el registro';
+
+        $noHabitaciones = floatval($_POST['noHabitaciones'] ?? 0);
+        if ($noHabitaciones < 0) {
+            return [
+                'status' => 400,
+                'message' => 'El número de habitaciones/clientes no puede ser negativo'
+            ];
+        }
+
+        $udn = $_POST['udn'] ?? 1;
+        if ($udn == 1) {
+            $total = floatval($_POST['Hospedaje'] ?? 0) +
+                     floatval($_POST['AyB'] ?? 0) +
+                     floatval($_POST['Diversos'] ?? 0);
+        } elseif ($udn == 5) {
+            $total = floatval($_POST['alimentos'] ?? 0) +
+                     floatval($_POST['bebidas'] ?? 0) +
+                     floatval($_POST['guarniciones'] ?? 0) +
+                     floatval($_POST['sales'] ?? 0) +
+                     floatval($_POST['domicilio'] ?? 0);
+        } else {
+            $total = floatval($_POST['alimentos'] ?? 0) +
+                     floatval($_POST['bebidas'] ?? 0);
+        }
+
+        $values = [
+            'noHabitaciones' => $noHabitaciones,
+            'total' => $total,
+          
+        ];
+
+        if ($udn == 1) {
+            $values['Hospedaje'] = floatval($_POST['Hospedaje'] ?? 0);
+            $values['AyB'] = floatval($_POST['AyB'] ?? 0);
+            $values['Diversos'] = floatval($_POST['Diversos'] ?? 0);
+        } elseif ($udn == 5) {
+            $values['alimentos'] = floatval($_POST['alimentos'] ?? 0);
+            $values['bebidas'] = floatval($_POST['bebidas'] ?? 0);
+            $values['guarniciones'] = floatval($_POST['guarniciones'] ?? 0);
+            $values['sales'] = floatval($_POST['sales'] ?? 0);
+            $values['domicilio'] = floatval($_POST['domicilio'] ?? 0);
+        } else {
+            $values['alimentos'] = floatval($_POST['alimentos'] ?? 0);
+            $values['bebidas'] = floatval($_POST['bebidas'] ?? 0);
+        }
+
+        $values['id'] = $id;
+
+        $update = $this->updateSale($this->util->sql($values, 1));
+
+        if ($update) {
+            $status = 200;
+            $message = 'Registro actualizado correctamente';
+        }
+
+        return [
+            'status' => $status,
+            'message' => $message
+        ];
+    }
+
     // Aux.
 
     function get_th_ingresos() {
@@ -1492,21 +1621,21 @@ class ctrl extends mdl {
             case 1:
                 return ['Fecha', 'Dia', 'Hospedaje', 'AYB', 'DIVERSOS', 'No. Habitaciones', 'Total'];
             case 5:
-                return ['Fecha', 'Dia', 'Alimentos', 'Bebidas', 'Complementos', 'Total'];
+                return ['Fecha', 'Dia', 'Alimentos', 'Bebidas', 'Complementos','Sales y cond.','Clientes', 'Total'];
             default:
                 return ['Fecha', 'Dia', 'Alimentos', 'Bebidas', 'Clientes', 'Total'];
         }
 
     }
 
-     function getSalesTitle() {
+    function getSalesTitle() {
         switch ($_POST['udn']) {
             case 1:
-                return ['Fecha', 'Dia', 'Estado', 'No. Habitaciones','Hospedaje', 'AYB', 'DIVERSOS', 'Total'];
+                return ['Fecha', 'Dia', 'Estado', 'No. Habitaciones','Hospedaje', 'AYB', 'DIVERSOS', 'Total',''];
             case 5:
-                return ['Fecha', 'Dia', 'Estado','Clientes','Alimentos', 'Bebidas', 'Guarniciones','Sales', 'Domicilio','Total'];
+                return ['Fecha', 'Dia', 'Estado','Clientes','Alimentos', 'Bebidas', 'Guarniciones','Sales', 'Domicilio','Total',''];
             default:
-                return ['Fecha', 'Dia', 'Estado', 'Clientes','Alimentos', 'Bebidas', 'Total'];
+                return ['Fecha', 'Dia', 'Estado', 'Clientes','Alimentos', 'Bebidas', 'Total',''];
         }
 
     }

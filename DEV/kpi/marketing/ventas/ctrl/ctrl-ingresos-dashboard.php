@@ -108,6 +108,8 @@ class ctrl extends mdl {
             'data'          => $response,
             'meses'         => $meses,
             'dashboard'     => $this->apiDashBoard($response, $udn),
+            'barDays'       => $this->apiIngresosComparativoSemana(),
+
             'barras'        => $this->comparativaChequePromedio(),
             'linear'        => $this->apiLinearPromediosDiarioRango($fi, $ff, $udn),
             'topWeek'       => $this->apiTopDiasSemanaPromedioRango($fi, $ff, $udn),
@@ -313,6 +315,71 @@ class ctrl extends mdl {
                     'pointBackgroundColor' => "#103B60"
                 ]
             ]
+        ];
+    }
+
+    public function apiIngresosComparativoSemana($fi = null, $ff = null, $fiBase = null, $ffBase = null, $udn = null) {
+    
+        $fi     = $fi     ?? (isset($_POST['fi'])     ? $_POST['fi']     : date('Y-m-d'));
+        $ff     = $ff     ?? (isset($_POST['ff'])     ? $_POST['ff']     : date('Y-m-d'));
+        $fiBase = $fiBase ?? (isset($_POST['fiBase']) ? $_POST['fiBase'] : date('Y-m-d', strtotime('-1 year')));
+        $ffBase = $ffBase ?? (isset($_POST['ffBase']) ? $_POST['ffBase'] : date('Y-m-d', strtotime('-1 year')));
+        $udn    = $udn    ?? (isset($_POST['udn'])    ? (int) $_POST['udn'] : 1);
+
+        $yearActual = date('Y', strtotime($fi));
+        $yearBase = date('Y', strtotime($fiBase));
+
+        // Período actual
+        $apiA = $this->apiResumenIngresosPorRango($udn, $fi, $ff);
+        $totalesA = [];
+        $conteosA = [];
+        foreach ($apiA['data'] as $row) {
+            $dia = $row['dia'];
+            if (!isset($totalesA[$dia])) {
+                $totalesA[$dia] = 0;
+                $conteosA[$dia] = 0;
+            }
+            $totalesA[$dia] += $row['total'];
+            $conteosA[$dia]++;
+        }
+
+        // Período base
+        $apiB = $this->apiResumenIngresosPorRango($udn, $fiBase, $ffBase);
+        $totalesB = [];
+        $conteosB = [];
+        foreach ($apiB['data'] as $row) {
+            $dia = $row['dia'];
+            if (!isset($totalesB[$dia])) {
+                $totalesB[$dia] = 0;
+                $conteosB[$dia] = 0;
+            }
+            $totalesB[$dia] += $row['total'];
+            $conteosB[$dia]++;
+        }
+
+        // Etiquetas en orden fijo
+        $labels = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+        $dataA  = [];
+        $dataB  = [];
+
+        foreach ($labels as $dia) {
+            $promedioA = isset($conteosA[$dia]) && $conteosA[$dia] > 0 
+                ? $totalesA[$dia] / $conteosA[$dia] 
+                : 0;
+            $promedioB = isset($conteosB[$dia]) && $conteosB[$dia] > 0 
+                ? $totalesB[$dia] / $conteosB[$dia] 
+                : 0;
+                
+            $dataA[] = round($promedioA, 2);
+            $dataB[] = round($promedioB, 2);
+        }
+
+        return [
+            'labels' => $labels,
+            'dataA'  => $dataA,
+            'dataB'  => $dataB,
+            'yearA'  => $yearBase,
+            'yearB'  => $yearActual
         ];
     }
 
@@ -544,17 +611,20 @@ class ctrl extends mdl {
     
     function getDailyCheck() {
         $udn      = $_POST['udn']    ?? null;
-        $anio1    = $_POST['anio1']  ?? date('Y');
-        $mes1     = $_POST['mes1']   ?? date('m');
-        $anio2    = $_POST['anio2']  ?? date('Y') - 1;
-        $mes2     = $_POST['mes2']   ?? date('m');
+        $fi       = $_POST['fi']     ?? date('Y-m-d');
+        $ff       = $_POST['ff']     ?? date('Y-m-d');
+        $fiBase   = $_POST['fiBase'] ?? date('Y-m-d', strtotime('-1 year'));
+        $ffBase   = $_POST['ffBase'] ?? date('Y-m-d', strtotime('-1 year'));
         $category = strtolower(trim($_POST['category'] ?? 'todas'));
 
-        $apiActual   = $this->apiIngresosTotales($udn, $anio1, $mes1);
-        $apiAnterior = $this->apiIngresosTotales($udn, $anio2, $mes2);
+        $yearActual = date('Y', strtotime($fi));
+        $yearBase = date('Y', strtotime($fiBase));
 
-        $rowsActual   = $apiActual['data'] ?? [];
-        $rowsAnterior = $apiAnterior['data'] ?? [];
+        $apiActual   = $this->apiIngresosTotalesByRange($udn, $fi, $ff, $category);
+        $apiAnterior = $this->apiIngresosTotalesByRange($udn, $fiBase, $ffBase, $category);
+
+        $rowsActual   = $apiActual ?? [];
+        $rowsAnterior = $apiAnterior ?? [];
 
         // Días en español
         $diasES = [
@@ -627,8 +697,8 @@ class ctrl extends mdl {
             'labels'  => $labels,
             'dataA'   => $dataA,
             'dataB'   => $dataB,
-            'yearA'   => intval($anio2),
-            'yearB'   => intval($anio1),
+            'yearA'   => intval($yearBase),
+            'yearB'   => intval($yearActual),
             'api'     => [
                 'actual'   => $apiActual,
                 'anterior' => $apiAnterior
@@ -651,10 +721,12 @@ class ctrl extends mdl {
         if ($udn == 1):
             $consultas = [
                 'totalGeneral'      => 'Suma de ingresos',
-                'totalHospedaje'    => 'ingreso de Hospedaje',
+                'totalHospedaje'    => 'Hospedaje',
+                'totalAlimentos'    => 'Alimentos',
+                'totalBebidas'      => 'Bebidas',
                 'totalAyB'          => 'ingreso AyB',
-                'totalDiversos'     => 'ingreso Diversos',
-                'totalHabitaciones' => 'Habitaciones',
+                'totalDiversos'     => 'Miscelaneos',
+                'totalHabitaciones' => 'Clientes',
                 'group'             => '',
                 'porcAgrupacion'          => '% Ocupacion',
                 'tarifaEfectiva'          => 'Tarifa efectiva acumulada',
@@ -767,7 +839,7 @@ class ctrl extends mdl {
         $dataA = [];
         $dataB = [];
         $nombre = '';
-        $yearA = $_POST['anio'] ?? date('Y');
+        $yearA = $_POST['anio'] ;
         $yearB = $yearA - 1;
 
         $clientesData = [];
@@ -819,14 +891,16 @@ class ctrl extends mdl {
         $labels = array_reverse($labels);
         $dataA = array_reverse($dataA);
         $dataB = array_reverse($dataB);
-
+        $rango =  $_POST['rango'];
         return [
-            'title'  => "Comparativa Anual de Cheque Promedio ( $nombre ) ",
+            'title'  => "Comparativa Anual de Cheque Promedio ( $concepto ) ",
+            'subtitle' => "Rango de consulta  $rango  meses ",
             'labels' => $labels,
             'dataA'  => $dataB,
             'dataB'  => $dataA,
             'yearA'  => intval($yearB),
-            'yearB'  => intval($yearA)
+            'yearB'  => intval($yearA),
+            'endpoint'=>$res
         ];
     }
 
@@ -838,7 +912,7 @@ class ctrl extends mdl {
 
         return[
             'dataset' => $grafica,
-            'range'   => $response,
+           
             'concepto' => $concepto
         ];
     }
@@ -1308,6 +1382,71 @@ class ctrl extends mdl {
         ];
     }
 
+    public function apiResumenIngresosPorRango($udn = null, $fi = null, $ff = null) {
+        $rows = [];
+        $udn = $udn ?? (isset($_POST['udn']) ? (int) $_POST['udn'] : 1);
+        $fi  = $fi  ?? (isset($_POST['fi'])  ? $_POST['fi']  : date('Y-m-d'));
+        $ff  = $ff  ?? (isset($_POST['ff'])  ? $_POST['ff']  : date('Y-m-d'));
+
+        $diasSemana = [
+            1 => 'Lunes',
+            2 => 'Martes',
+            3 => 'Miércoles',
+            4 => 'Jueves',
+            5 => 'Viernes',
+            6 => 'Sábado',
+            7 => 'Domingo'
+        ];
+
+        $lsDays = $this->getIngresosDayOfWeekByRange([$udn, $fi, $ff]);
+
+        foreach ($lsDays as $item) {
+            $fechaObj = new DateTime($item['fecha']);
+            $diaNum   = (int)$fechaObj->format('N');
+            $dayName  = $diasSemana[$diaNum];
+
+            if ($udn == 1) {
+                $rows[] = [
+                    'id'        => $diaNum,
+                    'fecha'     => $item['fecha'],
+                    'dia'       => $dayName,
+                    'Hospedaje' => $item['Hospedaje'],
+                    'AyB'       => $item['AyB'],
+                    'Diversos'  => $item['Diversos'],
+                    'clientes'  => $item['noHabitaciones'],
+                    'total'     => $item['total']
+                ];
+            } elseif ($udn == 5) {
+                $rows[] = [
+                    'id'          => $diaNum,
+                    'fecha'       => $item['fecha'],
+                    'dia'         => $dayName,
+                    'alimentos'   => $item['alimentos'],
+                    'bebidas'     => $item['bebidas'],
+                    'guarniciones'=> $item['guarniciones'],
+                    'sales'       => $item['sales'],
+                    'domicilio'   => $item['domicilio'],
+                    'total'       => $item['total']
+                ];
+            } else {
+                $rows[] = [
+                    'id'        => $diaNum,
+                    'fecha'     => $item['fecha'],
+                    'dia'       => $dayName,
+                    'alimentos' => $item['alimentos'],
+                    'bebidas'   => $item['bebidas'],
+                    'clientes'  => $item['noHabitaciones'],
+                    'total'     => $item['totalGral'] ?? $item['total']
+                ];
+            }
+        }
+
+        return [
+            'status' => 200,
+            'data'   => $rows
+        ];
+    }
+
     public function apiTopDiasSemanaPromedio($anio = null, $mes = null, $udn = null) {
         $anio = $anio ?? (isset($_POST['anio']) ? (int) $_POST['anio'] : date('Y'));
         $mes  = $mes  ?? (isset($_POST['mes'])  ? (int) $_POST['mes']  : date('m'));
@@ -1437,17 +1576,20 @@ class ctrl extends mdl {
     }
 
     function getClientesPorSemana() {
-        $udn   = $_POST['udn']   ?? null;
-        $anio1 = $_POST['anio1'] ?? date('Y');
-        $mes1  = $_POST['mes1']  ?? date('m');
-        $anio2 = $_POST['anio2'] ?? date('Y') - 1;
-        $mes2  = $_POST['mes2']  ?? date('m');
+        $udn    = $_POST['udn']    ?? 1;
+        $fi     = $_POST['fi']     ?? date('Y-m-d');
+        $ff     = $_POST['ff']     ?? date('Y-m-d');
+        $fiBase = $_POST['fiBase'] ?? date('Y-m-d', strtotime('-1 year'));
+        $ffBase = $_POST['ffBase'] ?? date('Y-m-d', strtotime('-1 year'));
 
-        $apiActual   = $this->apiIngresosTotales($udn, $anio1, $mes1);
-        $apiAnterior = $this->apiIngresosTotales($udn, $anio2, $mes2);
+        $yearActual = date('Y', strtotime($fi));
+        $yearBase = date('Y', strtotime($fiBase));
 
-        $rowsActual   = $apiActual['data'] ?? [];
-        $rowsAnterior = $apiAnterior['data'] ?? [];
+        $apiActual   = $this->apiIngresosTotalesByRange($udn, $fi, $ff, 'todas');
+        $apiAnterior = $this->apiIngresosTotalesByRange($udn, $fiBase, $ffBase, 'todas');
+
+        $rowsActual   = $apiActual ?? [];
+        $rowsAnterior = $apiAnterior ?? [];
 
         $diasES = [
             'Monday'    => 'Lunes',
@@ -1496,8 +1638,8 @@ class ctrl extends mdl {
             'labels'  => $labels,
             'dataA'   => $dataA,
             'dataB'   => $dataB,
-            'yearA'   => intval($anio2),
-            'yearB'   => intval($anio1)
+            'yearA'   => intval($yearBase),
+            'yearB'   => intval($yearActual)
         ];
     }
 
