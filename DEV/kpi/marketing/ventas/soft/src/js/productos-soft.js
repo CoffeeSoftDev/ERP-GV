@@ -1,6 +1,8 @@
 let apiProductos = 'ctrl/ctrl-productos-soft.php';
 let app, lsudn, lsgrupos;
 
+let concentrado;
+
 $(async () => {
     const data = await useFetch({ url: apiProductos, data: { opc: "init" } });
     lsudn = data.udn;
@@ -8,6 +10,10 @@ $(async () => {
 
     app = new ProductosSoft(apiProductos, "root");
     app.render();
+
+    concentrado = new Concentrado(apiProductos,'');
+    concentrado.render();
+
 });
 
 class ProductosSoft extends Templates {
@@ -20,10 +26,11 @@ class ProductosSoft extends Templates {
         this.layout();
         this.filterBarProductos();
         this.loadGruposByUdn();
-        this.lsProductos();
+        // this.lsProductos();
     }
 
     layout() {
+
         this.primaryLayout({
             parent: "root",
             id: this.PROJECT_NAME,
@@ -50,13 +57,14 @@ class ProductosSoft extends Templates {
                 {
                     id: "list-productos",
                     tab: "Productos Soft",
-                    active: true,
+                 
                     onClick: () => this.lsProductos()
                 },
                 {
                     id: "concentrado-productos",
                     tab: "Concentrado por Periodos",
-                    onClick: () => this.lsConcentrado()
+                    active: true,
+                    onClick: () => concentrado.lsConcentrado()
                 },
                 {
                     id: "grupos-homologacion",
@@ -70,6 +78,7 @@ class ProductosSoft extends Templates {
     }
 
     filterBarProductos() {
+
         const currentYear = moment().year();
         const currentMonth = moment().month() + 1;
 
@@ -113,9 +122,9 @@ class ProductosSoft extends Templates {
             ],
         });
 
-        setTimeout(() => {
-            $(`#filterBar${this.PROJECT_NAME} #mes`).val(currentMonth).trigger("change");
-        }, 100);
+        // setTimeout(() => {
+        //     $(`#filterBar${this.PROJECT_NAME} #mes`).val(currentMonth).trigger("change");
+        // }, 100);
     }
 
     async loadGruposByUdn() {
@@ -132,7 +141,6 @@ class ProductosSoft extends Templates {
                 }
             });
 
-            console.log('📦 Respuesta del servidor:', response);
 
             if (response && response.status === 200 && response.grupos) {
                 const grupoSelect = $(`#filterBar${this.PROJECT_NAME} #grupo`);
@@ -192,148 +200,7 @@ class ProductosSoft extends Templates {
         });
     }
 
-    // Tab concentrado. 
-
-    filterBarConcentrado() {
-        const currentYear = moment().year();
-        const currentMonth = moment().month() + 1;
-
-        $("#container-concentrado-productos").html(`
-            <div id="filterBarConcentrado" class="mb-3"></div>
-            <div id="tableConcentrado"></div>
-        `);
-
-        this.createfilterBar({
-            parent: "filterBarConcentrado",
-            data: [
-                {
-                    opc: "select",
-                    id: "udnConcentrado",
-                    lbl: "Unidad de Negocio",
-                    class: "col-sm-2",
-                    data: lsudn,
-                    onchange: `app.loadGruposConcentrado()`,
-                },
-                {
-                    opc: "select",
-                    id: "grupoConcentrado",
-                    lbl: "Grupo de Producto",
-                    class: "col-sm-2",
-                    onchange: `app.lsConcentrado()`,
-                },
-                {
-                    opc: "select",
-                    id: "anioConcentrado",
-                    lbl: "Año",
-                    class: "col-sm-2",
-                    data: Array.from({ length: 5 }, (_, i) => {
-                        const year = currentYear - i;
-                        return { id: year, valor: year.toString() };
-                    }),
-                    onchange: `app.lsConcentrado()`,
-                },
-                {
-                    opc: "select",
-                    id: "mesConcentrado",
-                    lbl: "Mes",
-                    class: "col-sm-2",
-                    data: moment.months().map((m, i) => ({ id: i + 1, valor: m })),
-                    onchange: `app.lsConcentrado()`,
-                },
-                {
-                    opc: "select",
-                    id: "periodo",
-                    lbl: "Periodo",
-                    class: "col-sm-2",
-                    data: [
-                        { id: '3', valor: '3 Meses' },
-                        { id: '6', valor: '6 Meses' },
-                        { id: '9', valor: '9 Meses' }
-                    ],
-                    onchange: `app.lsConcentrado()`,
-                }
-            ],
-        });
-
-        setTimeout(() => {
-            $("#filterBarConcentrado #mesConcentrado").val(currentMonth).trigger("change");
-        }, 100);
-    }
-
-    async loadGruposConcentrado() {
-        const udn = $("#filterBarConcentrado #udnConcentrado").val();
-        
-        try {
-            const response = await useFetch({
-                url: this._link,
-                data: {
-                    opc: 'getGruposByUdn',
-                    udn: udn
-                }
-            });
-
-            if (response && response.status === 200 && response.grupos) {
-                const grupoSelect = $("#filterBarConcentrado #grupoConcentrado");
-                grupoSelect.empty();
-                
-                grupoSelect.append($('<option>', {
-                    value: 'all',
-                    text: 'Todos los grupos'
-                }));
-
-                if (response.grupos.length > 0) {
-                    response.grupos.forEach(grupo => {
-                        grupoSelect.append($('<option>', {
-                            value: grupo.id,
-                            text: grupo.valor
-                        }));
-                    });
-                } else {
-                    grupoSelect.append($('<option>', {
-                        value: '',
-                        text: 'No hay grupos disponibles'
-                    }));
-                }
-
-                grupoSelect.val('all');
-                this.lsConcentrado();
-            } else {
-                console.error('Error al cargar grupos:', response);
-            }
-        } catch (error) {
-            console.error('Error en loadGruposConcentrado:', error);
-        }
-    }
-
-
-    lsConcentrado() {
-        if (!$("#filterBarConcentrado").length) {
-            this.filterBarConcentrado();
-        }
-
-        setTimeout(() => {
-            this.createTable({
-                parent: "tableConcentrado",
-                idFilterBar: "filterBarConcentrado",
-                data: { 
-                    opc: 'lsConcentrado'
-                },
-                conf: { datatable: false, pag: 50 },
-                attr: {
-                    id     : "tbConcentrado",
-                    theme  : 'corporativo',
-                    extends: true,
-                    striped: false,
-                    f_size : 11
-                },
-            });
-        }, 100);
-    }
-
-
-
-
-
+ 
     headerBar(options) {
         const defaults = {
             parent: "root",
@@ -364,7 +231,7 @@ class ProductosSoft extends Templates {
         const centerSection = $("<div>", {
             class: "text-center"
         }).append(
-            $("<h2>", {
+            $("<label>", {
                 class: "text-2xl font-bold text-[#103B60]",
                 text: opts.title
             }),
@@ -376,6 +243,7 @@ class ProductosSoft extends Templates {
 
         container.append(leftSection, centerSection);
         $(`#${opts.parent}`).prepend(container);
+
     }
 
     redirectToHome() {
@@ -383,38 +251,7 @@ class ProductosSoft extends Templates {
         window.location.href = `${base}/kpi/marketing.php`;
     }
 
-    async renderGruposHomologacion() {
-        const container = $("#container-grupos-homologacion");
-        container.html(`
-            <div id="filterBarGrupos" class="mb-3"></div>
-            <div id="contentGrupos"></div>
-        `);
-
-        this.createfilterBar({
-            parent: "filterBarGrupos",
-            data: [
-                {
-                    opc: "select",
-                    id: "udnGrupos",
-                    lbl: "Unidad de Negocio",
-                    class: "col-sm-3",
-                    data: lsudn,
-                    onchange: "app.loadGruposCards()"
-                },
-                {
-                    opc: "button",
-                    id: "btnVolverGrupos",
-                    text: "Volver a Grupos",
-                    class: "col-sm-2 d-none",
-                    onClick: () => this.loadGruposCards()
-                }
-            ]
-        });
-
-        setTimeout(() => {
-            this.loadGruposCards();
-        }, 100);
-    }
+ 
 
     async loadGruposCards() {
         const udn = $("#filterBarGrupos #udnGrupos").val();
@@ -533,6 +370,360 @@ class ProductosSoft extends Templates {
             });
         }
     }
+}
+
+class Concentrado extends Templates {
+    constructor(link, div_modulo) {
+        super(link, div_modulo);
+        this.PROJECT_NAME = "Concentrado";
+    }
+
+    render(){
+
+        this.filterBarConcentrado();
+        this.loadGruposConcentrado();
+        
+
+        setTimeout(() => {
+            this.lsConcentrado();
+        }, 100);
+
+    }
+
+    // Tab concentrado. 
+
+    filterBarConcentrado() {
+        const currentYear = moment().year();
+        const currentMonth = moment().month() + 1;
+
+        $("#container-concentrado-productos").html(`
+            <div id="filterBarConcentrado" class="mb-3"></div>
+            <div id="tableConcentrado"></div>
+        `);
+
+        this.createfilterBar({
+            parent: "filterBarConcentrado",
+            data: [
+                {
+                    opc: "select",
+                    id: "udnConcentrado",
+                    lbl: "Unidad de Negocio",
+                    class: "col-sm-2",
+                    data: lsudn,
+                    onchange: `concentrado.loadGruposConcentrado()`,
+                },
+                {
+                    opc: "select",
+                    id: "grupoConcentrado",
+                    lbl: "Grupo de Producto",
+                    class: "col-sm-2",
+                    onchange: `concentrado.lsConcentrado()`,
+                },
+                {
+                    opc: "select",
+                    id: "anioConcentrado",
+                    lbl: "Año",
+                    class: "col-sm-2",
+                    data: Array.from({ length: 5 }, (_, i) => {
+                        const year = currentYear - i;
+                        return { id: year, valor: year.toString() };
+                    }),
+                    onchange: `concentrado.lsConcentrado()`,
+                },
+                {
+                    opc: "select",
+                    id: "mesConcentrado",
+                    lbl: "Mes",
+                    class: "col-sm-2",
+                    data: moment.months().map((m, i) => ({ id: i + 1, valor: m })),
+                    onchange: `concentrado.lsConcentrado()`,
+                },
+                {
+                    opc: "select",
+                    id: "periodo",
+                    lbl: "Periodo",
+                    class: "col-sm-2",
+                    data: [
+                        { id: '3', valor: '3 Meses' },
+                        { id: '6', valor: '6 Meses' },
+                        { id: '9', valor: '9 Meses' }
+                    ],
+                    onchange: `concentrado.lsConcentrado()`,
+                }
+            ],
+        });
+
+        // setTimeout(() => {
+        //     $("#filterBarConcentrado #mesConcentrado").val(currentMonth).trigger("change");
+        // }, 100);
+    }
+
+    async loadGruposConcentrado() {
+        const udn = $("#filterBarConcentrado #udnConcentrado").val();
+
+        const response = await useFetch({
+            url: this._link,
+            data: {
+                opc: 'getGruposByUdn',
+                udn: udn
+            }
+        });
+
+        if (response && response.status === 200 && response.grupos) {
+            const grupoSelect = $("#filterBarConcentrado #grupoConcentrado");
+            grupoSelect.empty();
+
+            grupoSelect.append($('<option>', {
+                value: 'all',
+                text: 'Todos los grupos'
+            }));
+
+            if (response.grupos.length > 0) {
+                response.grupos.forEach(grupo => {
+                    grupoSelect.append($('<option>', {
+                        value: grupo.id,
+                        text: grupo.valor
+                    }));
+                });
+            } else {
+                grupoSelect.append($('<option>', {
+                    value: '',
+                    text: 'No hay grupos disponibles'
+                }));
+            }
+        }
+    }
+
+
+    async lsConcentrado() {
+        const response = await useFetch({
+            url: this._link,
+            data: {
+                opc    : 'lsConcentrado',
+                udn    : $("#filterBarConcentrado #udnConcentrado").val(),
+                grupo  : $("#filterBarConcentrado #grupoConcentrado").val(),
+                anio   : $("#filterBarConcentrado #anioConcentrado").val(),
+                mes    : $("#filterBarConcentrado #mesConcentrado").val(),
+                periodo: $("#filterBarConcentrado #periodo").val()
+            }
+        });
+
+
+            this.createConcentradoTable({
+                parent: "tableConcentrado",
+                id: "tbConcentrado",
+                theme: 'corporativo',
+                data: {
+                    thead: response.thead || [],
+                    row: response.row || [],
+                    theadGroups: response.theadGroups || []
+                },
+                f_size: 11,
+                expandable: true
+            });
+     
+    }
+
+    async renderGruposHomologacion() {
+        const container = $("#container-grupos-homologacion");
+        container.html(`
+            <div id="filterBarGrupos" class="mb-3"></div>
+            <div id="contentGrupos"></div>
+        `);
+
+        this.createfilterBar({
+            parent: "filterBarGrupos",
+            data: [
+                {
+                    opc: "select",
+                    id: "udnGrupos",
+                    lbl: "Unidad de Negocio",
+                    class: "col-sm-3",
+                    data: lsudn,
+                    onchange: "app.loadGruposCards()"
+                },
+                {
+                    opc: "button",
+                    id: "btnVolverGrupos",
+                    text: "Volver a Grupos",
+                    class: "col-sm-2 d-none",
+                    onClick: () => this.loadGruposCards()
+                }
+            ]
+        });
+
+        setTimeout(() => {
+            this.loadGruposCards();
+        }, 100);
+    }
+
+
+    // Components.
+    createConcentradoTable(options) {
+        const defaults = {
+            parent: "root",
+            id: "concentradoTable",
+            title: null,
+            subtitle: null,
+            data: { thead: [], row: [], theadGroups: [] },
+            theme: 'dark',
+            color_th: "bg-[#1e3a5f] text-white",
+            color_th_group: "bg-[#1e3a5f] text-white",
+            color_row: "bg-white",
+            color_row_expandable: "bg-gray-50",
+            border_table: "border border-gray-300 rounded-lg",
+            border_row: "border-b border-gray-300",
+            f_size: 11,
+            expandable: true
+        };
+
+        const opts = Object.assign({}, defaults, options);
+
+        const container = $("<div>", {
+            class: "rounded-lg h-full overflow-x-auto"
+        });
+
+        if (opts.title) {
+            const titleRow = $(`
+                <div class="flex flex-col py-3 px-2">
+                    <span class="text-lg font-semibold text-gray-800">${opts.title}</span>
+                    ${opts.subtitle ? `<p class="text-sm text-gray-600 mt-1">${opts.subtitle}</p>` : ''}
+                </div>
+            `);
+            container.append(titleRow);
+        }
+
+        const table = $("<table>", {
+            id: opts.id,
+            class: `w-full border-collapse ${opts.border_table}`
+        });
+
+        const thead = $("<thead>");
+
+        if (opts.data.theadGroups && opts.data.theadGroups.length > 0) {
+            const groupRow = $('<tr>');
+            opts.data.theadGroups.forEach((group, idx) => {
+                const th = $('<th>', {
+                    colspan: group.colspan || 1,
+                    class: `text-center px-3 py-3 font-semibold text-xs ${group.color || opts.color_th_group} border-b border-r border-gray-300`,
+                    text: group.label || ''
+                });
+                if (idx === 0) {
+                    th.addClass('border-l');
+                }
+                groupRow.append(th);
+            });
+            thead.append(groupRow);
+        }
+
+        if (opts.data.thead && opts.data.thead.length > 0) {
+            const headerRow = $('<tr>');
+            opts.data.thead.forEach((header, idx) => {
+                const th = $('<th>', {
+                    class: `text-center px-3 py-2 text-xs font-semibold uppercase ${opts.color_th} border-b border-r border-gray-300`,
+                    text: header
+                });
+                if (idx === 0) {
+                    th.addClass('border-l');
+                }
+                headerRow.append(th);
+            });
+            thead.append(headerRow);
+        } else if (opts.data.row && opts.data.row.length > 0) {
+            const autoHeaderRow = $("<tr>");
+            for (let clave in opts.data.row[0]) {
+                if (!["opc", "id", "expandable", "subrow"].includes(clave)) {
+                    clave = (clave === 'btn' || clave === 'btn_personalizado' || clave === 'a' || clave === 'dropdown') 
+                        ? '<i class="icon-gear"></i>' 
+                        : clave;
+                    autoHeaderRow.append($("<th>", {
+                        class: `px-3 py-2 ${opts.color_th} capitalize text-center font-semibold border-b border-r border-gray-300`,
+                        style: `font-size:${opts.f_size}px;`
+                    }).html(clave));
+                }
+            }
+            thead.append(autoHeaderRow);
+        }
+
+        table.append(thead);
+
+        const tbody = $("<tbody>");
+
+        opts.data.row.forEach((data, i) => {
+            const isExpandable = data.expandable || (data.opc === 1);
+            const isSubrow = data.subrow || false;
+
+            const tr = $("<tr>", {
+                class: `${isSubrow ? 'subrow' : ''} ${isExpandable ? 'expandable-row' : ''}`,
+                'data-parent-id': data.id,
+                'data-row-index': i
+            });
+
+            let colIdx = 0;
+            Object.keys(data).forEach((key) => {
+                if (["id", "opc", "expandable", "subrow"].includes(key)) return;
+
+                let cellAttributes = {
+                    class: `px-3 py-2 border-b border-r border-gray-300`,
+                    style: `font-size:${opts.f_size}px;`
+                };
+
+                if (colIdx === 0) {
+                    cellAttributes.class += ' border-l';
+                }
+
+                if (typeof data[key] === 'object' && data[key] !== null) {
+                    cellAttributes.html = data[key].html || '';
+                    cellAttributes.class += ` ${data[key].class || ''}`;
+                } else {
+                    cellAttributes.html = data[key];
+                    cellAttributes.class += ` ${opts.color_row}`;
+                }
+
+                if (isExpandable && colIdx === 0) {
+                    cellAttributes.class += ' cursor-pointer';
+                    cellAttributes.html = `<span class="inline-flex items-center">
+                        <i class="icon-right-open mr-2 expand-icon text-gray-600"></i>
+                        ${cellAttributes.html}
+                    </span>`;
+                }
+
+                tr.append($("<td>", cellAttributes));
+                colIdx++;
+            });
+
+            tbody.append(tr);
+        });
+
+        table.append(tbody);
+        container.append(table);
+        $(`#${opts.parent}`).html(container);
+
+        if (opts.expandable) {
+            this.setupExpandableConcentrado(opts.id);
+        }
+
+        $("<style>").text(`
+            #${opts.id} { border-collapse: collapse; }
+            #${opts.id} thead tr:first-child th:first-child { border-top-left-radius: 0.5rem; }
+            #${opts.id} thead tr:first-child th:last-child { border-top-right-radius: 0.5rem; }
+            #${opts.id} tbody tr:last-child td:first-child { border-bottom-left-radius: 0.5rem; }
+            #${opts.id} tbody tr:last-child td:last-child { border-bottom-right-radius: 0.5rem; }
+            #${opts.id} tbody tr:last-child td { border-bottom: 1px solid #d1d5db; }
+            #${opts.id} .subrow { display: none; }
+            #${opts.id} .subrow.show { display: table-row; }
+            #${opts.id} .expand-icon { 
+                transition: transform 0.2s ease;
+                display: inline-block;
+            }
+            #${opts.id} .expandable-row.expanded .expand-icon { 
+                transform: rotate(90deg); 
+            }
+        `).appendTo("head");
+    }
+
+
+
 }
 
 

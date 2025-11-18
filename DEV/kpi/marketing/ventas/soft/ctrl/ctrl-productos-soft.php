@@ -64,9 +64,9 @@ class ctrl extends mdlProductosSoft {
         $ls = $this->listProductos($params);
 
         foreach ($ls as $key) {
-            $nombre_costsys = $this->select_homologar(array($key['id']));
-            // $totalEnlaces   = count($nombre_costsys);
-            $totalEnlaces =0;
+
+            $nombre_costsys = $this->select_homologar([$key['id']]);
+            $totalEnlaces   = count($nombre_costsys);
             $enlaces        = [];
 
             foreach ($nombre_costsys as $costsys) {
@@ -76,28 +76,29 @@ class ctrl extends mdlProductosSoft {
             $linkHtml = renderEstadoHomologacion($key['id'], $enlaces, $totalEnlaces);
 
             $__row[] = [
-                'id' => $key['id_Producto'],
+                'id' => $key['id'],
                 'Descripción' => htmlspecialchars($key['descripcion'] ?? '', ENT_QUOTES, 'UTF-8'),
                 'Grupo' => htmlspecialchars($key['grupoproductos'] ?? 'Sin grupo', ENT_QUOTES, 'UTF-8'),
+
                 'Homologación' => [
-                    'html' => $linkHtml,
-                    'class' => 'text-center'
+                    'html'  => $linkHtml,
+                    'class' => 'text-center '
                 ],
                 'Cantidad' => [
                     'html' => number_format($key['cantidad_vendida'] ?? 0, 0, '.', ','),
-                    'class' => 'text-center font-semibold'
+                    'class' => 'text-center font-semibold '
                 ],
                 'Costo' => [
                     'html' => evaluar($key['costo'] ?? 0),
-                    'class' => 'text-end'
+                    'class' => 'text-end '
                 ],
                 'Precio Venta' => [
                     'html' => evaluar($key['precio_venta'] ?? 0),
-                    'class' => 'text-end'
+                    'class' => 'text-end '
                 ],
                 'cantidad_vendida' => [
                     'html' => evaluar($key['cantidad_vendida'] ?? 0),
-                    'class' => 'text-end'
+                    'class' => 'text-end '
                 ]
             ];
         }

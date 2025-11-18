@@ -261,19 +261,20 @@ class mdlProductosSoft extends CRUD {
     }
 
     function select_homologar($array) {
-        // $query = "
-        //     SELECT 
-        //         idhomologado,
-        //         id_costsys_recetas,
-        //         id_soft_productos
-        //     FROM {$this->bd}soft_homologacion
-        //     WHERE id_soft_productos = ?
-        // ";
 
-        // return $this->_Read($query, $array);
+        $query = "
+            SELECT 
+                idhomologado,
+                id_costsys_recetas,
+                id_soft_productos
+            FROM {$this->bd}soft_costsys
+            WHERE id_soft_productos = ?
+        ";
+
+        return $this->_Read($query, $array);
     }
 
-      function listGruposConEstadisticas($array = []) {
+    function listGruposConEstadisticas($array = []) {
         // $query = "
         //     SELECT 
         //         gp.idgrupo,

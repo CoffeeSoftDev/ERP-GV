@@ -334,6 +334,68 @@ Incluye una biblioteca de componentes reutilizables, herramientas para gestión 
 
 ## Control de errores
 
+### Regla de Try-Catch
+
+**CRÍTICO:** NUNCA usar bloques try-catch en el código generado.
+
+#### ❌ PROHIBIDO:
+
+- **NO** usar `try-catch` en JavaScript (Frontend)
+- **NO** usar `try-catch` en PHP (Backend/Controladores)
+- **NO** agregar manejo de excepciones con bloques try-catch
+
+#### ✅ PERMITIDO:
+
+- Manejo de errores mediante validaciones condicionales
+- Uso de callbacks de error en peticiones AJAX
+- Validación de datos antes de procesarlos
+
+#### Ejemplos de lo que NO hacer:
+
+```javascript
+// ❌ INCORRECTO
+async function getData() {
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(error);
+    }
+}
+```
+
+```php
+// ❌ INCORRECTO
+function getUsers() {
+    try {
+        $result = $this->_Select([...]);
+        return $result;
+    } catch (Exception $e) {
+        return false;
+    }
+}
+```
+
+#### Ejemplo correcto:
+
+```javascript
+// ✅ CORRECTO
+async function getData() {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+}
+```
+
+```php
+// ✅ CORRECTO
+function getUsers() {
+    $result = $this->_Select([...]);
+    return $result;
+}
+```
+
 ## Reglas de Comentarios
 
 **CRÍTICO:** NUNCA generar comentarios automáticamente en métodos o clases. El código debe ser limpio y autoexplicativo.
