@@ -1,5 +1,5 @@
 <?php
-	class Conection {
+	class Conection2 {
 		protected $mysql;
         protected $connected = false;
 

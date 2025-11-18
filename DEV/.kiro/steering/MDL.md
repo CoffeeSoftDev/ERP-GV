@@ -80,83 +80,151 @@ Debe respetarse el formato de CoffeeSoft
 
 ### 3. Uso de Métodos CRUD Heredados
 
-- Utiliza los métodos de la clase base `CRUD` (CRUD.md) según el tipo de operación:
-  _Select : Consultas estructuradas tipo array
-  _Delete : Eliminar un registro
-  _Update : Actualizaciones
-  _Read   : SQL personalizados (raw queries)
+**CRÍTICO - Regla de Consultas:**
+- **TODAS las consultas SELECT deben usar EXCLUSIVAMENTE el método `_Read()`**
+- **PROHIBIDO usar `_Select()` para consultas**
+- Solo se permiten los siguientes métodos CRUD:
+  - `_Read` : **ÚNICO método permitido para consultas SELECT** (raw queries SQL)
+  - `_Insert` : Insertar registros
+  - `_Update` : Actualizar registros
+  - `_Delete` : Eliminar registros
 
 **IMPORTANTE:** consulta siempre CRUD.md para entender el funcionamiento de los metodos de consulta.
 
-  <_Insert>
-  ```php
-    function create($array){
-      return $this->_Insert([
-        'table' =>  "{$this->bd}table_name",
+#### Ejemplos de Uso:
+
+**<_Read> - ÚNICO método para consultas SELECT:**
+```php
+function listProducts($array) {
+    $query = "
+        SELECT id, name, price, category_id
+        FROM {$this->bd}products
+        WHERE active = ?
+        ORDER BY name ASC
+    ";
+    return $this->_Read($query, $array);
+}
+
+function getProductById($array) {
+    $query = "
+        SELECT *
+        FROM {$this->bd}products
+        WHERE id = ?
+    ";
+    return $this->_Read($query, $array);
+}
+```
+
+**<_Insert> - Para crear registros:**
+```php
+function createProduct($array){
+    return $this->_Insert([
+        'table' =>  "{$this->bd}products",
         'values' => $array['values'],
         'data' => $array['data']
-      ]);
-    }
-  ```
+    ]);
+}
+```
 
-  <_Update>
-
+**<_Update> - Para actualizar registros:**
 ```php
-  function update($array){
+function updateProduct($array){
     return $this->_Update([
-      'table'  => "{$this->bd}table_name",
-      'values' => $array['values'],
-      'where'  => $array['where'],
-      'data'   => $array['data'],
+        'table'  => "{$this->bd}products",
+        'values' => $array['values'],
+        'where'  => $array['where'],
+        'data'   => $array['data'],
     ]);
-  }
+}
 ```
 
-<_Delete>
+**<_Delete> - Para eliminar registros:**
+```php
+function deleteProduct($array){
+    return $this->_Delete([
+        'table' => "{$this->bd}products",
+        'where' => $array['where'],
+        'data'  => $array['data'],
+    ]);
+}
+```
+
+### 4. Estructura para Consultas con _Read
+
+**TODAS las consultas SELECT deben usar `_Read()` con SQL raw:**
+
+#### Consultas Básicas:
 
 ```php
-  function remove($array){
+// Listar registros con filtros
+public function listProducts($array) {
+    $query = "
+        SELECT id, name, price, active
+        FROM {$this->bd}products
+        WHERE active = ?
+        ORDER BY name ASC
+    ";
+    return $this->_Read($query, $array);
+}
 
-    return $this->_Delete([
-      'table' => "{$this->bd}table_name",
-      'where' => $array['where'],
-      'data'  => $array['data'],
-    ]);
-  }
+// Obtener un registro por ID
+public function getProductById($array) {
+    $query = "
+        SELECT *
+        FROM {$this->bd}products
+        WHERE id = ?
+    ";
+    return $this->_Read($query, $array);
+}
 ```
 
-### 4. Estructura para Consultas tipo `<select>`
+#### Consultas con JOINs:
 
-  ####  Nivel 1: Consulta directa (_Read)
+```php
+public function listProductsWithCategory($array) {
+    $query = "
+        SELECT 
+            p.id,
+            p.name,
+            p.price,
+            c.classification as category_name
+        FROM {$this->bd}products p
+        LEFT JOIN {$this->bd}categories c ON p.category_id = c.id
+        WHERE p.active = ?
+        ORDER BY p.name ASC
+    ";
+    return $this->_Read($query, $array);
+}
+```
 
-  Para consultas SQL manuales sin estructura:
+#### Consultas para Filtros (select):
 
-  ```php
-    public function getTableByID($array) {
-        $query = "
-            SELECT *
-            FROM {$this->bd}table_name
-            WHERE id = ?
-        ";
-        return $this->_Read($query, $array);
-    }
-  ```
-  #### Nivel 2: Consulta estructurada (_Select)
+```php
+public function lsCategories($array) {
+    $query = "
+        SELECT id, classification as valor
+        FROM {$this->bd}categories
+        WHERE active = ?
+        ORDER BY classification ASC
+    ";
+    return $this->_Read($query, $array);
+}
+```
 
-  Para obtener valores usando estructura predefinida:
+#### Consultas de Validación:
 
-  ```php
-    public function getMaxSeasonId() {
-      return $this->_Select([
-      'table'     => "{$this->bd}table_name",
-      'values'    => 'id,name',
-      'where'     => 'id',
-      'order'     => ['ASC'=>'Nombres'],
-      'data'      => $array
-      ]);
-
-    }
-  ```
+```php
+public function existsProductByName($array) {
+    $query = "
+        SELECT COUNT(*) as count
+        FROM {$this->bd}products
+        WHERE LOWER(name) = LOWER(?)
+        AND active = 1
+    ";
+    $result = $this->_Read($query, $array);
+    return $result[0]['count'] > 0;
+}
+```
 
 **Consideraciones Finales**
 - Este prompt puede ser reutilizado para todos los módulos que requieran interacción con datos tipo filtro `<mdl>`.

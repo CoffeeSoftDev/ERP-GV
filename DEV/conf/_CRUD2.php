@@ -5,7 +5,7 @@
 */
 require('_Conect2.php');
 
-class CRUD extends Conection {
+class CRUD2 extends Conection2 {
 /* Función CUD (Create, Update y Delete)
     los parámetros que recibe son la consulta sql y los datos en forma de arreglo.
     Inserta, modifica y elimina los datos de una tabla en la base de datos.

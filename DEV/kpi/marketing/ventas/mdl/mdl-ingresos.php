@@ -123,7 +123,7 @@ class mdl extends CRUD {
                 END AS promedio_bebidas,
 
 
-
+                (alimentos + bebidas + guarniciones + domicilio + sales ) as total_gral,
                 (Hospedaje + AyB + Diversos) as total,
 
                 DATE_FORMAT(fecha_folio,'%Y-%m-%d') as fecha,
@@ -261,5 +261,24 @@ class mdl extends CRUD {
         $sql = $this->_Read($query, $array);
 
         return $sql[0];
+    }
+
+    function getSaleById($array) {
+        $query = "
+            SELECT *
+            FROM {$this->bd}soft_restaurant_ventas
+            WHERE id_venta = ?
+        ";
+        $result = $this->_Read($query, $array);
+        return $result[0] ?? null;
+    }
+
+    function updateSale($array) {
+        return $this->_Update([
+            'table' => "{$this->bd}soft_restaurant_ventas",
+            'values' => $array['values'],
+            'where' => 'id_venta = ?',
+            'data' => $array['data']
+        ]);
     }
 }

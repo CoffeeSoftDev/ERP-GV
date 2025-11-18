@@ -1068,7 +1068,7 @@ class Sales extends Templates {
                     data: [
                         { id: "3", valor: "Promedios Diarios" },
                         { id: "1", valor: " Ingresos por día" },
-                        { id: "2", valor: "Captura de sales" },
+                        { id: "2", valor: "Captura de ventas" },
                     ],
                     onchange: `sales.listSales()`,
                 },
@@ -1084,8 +1084,8 @@ class Sales extends Templates {
         const monthText = $("#filterBarsales #mes option:selected").text();
         $("#containersales").html(`
             <div class="px-2 pt-2 pb-2">
-                <h2 class="text-2xl font-semibold ">📦 VENTAS DIARIAS</h2>
-                <p class="text-gray-400">Consultar y capturar ventas diaria por unidad de negocio (sales)</p>
+                <h2 class="text-2xl font-semibold ">📦 VENTAS DIARIAS - (${monthText}) </h2>
+                <p class="text-gray-400">Consultar y capturar ventas diaria por unidad de negocio (ventas)</p>
             </div>
             <div id="container-table-sales"></div>
         `);
@@ -1099,9 +1099,76 @@ class Sales extends Templates {
                 id: "tbIngresos",
                 theme: 'corporativo',
                 color_group: "bg-gray-300",
-                // center: [2],
                 right: [4]
             },
+        });
+    }
+
+    jsonEditSale() {
+        const udn = $('#filterBarsales #udn').val();
+        let fields = [
+            {
+                opc: "input",
+                id: "noHabitaciones",
+                lbl: udn == 1 ? "No. Habitaciones" : "Clientes",
+                tipo: "numero",
+                class: "col-12 col-md-6 mb-3"
+            }
+        ];
+
+        if (udn == 1) {
+            fields.push(
+                { opc: "input", id: "Hospedaje", lbl: "Hospedaje", tipo: "cifra", class: "col-12 col-md-6 mb-3" },
+                { opc: "input", id: "AyB", lbl: "Alimentos y Bebidas", tipo: "cifra", class: "col-12 col-md-6 mb-3" },
+                { opc: "input", id: "Diversos", lbl: "Diversos", tipo: "cifra", class: "col-12 col-md-6 mb-3" }
+            );
+        } else if (udn == 5) {
+            fields.push(
+                { opc: "input", id: "alimentos", lbl: "Alimentos", tipo: "cifra", class: "col-12 col-md-6 mb-3" },
+                { opc: "input", id: "bebidas", lbl: "Bebidas", tipo: "cifra", class: "col-12 col-md-6 mb-3" },
+                { opc: "input", id: "guarniciones", lbl: "Guarniciones", tipo: "cifra", class: "col-12 col-md-6 mb-3" },
+                { opc: "input", id: "sales", lbl: "Sales", tipo: "cifra", class: "col-12 col-md-6 mb-3" },
+                { opc: "input", id: "domicilio", lbl: "Domicilio", tipo: "cifra", class: "col-12 col-md-6 mb-3" }
+            );
+        } else {
+            fields.push(
+                { opc: "input", id: "alimentos", lbl: "Alimentos", tipo: "cifra", class: "col-12 col-md-6 mb-3" },
+                { opc: "input", id: "bebidas", lbl: "Bebidas", tipo: "cifra", class: "col-12 col-md-6 mb-3" }
+            );
+        }
+
+
+        return fields;
+    }
+
+    async editSale(id) {
+        const request = await useFetch({
+            url: this._link,
+            data: { opc: "getSale", id: id }
+        });
+
+        const udn = $('#filterBarsales #udn').val();
+        const fechaRaw = request.data.soft_ventas_fecha;
+        const fecha =  moment(fechaRaw).format('dddd, D [de] MMMM [de] YYYY');
+            
+
+        this.createModalForm({
+            id: 'formEditSale',
+            data: { opc: 'editSale', udn: udn, id: id },
+            autofill: request.data,
+            json: this.jsonEditSale(),
+            bootbox: {
+                title: `Editar Venta - ${fecha}`,
+                closeButton: true
+            },
+            success: (response) => {
+                if (response.status === 200) {
+                    alert({ icon: "success", text: response.message });
+                    this.listSales();
+                } else {
+                    alert({ icon: "error", text: response.message });
+                }
+            }
         });
     }
 }

@@ -7,10 +7,17 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
 
 require_once '../mdl/mdl-ventas2.php';
+require_once '../mdl/mdl-list-ventas.php';
 require_once '../../../../conf/coffeSoft.php';
 
 
 class ctrl extends mdl {
+    protected $mdlVentas;
+
+    public function __construct() {
+        parent::__construct();
+        $this->mdlVentas = new mdlVentas();
+    }
 
     function init() {
         
@@ -26,10 +33,20 @@ class ctrl extends mdl {
         $anio           = $_POST['anio'];
         $mes            = $_POST['mes'];
 
-        $ls = $this->listSales([$udn, $anio, $mes]);
+        $ls = $this->mdlVentas->listSales([$udn, $anio, $mes]);
 
         $categorias     = [];
         $ventasPorFecha = [];
+
+        $totales = [
+            'total_registros'  => 0,
+            'total_hospedaje'  => 0,
+            'total_alimentos'  => 0,
+            'total_bebidas'    => 0,
+            'total_diversos'   => 0,
+            'total_otros'      => 0,
+            'total_general'    => 0
+        ];
 
         foreach ($ls as $key) {
             $fecha     = $key['fecha'];
@@ -67,15 +84,15 @@ class ctrl extends mdl {
 
         foreach ($ventasPorFecha as $venta) {
             $total = 0;
+            $totales['total_registros']++;
 
             $a = [];
 
-              $a[] = [
-                    'class'   => 'btn btn-sm bg-green-600 text-white hover:bg-green-800 me-1',
-                    'html'    => '<i class="icon-upload"></i> Subir ',
-                    'onclick' => 'app.syncToFolio(\'' . $venta['fecha'] . '\', ' . $udn . ')'
-                ];
-
+            $a[] = [
+                'class'   => 'btn btn-sm bg-green-600 text-white hover:bg-green-800 me-1',
+                'html'    => '<i class="icon-upload"></i> Subir ',
+                'onclick' => 'app.syncToFolio(\'' . $venta['fecha'] . '\', ' . $udn . ')'
+            ];
 
             $row   = [
                 'id'     => $venta['id'],
@@ -83,7 +100,7 @@ class ctrl extends mdl {
             ];
 
             if ($udn == 1) {
-                $suitesOcupadas = $this->getSuitesOcupadasByFecha($venta['fecha']);
+                $suitesOcupadas = $this->mdlVentas->getSuitesOcupadasByFecha($venta['fecha']);
                 $row['Habitaciones'] = [
                     'html'  => '<div class="text-center font-semibold text-blue-700">' . $suitesOcupadas . '</div>',
                     'class' => 'text-center bg-blue-50'
@@ -105,7 +122,30 @@ class ctrl extends mdl {
                 
                 $cantidadConImpuestos = $cantidadSinImpuestos + $iva + $ieps;
                 
-                $total     += $cantidadConImpuestos;
+                $total += $cantidadConImpuestos;
+                
+                $categoriaLower = strtolower($cat);
+                switch ($categoriaLower) {
+                    case 'hospedaje':
+                        $totales['total_hospedaje'] += $cantidadConImpuestos;
+                        break;
+                  
+                    case 'alimentos':
+                    case 'cortes':
+                        $totales['total_alimentos'] += $cantidadConImpuestos;
+                        break;
+                    case 'bebidas':
+                        $totales['total_bebidas'] += $cantidadConImpuestos;
+                        break;
+                    case 'diversos':
+                    case 'misceláneos':
+                        $totales['total_diversos'] += $cantidadConImpuestos;
+                        break;
+                    case 'otros':
+                        $totales['total_otros'] += $cantidadConImpuestos;
+                        break;
+                }
+                
                 $row[$cat]  = [
                     'html' => '
                         <div class="text-end">
@@ -119,6 +159,8 @@ class ctrl extends mdl {
                     '
                 ];
             }
+
+            $totales['total_general'] += $total;
 
             $row['Total Ventas'] = [
                 'html'  => evaluar($total),
@@ -135,6 +177,7 @@ class ctrl extends mdl {
             'row'        => $__row,
             'thead'      => $thead,
             'categorias' => $categorias,
+            'totales'    => $totales,
             'ls'         => $ls
         ];
     }
@@ -261,10 +304,10 @@ class ctrl extends mdl {
                 ];
             }
 
-            $folioExistente = $this->getFolioByFechaUdn([$fecha, $udn]);
+            $folioExistente = $this ->getFolioByFechaUdn([$fecha, $udn]);
         }
 
-        $ventasDelDia = $this->listSales([$udn, date('Y', strtotime($fecha)), date('m', strtotime($fecha))]);
+        $ventasDelDia = $this->mdlVentas->listSales([$udn, date('Y', strtotime($fecha)), date('m', strtotime($fecha))]);
         
         $alimentos = 0;
         $bebidas   = 0;
@@ -317,7 +360,7 @@ class ctrl extends mdl {
 
         $suitesOcupadas = 0;
         if ($udn == 1) {
-            $suitesOcupadas = $this->getSuitesOcupadasByFecha($fecha);
+            $suitesOcupadas = $this->mdlVentas->getSuitesOcupadasByFecha($fecha);
         }
 
         $ventaExistente = $this->getVentaByFolioId($folioExistente['id_folio']);
@@ -398,7 +441,7 @@ class ctrl extends mdl {
         $anio    = $_POST['anio'];
         $mes     = $_POST['mes'];
 
-        $ventasDelMes = $this->listSales([$udn, $anio, $mes]);
+        $ventasDelMes = $this->mdlVentas->listSales([$udn, $anio, $mes]);
         
         if (empty($ventasDelMes)) {
             return [
@@ -497,7 +540,7 @@ class ctrl extends mdl {
 
             $suitesOcupadas = 0;
             if ($udn == 1) {
-                $suitesOcupadas = $this->getSuitesOcupadasByFecha($fecha);
+                $suitesOcupadas = $this->mdlVentas->getSuitesOcupadasByFecha($fecha);
             }
 
             $ventaExistente = $this->getVentaByFolioId($folioExistente['id_folio']);

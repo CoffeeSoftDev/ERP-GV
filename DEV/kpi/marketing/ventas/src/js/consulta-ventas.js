@@ -95,16 +95,35 @@ class ConsultaVentas extends Templates {
         }, 100);
     }
 
-    listSales() {
+    async listSales() {
         const udn = $(`#filterBar${this.PROJECT_NAME} #udn`).val();
         const anio = $(`#filterBar${this.PROJECT_NAME} #anio`).val();
         const mes = $(`#filterBar${this.PROJECT_NAME} #mes`).val();
         const monthText = $(`#filterBar${this.PROJECT_NAME} #mes option:selected`).text();
 
-     
+        const container = $(`#container${this.PROJECT_NAME}`);
+        container.html(`
+            <div id="cardsResumen${this.PROJECT_NAME}" class="mb-4 border p-4"></div>
+            <div id="tableContainer${this.PROJECT_NAME}"></div>
+        `);
+
+        const response = await useFetch({
+            url: this._link,
+            data: { 
+                opc: 'lsSales',
+                udn: udn,
+                anio: anio,
+                mes: mes
+            }
+        });
+
+        if (response && response.totales) {
+            this.showSummaryCards(response.totales, udn);
+        }
+    
 
         this.createTable({
-            parent: `container${this.PROJECT_NAME}`,
+            parent: `tableContainer${this.PROJECT_NAME}`,
             idFilterBar: `filterBar${this.PROJECT_NAME}`,
             data: { 
                 opc: 'lsSales',
@@ -121,6 +140,87 @@ class ConsultaVentas extends Templates {
                 center: [1, 2],
                 right: []
             },
+        });
+    }
+
+    showSummaryCards(totales, udn) {
+        const cards = [];
+
+        if (udn == 1) {
+            cards.push(
+                {
+                    title: "Archivos totales",
+                    data: {
+                        value: totales.total_registros || 0,
+                        color: "text-blue-600"
+                    }
+                },
+                {
+                    title: "Hospedaje",
+                    data: {
+                        value: formatPrice(totales.total_hospedaje || 0),
+                        color: "text-[#103B60]"
+                    }
+                },
+                {
+                    title: "Alimentos y Bebidas",
+                    data: {
+                        value: formatPrice(totales.total_ayb || 0),
+                        color: "text-green-600"
+                    }
+                },
+                {
+                    title: "Diversos",
+                    data: {
+                        value: formatPrice(totales.total_diversos || 0),
+                        color: "text-orange-600"
+                    }
+                },
+                {
+                    title: "Total General",
+                    data: {
+                        value: formatPrice(totales.total_general || 0),
+                        color: "text-purple-600"
+                    }
+                }
+            );
+        } else {
+            cards.push(
+                {
+                    title: "Archivos totales",
+                    data: {
+                        value: totales.total_registros || 0,
+                        color: "text-blue-600"
+                    }
+                },
+                {
+                    title: "Alimentos",
+                    data: {
+                        value: formatPrice(totales.total_alimentos || 0),
+                        color: "text-green-600"
+                    }
+                },
+                {
+                    title: "Bebidas",
+                    data: {
+                        value: formatPrice(totales.total_bebidas || 0),
+                        color: "text-blue-500"
+                    }
+                },
+                {
+                    title: "Total General",
+                    data: {
+                        value: formatPrice(totales.total_general || 0),
+                        color: "text-purple-600"
+                    }
+                }
+            );
+        }
+
+        this.infoCard({
+            parent: `cardsResumen${this.PROJECT_NAME}`,
+            theme: "light",
+            json: cards
         });
     }
 
@@ -561,5 +661,68 @@ class ConsultaVentas extends Templates {
     redirectToHome() {
         const base = window.location.origin + '/ERP24';
         window.location.href = `${base}/kpi/marketing.php`;
+    }
+
+    infoCard(options) {
+        const defaults = {
+            parent: "root",
+            id: "infoCardKPI",
+            class: "",
+            theme: "light",
+            json: [],
+            data: {
+                value: "0",
+                description: "",
+                color: "text-gray-800"
+            },
+            onClick: () => { }
+        };
+        const opts = Object.assign({}, defaults, options);
+        const isDark = opts.theme === "dark";
+        const cardBase = isDark
+            ? "bg-[#1F2A37] text-white rounded-xl shadow"
+            : "bg-white text-gray-800 rounded-xl shadow border border-gray-200";
+        const titleColor = isDark ? "text-gray-300" : "text-gray-600";
+        const descColor = isDark ? "text-gray-400" : "text-gray-500";
+        
+        const renderCard = (card, i = "") => {
+            const box = $("<div>", {
+                id: `${opts.id}_${i}`,
+                class: `${cardBase} p-4 hover:shadow-lg transition-shadow duration-200`
+            });
+            const title = $("<p>", {
+                class: `text-sm ${titleColor} mb-2`,
+                text: card.title
+            });
+            const value = $("<p>", {
+                id: card.id || "",
+                class: `text-2xl font-bold ${card.data?.color || "text-gray-800"}`,
+                text: card.data?.value
+            });
+            const description = $("<p>", {
+                class: `text-xs mt-1 ${card.data?.color || descColor}`,
+                text: card.data?.description || ""
+            });
+            box.append(title, value);
+            if (card.data?.description) {
+                box.append(description);
+            }
+            return box;
+        };
+        
+        const container = $("<div>", {
+            id: opts.id,
+            class: `grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 ${opts.class}`
+        });
+        
+        if (opts.json.length > 0) {
+            opts.json.forEach((item, i) => {
+                container.append(renderCard(item, i));
+            });
+        } else {
+            container.append(renderCard(opts));
+        }
+        
+        $(`#${opts.parent}`).html(container);
     }
 }

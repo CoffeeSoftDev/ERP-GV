@@ -1,5 +1,5 @@
 <?php
-require_once '../../../../conf/_CRUD2.php';
+require_once '../../../../conf/_CRUD.php';
 require_once '../../../../conf/_Utileria.php';
 
 
@@ -9,7 +9,7 @@ class mdl extends CRUD {
 
     public function __construct() {
         $this->util = new Utileria;
-        $this->bd = "_rfwsmqex_gvsl_finanzas.";
+        $this->bd = "rfwsmqex_gvsl_finanzas.";
     }
 
     function listSales($array) {
@@ -175,4 +175,6 @@ class mdl extends CRUD {
         $result = $this->_Read($query, [$fecha]);
         return $result[0]['total_suites_unicas'] ?? 0;
     }
+
+
 }
