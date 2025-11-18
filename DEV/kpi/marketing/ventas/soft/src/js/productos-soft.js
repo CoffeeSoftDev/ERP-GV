@@ -181,7 +181,7 @@ class ProductosSoft extends Templates {
                 anio : anio,
                 mes  : mes
             },
-            // coffeesoft: true,
+            coffeesoft: true,
             conf: { datatable: false, pag: 25 },
             attr: {
                 id     : "tbProductosSoft",
@@ -232,7 +232,7 @@ class ProductosSoft extends Templates {
             subtitle: "Subtítulo por defecto",
             icon: "icon-home",
             textBtn: "Inicio",
-            classBtn: "border-2 border-blue-700 text-blue-600 hover:bg-blue-700 hover:text-white transition-colors duration-200",
+            classBtn: "border-1 border-blue-700 text-blue-600 hover:bg-blue-700 hover:text-white transition-colors duration-200",
             onClick: null,
         };
 
@@ -246,7 +246,7 @@ class ProductosSoft extends Templates {
             class: "absolute left-4"
         }).append(
             $("<button>", {
-                class: `${opts.classBtn} font-semibold px-4 py-2 rounded-lg transition flex items-center`,
+                class: `${opts.classBtn} font-semibold px-4 py-2 rounded transition flex items-center`,
                 html: `<i class="${opts.icon} mr-2"></i>${opts.textBtn}`,
                 click: () => typeof opts.onClick === "function" && opts.onClick()
             })
