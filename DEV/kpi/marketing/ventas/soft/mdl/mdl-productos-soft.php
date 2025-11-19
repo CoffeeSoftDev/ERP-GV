@@ -153,6 +153,31 @@ class mdlProductosSoft extends CRUD {
         return $this->_Read($query, empty($params) ? null : $params);
     }
 
+    function listGrupos($array = []) {
+        $query = "
+            SELECT 
+                g.idgrupo as id,
+                g.grupoproductos,
+                g.id_udn,
+                COUNT(p.id_Producto) as cantidad_productos
+            FROM {$this->bd}soft_grupoproductos g
+            LEFT JOIN {$this->bd}soft_productos p ON g.idgrupo = p.id_grupo_productos
+            WHERE 1=1
+        ";
+
+        $params = [];
+
+        if (!empty($array['udn']) && $array['udn'] !== 'all') {
+            $query .= " AND g.id_udn = ?";
+            $params[] = $array['udn'];
+        }
+
+        $query .= " GROUP BY g.idgrupo, g.grupoproductos, g.id_udn
+                    ORDER BY g.grupoproductos ASC";
+
+        return $this->_Read($query, empty($params) ? null : $params);
+    }
+
     function listConcentrado($array = []) {
         $query = "
             SELECT 
