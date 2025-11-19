@@ -39,6 +39,41 @@ class ctrl extends mdlProductosSoft {
         ];
     }
 
+    function lsGroups() {
+        $__row = [];
+        
+        $udn = $_POST['udn'] ?? 'all';
+        
+        if ($udn !== 'all' && !is_numeric($udn)) {
+            return [
+                'status' => 400,
+                'message' => 'UDN inválida',
+                'grupos' => []
+            ];
+        }
+        
+        $params = [];
+        if ($udn !== 'all') {
+            $params['udn'] = $udn;
+        }
+        
+        $ls = $this->listGrupos($params);
+        
+        foreach ($ls as $key) {
+            $__row[] = [
+                'id' => $key['id'],
+                'valor' => $key['grupoproductos'],
+                'cantidad_productos' => intval($key['cantidad_productos'])
+            ];
+        }
+        
+        return [
+            'status' => 200,
+            'grupos' => $__row,
+            'total' => count($__row)
+        ];
+    }
+
     function lsProductos() {
         $__row = [];
         
@@ -109,120 +144,10 @@ class ctrl extends mdlProductosSoft {
         ];
     }
 
-    function lsConcentrado() {
-        $__row = [];
-        $row = [];
-        
-        $udn     = $_POST['udnConcentrado'] ?? 'all';
-        $grupo   = $_POST['grupoConcentrado'] ?? 'all';
-        $anio    = intval($_POST['anioConcentrado'] ?? date('Y'));
-        $periodo = intval($_POST['periodo'] ?? 6);
-
-        $params = [];
-        if ($udn !== 'all') {
-            $params['udn'] = $udn;
-        }
-        if ($grupo !== 'all') {
-            $params['grupo'] = $grupo;
-        }
-        $params['anio'] = $anio;
-        $params['periodo'] = $periodo;
-
-        $ls = $this->listConcentrado($params);
 
 
 
-        $mesesNombres = ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'];
-        $mesActual = intval(date('n'));
-        
-        $fechasName = [];
-        $mesesData = [];
-        
-        for ($i = 0; $i < $periodo; $i++) {
-            $mesIndex = $mesActual - $i - 1;
-            $anioColumna = $anio;
-            
-            if ($mesIndex < 0) {
-                $mesIndex += 12;
-                $anioColumna--;
-            }
-            
-            $nombreMes = $mesesNombres[$mesIndex];
-            $fechasName[] = strtoupper($nombreMes) . '/' . $anioColumna;
-            $mesesData[] = ['mes' => $mesIndex + 1, 'anio' => $anioColumna];
-        }
 
-        $gruposData = [];
-        foreach ($ls as $key) {
-            $grupoNombre = $key['grupo_nombre'] ?? 'Sin grupo';
-            if (!isset($gruposData[$grupoNombre])) {
-                $gruposData[$grupoNombre] = [];
-            }
-            $gruposData[$grupoNombre][] = $key;
-        }
-
-        foreach ($gruposData as $grupoNombre => $productos) {
-            $row = [];
-            
-            $totalesGrupo = array_fill_keys($fechasName, 0);
-
-            $campos = [
-                'id'     => 0,
-                'clave'  => '',
-                'nombre' => strtoupper($grupoNombre),
-            ];
-
-            $dates = [];
-            foreach ($fechasName as $fechaName) {
-                $dates[$fechaName] = '';
-            }
-
-            $indexEncabezado = count($__row);
-            $__row[] = array_merge($campos, $dates, ['opc' => 1]);
-
-            foreach ($productos as $_key) {
-                $campos = [
-                    'id'     => $_key['id_Producto'],
-                    'clave'  => htmlspecialchars($_key['clave_producto'] ?? '', ENT_QUOTES, 'UTF-8'),
-                    'nombre' => htmlspecialchars($_key['descripcion'] ?? '', ENT_QUOTES, 'UTF-8'),
-                ];
-
-                $dates = [];
-
-                foreach ($fechasName as $index => $fechaName) {
-                    $cantidad = $_key['mes_' . $index] ?? 0;
-                    $totalesGrupo[$fechaName] += $cantidad;
-                    
-                    $mostrar_valor = ($cantidad == 0) ? '-' : number_format($cantidad, 0, '.', ',');
-                    
-                    $dates[$fechaName] = [
-                        'html'  => $mostrar_valor,
-                        'val'   => $cantidad,
-                        'class' => 'text-center'
-                    ];
-                }
-
-                $row[] = array_merge($campos, $dates, ['opc' => 0]);
-            }
-
-            $__row = array_merge($__row, $row);
-
-            foreach ($fechasName as $fechaName) {
-                $totalGroup = ($totalesGrupo[$fechaName] > 0) ? number_format($totalesGrupo[$fechaName], 0, '.', ',') : '-';
-
-                $__row[$indexEncabezado][$fechaName] = [
-                    'html'  => '<strong>' . $totalGroup . '</strong>',
-                    'class' => 'text-center bg-gray-200 font-bold'
-                ];
-            }
-        }
-
-        return [
-            'row' => $__row,
-            'endpoint' =>$ls,
-            'thead' => ''
-        ];
-    }
 
     function getProducto() {
         $id = isset($_POST['id']) ? $_POST['id'] : null;
@@ -348,141 +273,7 @@ class ctrl extends mdlProductosSoft {
         ];
     }
 
-    //  Concentrado por periodo
-    
-    // function lsMenuCostsys(){
-
-    //     $calculo = new aux_cp;
-
-    //     // 📏 Declarar variables
-    //     $__row   = [];
-    //     $__lsMod = [];
-    //     $row     = [];
-
-    //     $mes                  = $_POST['Mes'];
-    //     $name_month           = $_POST['name_month'];
-    //     $year                 = $_POST['Anio'];
-    //     $idClasificacion      = $_POST['Clasificacion'];
-    //     $subClasificacion     = $_POST['Subclasificacion'];
-    //     $productosModificados = false;
-    //     $mostrar              = $_POST['mostrar'];
-    //     $type                 = $_POST['type'];
-
-
-
-    //     // 📜 Obtener subclasificaciones
-    //     $subClasificacion = $this->listMenu([$idClasificacion]);
-
-    //     foreach ($subClasificacion as $sub) {
-    //         $row = [];
-    //         $productos = $this->listDishes([$mes, $year, $sub['id']]);
-
-    //         $fechas     = [];
-    //         $fechasName = [];
-
-    //         // 📜 Generar los últimos 6 meses
-    //         for ($i = 0; $i < 6; $i++) {
-    //             $time         = strtotime("-$i months", strtotime("$year-$mes-01"));
-    //             $monthName    = date('M', $time);
-    //             $yearName     = date('Y', $time);
-    //             $fechasName[] = "$monthName/$yearName";
-    //             $monthNumber  = date('m', $time);
-    //             $yearNumber   = date('Y', $time);
-    //             $fechas[]     = "$monthNumber/$yearNumber";
-    //         }
-
-    //         // 📌 Inicializar acumulador por columna (mes)
-    //         $totalesGrupo = array_fill_keys($fechasName, 0);
-
-    //         // 📜 Fila de encabezado
-    //         $campos = [
-    //             'id'     => $sub['id'],
-    //             'clave'  => '',
-    //             'nombre' => $sub['nombre'],
-    //         ];
-
-    //         $dates = [];
-    //         foreach ($fechasName as $fechaName) {
-    //             $dates[$fechaName] = ''; // se actualizará luego con totales
-    //         }
-
-    //         $indexEncabezado = count($__row); // 📌 Guardar índice para editar después
-    //         $__row[] = array_merge($campos, $dates, ['opc' => 1]);
-
-    //         // 📜 Fila de productos
-    //         foreach ($productos as $_key) {
-
-    //             $campos = [
-    //                 'id'     => $sub['id'],
-    //                 'clave'  => $_key['idDishes'],
-    //                 'nombre' => $_key['nombre'],
-    //             ];
-
-    //             $dates = [];
-
-    //             foreach ($fechas as $index => $fecha) {
-
-    //                 list($m, $y) = explode("/", $fecha);
-    //                 $costo_potencial = $this->selectDatosCostoPotencial([$_key['idReceta'], $m, $y]);
-
-
-
-    //                 if($type == 3){
-    //                     $valor = $costo_potencial['costo'] * $costo_potencial['desplazamiento'];
-    //                     $totalesGrupo[$fechasName[$index]] += $valor; // 🔵 Acumular total por grupo
-    //                      $dates[$fechasName[$index]] = [
-    //                         'html'  => evaluar($valor),
-    //                         'val'   => $valor,
-    //                         'class' => ' text-end '
-    //                     ];
-    //                 }else{
-    //                     $valor                              = floatval($costo_potencial['desplazamiento'] ?? 0);
-    //                     $totalesGrupo[$fechasName[$index]] += $valor; // 🔵 Acumular total por grupo
-    //                      $mostrar_valor                      = ($valor == 0) ? '-' : $valor;  // 📌 Mostrar guion si es cero
-    //                     $dates[$fechasName[$index]] = [
-    //                         'html'  => $mostrar_valor,
-    //                         'val'   => $valor,
-    //                         'class' => 'text-end'
-    //                     ];
-    //                 }
-
-
-
-
-
-    //             }
-
-    //             $row[] = array_merge($campos, $dates, ['opc' => 0]);
-    //         }
-
-    //         $res   = pintarValPromedios($row,$fechasName);
-    //         $__row = array_merge($__row,$res);
-
-    //         // 📌 Insertar totales al encabezado del grupo
-    //         foreach ($fechasName as $fechaName) {
-
-    //             $totalGroup = ($totalesGrupo[$fechaName]) ? $totalesGrupo[$fechaName] : '-';
-    //             if($type == 3){
-    //                 $totalGroup = evaluar($totalesGrupo[$fechaName]);
-    //             }
-
-
-    //             $__row[$indexEncabezado][$fechaName] = [
-    //                 'html'  => '<strong>' .$totalGroup. '</strong>',
-    //                 'class' => 'text-end bg-disabled2'
-    //             ];
-    //         }
-    //     }
-
-
-
-
-    //     // 📦 Devolver datos
-    //     return [
-    //         "thead" => '',
-    //         "row"   => $__row
-    //     ];
-    // }
+  
 
 
 }

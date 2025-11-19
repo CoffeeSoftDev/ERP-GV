@@ -67,6 +67,11 @@ class ProductosSoft extends Templates {
                     onClick: () => concentrado.lsConcentrado()
                 },
                 {
+                    id: "grupos-udn",
+                    tab: "Grupos por UDN",
+                    onClick: () => this.renderGruposUdn()
+                },
+                {
                     id: "grupos-homologacion",
                     tab: "Grupos por Homologar",
                     // onClick: () => this.renderGruposHomologacion()
@@ -200,7 +205,6 @@ class ProductosSoft extends Templates {
         });
     }
 
- 
     headerBar(options) {
         const defaults = {
             parent: "root",
@@ -251,30 +255,76 @@ class ProductosSoft extends Templates {
         window.location.href = `${base}/kpi/marketing.php`;
     }
 
- 
+    renderGruposUdn() {
+        this.filterBarGrupos();
+        setTimeout(() => {
+            this.loadGruposCards();
+        }, 100);
+    }
+
+    filterBarGrupos() {
+        const container = $("#container-grupos-udn");
+        container.html(`
+            <div id="filterBarGrupos" class="mb-3"></div>
+            <div id="contentGrupos"></div>
+        `);
+
+        this.createfilterBar({
+            parent: "filterBarGrupos",
+            data: [
+                {
+                    opc: "select",
+                    id: "udnGrupos",
+                    lbl: "Unidad de Negocio",
+                    class: "col-sm-3",
+                    data: lsudn,
+                    onchange: "app.loadGruposCards()"
+                },
+                {
+                    opc: "button",
+                    id: "btnVolverGrupos",
+                    text: "Regresar a Grupos",
+                    class: "col-sm-2 d-none",
+                    onClick: () => this.loadGruposCards()
+                }
+            ]
+        });
+    }
 
     async loadGruposCards() {
         const udn = $("#filterBarGrupos #udnGrupos").val();
 
         $("#btnVolverGrupos").addClass('d-none');
 
-        console.log('🔍 Cargando grupos para UDN:', udn);
-
+       
         const response = await useFetch({
             url: this._link,
             data: {
-                opc: 'getGruposConHomologacion',
+                opc: 'lsGroups',
                 udn: udn
             }
         });
 
-        console.log('📦 Respuesta del servidor:', response);
 
         if (response && response.status === 200) {
-            console.log(`✅ Se cargaron ${response.grupos.length} grupos`);
-            this.renderGruposCards(response.grupos);
+            if (response.grupos.length === 0) {
+                $("#contentGrupos").html(`
+                    <div class="text-center py-8">
+                        <i class="icon-info-circle text-4xl text-gray-400 mb-3"></i>
+                        <p class="text-gray-600">No hay grupos disponibles para esta UDN</p>
+                    </div>
+                `);
+            } else {
+                console.log(`✅ Se cargaron ${response.grupos.length} grupos`);
+                this.renderGruposCards(response.grupos);
+            }
         } else {
             console.error('❌ Error al cargar grupos:', response);
+            alert({
+                icon: 'error',
+                title: 'Error al cargar grupos',
+                text: response.message || 'Ocurrió un error inesperado'
+            });
         }
     }
 
@@ -283,8 +333,8 @@ class ProductosSoft extends Templates {
         container.html(`
             <div class="px-4 py-3">
                 <h3 class="text-xl font-bold text-[#103B60] mb-2">Grupos de Productos</h3>
-                <p class="text-gray-600 mb-4">Selecciona un grupo para ver sus productos</p>
-                <div id="gruposGrid" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3"></div>
+                <p class="text-gray-500 text-sm mb-4">Selecciona un grupo para ver sus productos</p>
+                <div id="gruposGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3"></div>
             </div>
         `);
 
@@ -293,41 +343,37 @@ class ProductosSoft extends Templates {
         console.log('📊 Renderizando', grupos.length, 'grupos');
 
         grupos.forEach(grupo => {
-            const porcentaje = grupo.total_productos > 0 
-                ? Math.round((grupo.productos_homologados / grupo.total_productos) * 100) 
-                : 0;
-
             const card = $(`
-                <div class="bg-white border-2 border-gray-200 rounded-lg p-3 hover:border-blue-500 hover:shadow-lg transition-all cursor-pointer">
-                    <h4 class="font-bold text-xs text-gray-800 mb-2 text-center uppercase line-clamp-2 h-8">${grupo.grupoproductos}</h4>
-                    <div class="text-center mb-2">
-                        <span class="text-lg font-bold text-gray-600">$NAN</span>
+                <div class="grupo-card bg-white rounded-lg shadow-sm border border-gray-100 p-3 hover:shadow-md hover:border-blue-400 transition-all duration-200 cursor-pointer relative">
+                    <div class="absolute top-2 right-2">
+                        <i class="icon-right-open text-gray-300 text-sm"></i>
                     </div>
-                    <div class="space-y-1 text-xs">
-                        <div class="flex justify-between">
-                            <span class="text-gray-600">Total:</span>
-                            <span class="font-semibold">${grupo.total_productos}</span>
+                    
+                    <div class="flex flex-col items-center text-center mb-2">
+                        <div class="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center mb-2">
+                            <i class="icon-food text-orange-500 text-xl"></i>
                         </div>
-                        <div class="flex justify-between">
-                            <span class="text-green-600">✓</span>
-                            <span class="font-semibold text-green-600">${grupo.productos_homologados}</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-red-600">✗</span>
-                            <span class="font-semibold text-red-600">${grupo.productos_sin_homologar}</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded-full h-1.5 mt-2">
-                            <div class="bg-green-500 h-1.5 rounded-full" style="width: ${porcentaje}%"></div>
-                        </div>
-                        <div class="text-center text-gray-600 text-xs">${porcentaje}%</div>
+                        <h4 class="font-semibold text-xs text-gray-800 uppercase tracking-wide line-clamp-2 leading-tight">${grupo.valor}</h4>
+                    </div>
+                    
+                    <div class="flex flex-col items-center pt-2 border-t border-gray-100">
+                        <span class="text-2xl font-bold text-[#103B60]">${grupo.cantidad_productos}</span>
+                        <span class="text-xs text-gray-500">Productos</span>
+                    </div>
+                    
+                    <div class="mt-2 flex justify-center">
+                        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-50 text-green-700">
+                            Activo
+                        </span>
                     </div>
                 </div>
             `);
 
             card.on('click', () => {
-                console.log('🖱️ Click en grupo:', grupo.idgrupo, grupo.grupoproductos);
-                this.showProductosByGrupo(grupo.idgrupo, grupo.grupoproductos);
+                console.log('🖱️ Click en grupo:', grupo.id, grupo.valor);
+                this.showProductosByGrupo(grupo.id, grupo.valor);
             });
+            
             grid.append(card);
         });
     }
@@ -337,38 +383,28 @@ class ProductosSoft extends Templates {
 
         const udn = $("#filterBarGrupos #udnGrupos").val();
 
-        const response = await useFetch({
-            url: this._link,
-            data: {
-                opc: 'getProductosByGrupo',
-                grupo: idGrupo,
-                udn: udn
+        const container = $("#contentGrupos");
+        container.html(`
+            <div class="px-4 ">
+              
+                <div id="tableProductosGrupo"></div>
+            </div>
+        `);
+
+        this.createTable({
+            parent: "tableProductosGrupo",
+            idFilterBar:'filterBarGrupos',
+            data: { opc: 'lsProductos', grupo: idGrupo, udn: udn },
+            coffeesoft: true,
+            conf: { datatable: true, pag: 15 },
+            attr: {
+                id: "tbProductosGrupo",
+                theme: 'corporativo',
+                title: nombreGrupo,
+                center: [2],
+                right: [4, 5, 6, 7]
             }
         });
-
-        if (response && response.status === 200) {
-            const container = $("#contentGrupos");
-            container.html(`
-                <div class="px-4 py-3">
-                    <h3 class="text-xl font-bold text-[#103B60] mb-2">${nombreGrupo}</h3>
-                    <p class="text-gray-600 mb-4">Productos del grupo</p>
-                    <div id="tableProductosGrupo"></div>
-                </div>
-            `);
-
-            this.createTable({
-                parent: "tableProductosGrupo",
-                data: { opc: 'getProductosByGrupo', grupo: idGrupo, udn: udn },
-                coffeesoft: true,
-                conf: { datatable: true, pag: 15 },
-                attr: {
-                    id: "tbProductosGrupo",
-                    theme: 'corporativo',
-                    center: [3],
-                    right: [4, 5]
-                }
-            });
-        }
     }
 }
 
@@ -527,7 +563,7 @@ class Concentrado extends Templates {
     async renderGruposHomologacion() {
         const container = $("#container-grupos-homologacion");
         container.html(`
-            <div id="filterBarGrupos" class="mb-3"></div>
+            <div id="filterBarGrupos" class=" mb-3 border rounded p-3"></div>
             <div id="contentGrupos"></div>
         `);
 
@@ -546,7 +582,7 @@ class Concentrado extends Templates {
                     opc: "button",
                     id: "btnVolverGrupos",
                     text: "Volver a Grupos",
-                    class: "col-sm-2 d-none",
+                    class: "col-sm-2 ",
                     onClick: () => this.loadGruposCards()
                 }
             ]
