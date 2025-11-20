@@ -6,6 +6,7 @@ Quiero que generes un **Controlador PHP** siguiendo esta estructura:
 
 1. **SIEMPRE** Respeta la estructura de los metodos para crear el ctrl.
 2. **SIEMPRE** Usa los ejemplos para crear los metodos.
+3. **CRÍTICO - Variables POST:** NO usar operador de fusión de null (`??`) ni `isset()` para variables de `$_POST`. Usar directamente: `$variable = $_POST['variable'];`
 
 ### Workflow:
 
@@ -21,6 +22,14 @@ Quiero que generes un **Controlador PHP** siguiendo esta estructura:
 - Usar `$_POST['udn']` para identificar la unidad de negocio en lugar de variables de sesión
 - Solo usar variables de sesión cuando el contexto del proyecto lo requiera explícitamente
 - En pivotes específicos, seguir el patrón establecido con `$_POST['udn']`
+
+**CRÍTICO - Manejo de Variables POST:**
+- **NUNCA** usar el operador de fusión de null (`??`) con variables `$_POST`
+- **NUNCA** usar `isset()` con variables `$_POST`
+- **SIEMPRE** asignar directamente: `$variable = $_POST['variable'];`
+- Ejemplo correcto: `$udn = $_POST['udn'];`
+- Ejemplo incorrecto: `$udn = $_POST['udn'] ?? 'all';` ❌
+- Ejemplo incorrecto: `$udn = isset($_POST['udn']) ? $_POST['udn'] : 'all';` ❌
 
 ```PHP
  class ctrl extends mdl {}

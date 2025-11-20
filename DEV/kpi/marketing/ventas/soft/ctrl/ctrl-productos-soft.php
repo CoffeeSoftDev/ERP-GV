@@ -19,7 +19,7 @@ class ctrl extends mdlProductosSoft {
     }
 
     function getGruposByUdn() {
-        $udn = $_POST['udn'] ?? 'all';
+        $udn = $_POST['udn'];
         
         $params = [];
         if ($udn !== 'all') {
@@ -42,7 +42,7 @@ class ctrl extends mdlProductosSoft {
     function lsGroups() {
         $__row = [];
         
-        $udn = $_POST['udn'] ?? 'all';
+        $udn = $_POST['udn'];
         
         if ($udn !== 'all' && !is_numeric($udn)) {
             return [
@@ -77,10 +77,10 @@ class ctrl extends mdlProductosSoft {
     function lsProductos() {
         $__row = [];
         
-        $udn = $_POST['udn'] ?? 'all';
-        $grupo = $_POST['grupo'] ?? 'all';
-        $anio = $_POST['anio'] ?? '';
-        $mes = $_POST['mes'] ?? '';
+        $udn = $_POST['udn'];
+        $grupo = $_POST['grupo'];
+        $anio = $_POST['anio'];
+        $mes = $_POST['mes'];
 
         $params = [];
         if ($udn !== 'all') {
@@ -150,7 +150,7 @@ class ctrl extends mdlProductosSoft {
 
 
     function getProducto() {
-        $id = isset($_POST['id']) ? $_POST['id'] : null;
+        $id = $_POST['id'];
         
         if (!$id || !is_numeric($id) || $id < 0) {
             return [
@@ -160,35 +160,25 @@ class ctrl extends mdlProductosSoft {
             ];
         }
 
-        try {
-            $producto = $this->getProductoById($id);
-            
-            if ($producto) {
-                return [
-                    'status' => 200,
-                    'message' => 'Producto obtenido correctamente',
-                    'data' => $producto
-                ];
-            } else {
-                return [
-                    'status' => 404,
-                    'message' => 'Producto no encontrado',
-                    'data' => null
-                ];
-            }
-        } catch (Exception $e) {
-            $this->writeToLog("Error en getProducto: " . $e->getMessage());
-            
+        $producto = $this->getProductoById($id);
+        
+        if ($producto) {
             return [
-                'status' => 500,
-                'message' => 'Error al obtener el producto',
+                'status' => 200,
+                'message' => 'Producto obtenido correctamente',
+                'data' => $producto
+            ];
+        } else {
+            return [
+                'status' => 404,
+                'message' => 'Producto no encontrado',
                 'data' => null
             ];
         }
     }
 
     function getGruposConHomologacion() {
-        $udn = $_POST['udn'] ?? 'all';
+        $udn = $_POST['udn'];
         
         $params = [];
         if ($udn !== 'all') {
@@ -218,8 +208,8 @@ class ctrl extends mdlProductosSoft {
 
     function getProductosByGrupo() {
         $__row = [];
-        $grupo = $_POST['grupo'] ?? null;
-        $udn = $_POST['udn'] ?? 'all';
+        $grupo = $_POST['grupo'];
+        $udn = $_POST['udn'];
 
         if (!$grupo) {
             return [

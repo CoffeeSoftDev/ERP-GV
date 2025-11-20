@@ -27,7 +27,7 @@
             <div class="main-container" id="root"></div>
 
             <!-- Module Scripts -->
-            <script src="src/js/productos-soft.js?t=<?php echo time(); ?>"></script>
+            <script src="src/js/concentrado-periodos.js?t=<?php echo time(); ?>"></script>
         
         </div>
     </main>

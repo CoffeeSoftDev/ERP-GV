@@ -1,0 +1,57 @@
+[ 2025-11-20 06:31:48 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT
+        costsys_menu.idmenu as id,
+        costsys_menu.categoria as nombre,
+        status,
+        costsys_menu.id_udn,
+        costsys_menu.id_clasificacion,
+        clasificacion.Clasificacion
+        FROM
+        rfwsmqex_gvsl_costsys.costsys_menu
+        INNER JOIN rfwsmqex_gvsl_costsys.clasificacion ON costsys_menu.id_clasificacion = clasificacion.idClasificacion
+        WHERE costsys_menu.id_udn = 4 and id_clasificacion = ?
+        order by orderMenu DESC
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_gvsl_costsys.costsys_menu' doesn't exist
+
+
+[ 2025-11-20 06:30:57 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT
+        costsys_menu.idmenu as id,
+        costsys_menu.categoria as nombre,
+        status,
+        costsys_menu.id_udn,
+        costsys_menu.id_clasificacion,
+        clasificacion.Clasificacion
+        FROM
+        rfwsmqex_gvsl_costsys.costsys_menu
+        INNER JOIN rfwsmqex_gvsl_costsys.clasificacion ON costsys_menu.id_clasificacion = clasificacion.idClasificacion
+        WHERE costsys_menu.id_udn = 4 and id_clasificacion = ?
+        order by orderMenu DESC
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_gvsl_costsys.costsys_menu' doesn't exist
+
+
+[ 2025-11-20 06:30:09 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
+[ INFO ] ::  SELECT
+        costsys_menu.idmenu as id,
+        costsys_menu.categoria as nombre,
+        status,
+        costsys_menu.id_udn,
+        costsys_menu.id_clasificacion,
+        clasificacion.Clasificacion
+        FROM
+        rfwsmqex_gvsl_costsys.costsys_menu
+        INNER JOIN rfwsmqex_gvsl_costsys.clasificacion ON costsys_menu.id_clasificacion = clasificacion.idClasificacion
+        WHERE costsys_menu.id_udn = 4 and id_clasificacion = ?
+        order by orderMenu DESC
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_gvsl_costsys.costsys_menu' doesn't exist
+
+
