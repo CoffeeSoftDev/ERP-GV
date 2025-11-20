@@ -340,7 +340,6 @@ class ProductosSoft extends Templates {
 
         const grid = $("#gruposGrid");
 
-        console.log('📊 Renderizando', grupos.length, 'grupos');
 
         grupos.forEach(grupo => {
             const card = $(`
