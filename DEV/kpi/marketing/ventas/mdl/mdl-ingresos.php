@@ -260,7 +260,19 @@ class mdl extends CRUD {
 
         $sql = $this->_Read($query, $array);
 
-        return $sql[0];
+        return isset($sql[0]) ? $sql[0] : [
+            'noHabitaciones' => 0,
+            'Hospedaje' => 0,
+            'AyB' => 0,
+            'Diversos' => 0,
+            'totalAyB' => 0,
+            'alimentos' => 0,
+            'bebidas' => 0,
+            'promedio_total_ayb' => 0,
+            'porcOcupacion' => 0,
+            'promedio_alimentos' => 0,
+            'promedio_bebidas' => 0
+        ];
     }
 
     function getSaleById($array) {

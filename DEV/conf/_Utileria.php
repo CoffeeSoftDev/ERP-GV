@@ -191,7 +191,7 @@ function sql($arreglo,$slice = 0){
         $sqlArray = [];
 
         
-        if (is_array($arreglo) && is_array($arreglo[0])) {
+        if (is_array($arreglo) && isset($arreglo[0]) && is_array($arreglo[0])) {
             $sqlArray['values'] = array_keys(current($arreglo));
             foreach ($arreglo as $row) $sqlArray['data'][] = array_values($row);
         } else {

@@ -1417,6 +1417,15 @@ class ctrl extends mdl {
         $fechaActual = new DateTime();
         $__row = [];
 
+        $idRow = 0;
+        $noHabitaciones = 0;
+        $total = 0;
+        $hospedaje = 0;
+        $AyB = 0;
+        $ingresosDiversos = 0;
+        $ventasAlimentos = 0;
+        $ventasBebidas = 0;
+
         while ($fi <= $hoy) {
             $idRow++;
             $fecha = $fi->format('Y-m-d');
