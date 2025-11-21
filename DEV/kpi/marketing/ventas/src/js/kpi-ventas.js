@@ -1340,7 +1340,7 @@ class CumulativeAverages extends Templates {
     ls() {
         $(`#container${this.PROJECT_NAME}`).html(`
             <div class="px-2 pt-2 pb-2">
-                <h2 class="text-2xl font-semibold ">📦Ch </h2>
+                <h2 class="text-2xl font-semibold ">📦Cheque promedio </h2>
                 <p class="text-gray-400">
                 Consulta los promedios acumulados del año seleccionado, hasta el mes seleccionado.
                 </p>
@@ -1357,7 +1357,7 @@ class CumulativeAverages extends Templates {
                 id: "tbI",
                 theme: 'corporativo',
                 center: [1, 2, 3],
-                right: [6]
+                right: [4,5,6,7,8,9,10,11]
             },
         });
     }

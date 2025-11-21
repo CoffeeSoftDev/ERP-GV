@@ -1411,116 +1411,118 @@ class ctrl extends mdl {
     // Promedios acomulados.
     function listAcumulados(){
         $udn = $_POST['udn'];
-        # -- variables para fechas
         $fi = new DateTime($_POST['anio'] . '-' . $_POST['mes'] . '-01');
-
         $hoy = clone $fi;
-
         $hoy->modify('last day of this month');
+        $fechaActual = new DateTime();
         $__row = [];
-
 
         while ($fi <= $hoy) {
             $idRow++;
             $fecha = $fi->format('Y-m-d');
+            $fechaObj = new DateTime($fecha);
+            
+            $esFuturo = $fechaObj > $fechaActual;
+            $esHoy = $fechaObj->format('Y-m-d') === $fechaActual->format('Y-m-d');
+
+            // if ($esFuturo) {
+            //     break;
+            // }
 
             $softVentas = $this->getsoft_ventas([$udn,$fecha]);
-            $opc        = ($softVentas['noHabitaciones']) ? 0 : 1;
+            $tieneDatos = $softVentas['noHabitaciones'] > 0;
+            
+            $opc = $esHoy ? 1 : 0;
 
+            if (!$tieneDatos) {
+                if($udn == 1):
+                    $__row[] = array(
+                        'id'                       => $idRow,
+                        'fecha'                    => $fecha,
+                        'dia'                      => formatSpanishDate($fecha),
+                        'Habitaciones'             => '-',
+                        'Suma de ingresos'         => '-',
+                        'Hospedaje'                => '-',
+                        'chequePromHospedaje'      => ['text'=>'-','value'=>0],
+                        'Tarifa efectiva acum.'    => '-',
+                        'Ingreso AyB'              => '-',
+                        'Cheque Promedio AyB'      => '-',
+                        'Ingreso Diversos'         => '-',
+                        'Cheque Promedio Diversos' => '-',
+                        'opc' => $opc
+                    );
+                else:
+                    $__row[] = array(
+                        'id'                    => $idRow,
+                        'fecha'                 => $fecha,
+                        'dia'                   => formatSpanishDate($fecha),
+                        'Clientes'              => '-',
+                        'Ventas AyB'            => '-',
+                        'Ventas Alimentos'      => '-',
+                        'Cheque Prom Alimentos' => '-',
+                        'Ventas Bebidas'        => '-',
+                        'Cheque Prom Bebidas'   => '-',
+                        'opc' => $opc
+                    );
+                endif;
+            } else {
+                $noHabitaciones += $softVentas['noHabitaciones'];
 
-            $noHabitaciones    += $softVentas['noHabitaciones'];
+                if($udn == 1):
+                    $total             += $softVentas['Hospedaje'] + $softVentas['AyB'] + $softVentas['Diversos'];
+                    $hospedaje         += $softVentas['Hospedaje'];
+                    $PromedioHospedaje  = $noHabitaciones > 0 ? $hospedaje / $noHabitaciones : 0;
+                    $AyB               += $softVentas['AyB'];
+                    $PromedioAyB        = $noHabitaciones > 0 ? $AyB / $noHabitaciones : 0;
+                    $tarifaEfectiva     = ($idRow ==1 ) ? ($total/12) : (($total/12)/ ($idRow-1));
+                    $ingresosDiversos  += $softVentas['Diversos'];
+                    $PromedioDiversos   = $noHabitaciones > 0 ? $ingresosDiversos / $noHabitaciones : 0;
 
+                    $__row[] = array(
+                        'id'                       => $idRow,
+                        'fecha'                    => $fecha,
+                        'dia'                      => formatSpanishDate($fecha),
+                        'Habitaciones'             => $noHabitaciones,
+                        'Suma de ingresos'         => formatNum($total),
+                        'Hospedaje'                => formatNum($hospedaje),
+                        'chequePromHospedaje'      => ['text'=>formatNum($PromedioHospedaje),'value'=>$PromedioHospedaje],
+                        'Tarifa efectiva acum.'    => formatNum($tarifaEfectiva),
+                        'Ingreso AyB'              => formatNum($AyB),
+                        'Cheque Promedio AyB'      => formatNum($PromedioAyB),
+                        'Ingreso Diversos'         => formatNum($ingresosDiversos),
+                        'Cheque Promedio Diversos' => formatNum($PromedioDiversos),
+                        'opc' => $opc
+                    );
+                else:
+                    $total           += $softVentas['totalAyB'];
+                    $ventasAlimentos += $softVentas['alimentos'];
+                    $ventasBebidas   += $softVentas['bebidas'];
+                    
+                    $chequePromAlimentos = $noHabitaciones > 0 ? $ventasAlimentos / $noHabitaciones : 0;
+                    $chequePromBebidas = $noHabitaciones > 0 ? $ventasBebidas / $noHabitaciones : 0;
 
-        //     $PromedioDiversos = $softVentas['Diversos'] / $noHabitaciones;
-
-        //     $tarifaEfectivaDiaria = $total / 12;
-        //     $porcentajeOcupacion = evaluar($noHabitaciones / 12, '%');
-
-
-           if($udn == 1):
-
-                $total             += $softVentas['Hospedaje'] + $softVentas['AyB'] + $softVentas['Diversos'];
-                $hospedaje         += $softVentas['Hospedaje'];
-                $PromedioHospedaje  = $hospedaje / $noHabitaciones;
-                $AyB               += $softVentas['AyB'];
-                $PromedioAyB        = $AyB / $noHabitaciones;
-                $tarifaEfectiva     = ($idRow ==1 ) ? evaluar($total/12) : evaluar(($total/12)/ ($idRow-1)) ;
-                $ingresosDiversos  += $softVentas['Diversos'];
-                $PromedioDiversos   = $ingresosDiversos / $noHabitaciones;
-
-
-                $__row[] = array(
-
-                    'id'                       => $idRow,
-                    'fecha'                    => $fecha,
-                    'dia'                      => formatSpanishDate($fecha),
-                    'Habitaciones'             => $noHabitaciones,
-                    'Suma de ingresos'         => $total,
-                    'Hospedaje'                => $hospedaje,
-                    'chequePromHospedaje'      => ['text'=>evaluar($PromedioHospedaje),'value'=>$PromedioHospedaje],
-                    'Tarifa efectiva acum.'    => $tarifaEfectiva,
-
-                    'Ingreso AyB'              => evaluar($AyB),
-                    'Cheque Promedio AyB'      => evaluar($PromedioAyB),
-                    'Ingreso Diversos'         => evaluar($ingresosDiversos),
-                    'Cheque Promedio Diversos' => evaluar($PromedioDiversos),
-                    // 'Costo de amenididad'      => '0.00',
-                    // 'Costo de AyB '            => '0.00',
-                    // 'Costo Diversos diario'    => '0.00',
-
-
-                    'opc' => $opc
-                );
-
-            else:
-                  // Calculo.
-                  $total           += $softVentas['totalAyB'];
-                  $ventasAlimentos += $softVentas['alimentos'];
-                  $ventasBebidas   += $softVentas['bebidas'];
-
-
-
-
-                  $__row[] = array(
-
-                    'id'                    => $idRow,
-                    'fecha'                 => $fecha,
-                    'dia'                   => formatSpanishDate($fecha),
-                    'Clientes'              => $noHabitaciones,
-
-                    'Ventas AyB'            => evaluar($total),
-                    'Ventas Alimentos'      => evaluar($ventasAlimentos),
-                    'Cheque Prom Alimentos' => evaluar(0),
-
-                    'Ventas Bebidas'      => evaluar($ventasBebidas),
-                    'Cheque Prom Bebidas' => '',
-
-
-
-                    // 'Costo de amenididad'      => '0.00',
-                    // 'Costo de AyB '            => '0.00',
-                    // 'Costo Diversos diario'    => '0.00',
-
-
-                    'opc' => 0
-                );
-
-
-
-            endif;
+                    $__row[] = array(
+                        'id'                    => $idRow,
+                        'fecha'                 => $fecha,
+                        'dia'                   => formatSpanishDate($fecha),
+                        'Clientes'              => $noHabitaciones,
+                        'Ventas AyB'            => formatNum($total),
+                        'Ventas Alimentos'      => formatNum($ventasAlimentos),
+                        'Cheque Prom Alimentos' => formatNum($chequePromAlimentos),
+                        'Ventas Bebidas'        => formatNum($ventasBebidas),
+                        'Cheque Prom Bebidas'   => formatNum($chequePromBebidas),
+                        'opc' => $opc
+                    );
+                endif;
+            }
 
             $fi->modify('+1 day');
         }
 
-
-        #encapsular datos
         return [
-
             "row" => $__row,
             "thead" => ''
         ];
-
-
     }
 
 
@@ -1697,6 +1699,13 @@ function createElement($tag, $attributes = [], $text = null) {
     }
 
     return $element;
+}
+
+function formatNum($number) {
+    if (!is_numeric($number)) {
+        return $number;
+    }
+    return number_format((float)$number, 2, '.', ',');
 }
 
 
