@@ -147,4 +147,63 @@ class mdlConcentradoPeriodos extends CRUD {
         $sql = $this->_Read($query, $array);
         return $sql;
     }
+
+     function listDishes($array){
+        $query = "SELECT
+            recetas.idReceta,
+            recetas.nombre,
+            recetas.precioVenta,
+            recetas.rendimiento,
+            precio_propuesto,
+            desplazamiento,
+            costo,
+            costopotencial.iva,
+            recetas.ieps,
+            costopotencial.idcostopotencial AS idcostopotencial,
+            recetas.id_Clasificacion,
+            recetas.id_Subclasificacion,
+            id_menu,
+            dishes.idDishes
+        FROM
+            {$this->bd_costsys}costopotencial,
+            {$this->bd_costsys}recetas,
+            {$this->bd_costsys}dishes
+        WHERE
+            receta = idReceta 
+        AND idReceta = dishes.id_receta
+        AND MONTH (fecha_costo)                  = ?
+        AND YEAR (fecha_costo)                   = ?
+        AND id_menu = ?
+        ";
+
+
+        $sql = $this->_Read($query, $array);
+        return $sql;
+    }
+
+    function selectDatosCostoPotencial($array) {
+        $query = "
+            SELECT 
+                costo,
+                desplazamiento,
+                precio_propuesto
+            FROM {$this->bd_costsys}costopotencial
+            WHERE receta = ?
+            AND MONTH(fecha_costo) = ?
+            AND YEAR(fecha_costo) = ?
+            LIMIT 1
+        ";
+
+        $result = $this->_Read($query, $array);
+        
+        if (!empty($result)) {
+            return $result[0];
+        }
+        
+        return [
+            'costo' => 0,
+            'desplazamiento' => 0,
+            'precio_propuesto' => 0
+        ];
+    }
 }

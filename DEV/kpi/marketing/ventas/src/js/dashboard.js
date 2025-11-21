@@ -520,15 +520,13 @@ class Dashboard extends Templates {
     }
 
     handleCategoryChange(idudn) {
-        // Filtrar las clasificaciones que coincidan con el idudn
         let lsclasificacion = clasificacion.filter((item) => item.udn == idudn);
 
-        // Generar options HTML para el select
-        const optionsHtml = lsclasificacion.map(item =>
-            `<option value="${item.id}">${item.valor}</option>`
-        ).join('');
+        const optionsHtml = '<option value="total">Total</option>' + 
+            lsclasificacion.map(item =>
+                `<option value="${item.id}">${item.valor}</option>`
+            ).join('');
 
-        // Actualizar el select con las opciones
         $('#filterBarProductMargen #category').html(optionsHtml);
     }
 
@@ -758,7 +756,6 @@ class FinanceDashboard extends Dashboard {
                     id: "category",
                     lbl: "Categorias",
                     class: "col-sm-4",
-                    // data:,
                     onchange: `dashboard.comparativaByCategory()`,
                 },
 
@@ -777,7 +774,7 @@ class FinanceDashboard extends Dashboard {
 
             const fiBase         = moment(fi).year(yearBase).format('YYYY-MM-DD');
             const ffBase         = moment(ff).year(yearBase).format('YYYY-MM-DD');
-            
+
             let   mkt            = await useFetch({
                 url: api_dashboard,
                 data: {
@@ -1028,9 +1025,10 @@ class FinanceDashboard extends Dashboard {
     }
 
     async comparativaByCategory() {
-        const udn = $('#filterBar #udn').val();
+        
+        const udn         = $('#filterBar #udn').val();
         const rangePicker = getDataRangePicker("iptDateRange");
-        const yearBase = parseInt($('#filterBar #yearComparison').val());
+        const yearBase    = parseInt($('#filterBar #yearComparison').val());
 
         const fi = rangePicker.fi;
         const ff = rangePicker.ff;
@@ -1038,27 +1036,69 @@ class FinanceDashboard extends Dashboard {
         const fiBase = moment(fi).year(yearBase).format('YYYY-MM-DD');
         const ffBase = moment(ff).year(yearBase).format('YYYY-MM-DD');
 
+        const categoryValue = $('#filterBarProductMargen #category').val();
         const name_category = $('#filterBarProductMargen #category option:selected').text();
 
-        let mkt = await useFetch({
-            url: api_dashboard,
-            data: {
-                opc: "comparativaByCategory",
-                udn: udn,
-                category: name_category,
-                fi: fi,
-                ff: ff,
-                fiBase: fiBase,
-                ffBase: ffBase,
-            },
-        });
+        if (categoryValue === 'total') {
+            const lsclasificacion = clasificacion.filter((item) => item.udn == udn);
+            
+            const promises = lsclasificacion.map(cat => 
+                useFetch({
+                    url: api_dashboard,
+                    data: {
+                        opc: "comparativaByCategory",
+                        udn: udn,
+                        category: cat.valor,
+                        fi: fi,
+                        ff: ff,
+                        fiBase: fiBase,
+                        ffBase: ffBase,
+                    },
+                })
+            );
 
-        this.linearChart({
-            parent: "barProductMargen",
-            id: "barProductMargewn",
-            title: `📈 Comparativa por Categoría · ${name_category}`,
-            data: mkt
-        });
+            const results = await Promise.all(promises);
+            
+            const totalData = {
+                labels: results[0].labels,
+                datasets: results[0].datasets.map((dataset, idx) => ({
+                    ...dataset,
+                    data: dataset.data.map((_, dataIdx) => 
+                        results.reduce((sum, result) => 
+                            sum + (result.datasets[idx].data[dataIdx] || 0), 0
+                        )
+                    )
+                }))
+            };
+
+            this.linearChart({
+                parent: "barProductMargen",
+                id: "barProductMargewn",
+                title: `📈 Comparativa Total · Todas las Categorías`,
+                data: totalData
+            });
+
+        } else {
+            let mkt = await useFetch({
+                url: api_dashboard,
+                data: {
+                    opc: "comparativaByCategory",
+                    udn: udn,
+                    category: name_category,
+                    fi: fi,
+                    ff: ff,
+                    fiBase: fiBase,
+                    ffBase: ffBase,
+                },
+            });
+
+            this.linearChart({
+                parent: "barProductMargen",
+                id: "barProductMargewn",
+                title: `📈 Comparativa por Categoría · ${name_category}`,
+                data: mkt
+            });
+        }
 
     }
 

@@ -321,7 +321,12 @@ class ConcentradoPeriodos extends Templates {
                     cellAttributes.class += ` ${data[key].class || ''}`;
                 } else {
                     cellAttributes.html = data[key];
-                    cellAttributes.class += ` ${opts.color_row}`;
+                }
+
+                if (data.opc === 1) {
+                    cellAttributes.class += ' bg-gray-100';
+                } else if (data.opc === 2) {
+                    cellAttributes.class += ' font-bold';
                 }
 
                 if (isExpandable && colIdx === 0) {

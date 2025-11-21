@@ -38,113 +38,103 @@ class ctrl extends mdlConcentradoPeriodos {
         
         $udn     = $_POST['udn'];
         $grupo   = $_POST['grupo'];
-        $anio    = $_POST['anio'];
+        $year    = $_POST['anio'];
         $mes     = $_POST['mes'];
         $periodo = $_POST['periodo'];
 
         $params = [];
-        if ($udn !== 'all') {
-            $params['udn'] = $udn;
-        }
+        
         if ($grupo !== 'all') {
             $params['grupo'] = $grupo;
         }
-        if (!empty($anio)) {
-            $params['anio'] = $anio;
-        }
-
-        $ls = $this->getListSubClasificacion(0,13);
+        
+         $ls = $this->getListSubClasificacion(0,13);
 
         $grupoActual = '';
         $theadGroups = [];
-        $thead       = ['Producto', 'Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic', 'Total'];
+        // $thead       = ['Producto', 'Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic', 'Total'];
 
-        foreach ($ls as $key) {
+        foreach ($ls as $sub) { 
           
-                
-                $__row[] = [
-                    'id' => $key['id'],
-                    'Producto' =>  $key['nombre'],
-                    'Ene' => '',
-                    'Feb' => '',
-                    'Mar' => '',
-                    'Abr' => '',
-                    'May' => '',
-                    'Jun' => '',
-                    'Jul' => '',
-                    'Ago' => '',
-                    'Sep' => '',
-                    'Oct' => '',
-                    'Nov' => '',
-                    'Dic' => '',
-                    'Total' => '',
-                    'opc' => 2,
-                    'colGroup' => true
+            $productos        = $this->listDishes([$mes, $year, $sub['id']]);
+            $totalesCategoria = array_fill(0, 12, 0);
+            $totalGeneral     = 0;
+            $rowsProductos    = [];
+
+            $fechas     = [];
+            $fechasName = [];
+
+            // 📜 Generar los últimos 6 meses
+            for ($i = 0; $i <  $periodo ; $i++) {
+
+                $time         = strtotime("-$i months", strtotime("$year-$mes-01"));
+                $monthName    = date('M', $time);
+                $yearName     = date('Y', $time);
+                $fechasName[] = "$monthName/$yearName";
+                $monthNumber  = date('m', $time);
+                $yearNumber   = date('Y', $time);
+                $fechas[]     = "$monthNumber/$yearNumber";
+            }
+
+
+
+            // 📜 Fila de encabezado
+            $campos = [
+                'id'     => $sub['id'],
+                'clave'  => '',
+                'nombre' => $sub['nombre'],
+            ];
+
+            $dates = [];
+            foreach ($fechasName as $fechaName) {
+                $dates[$fechaName] = ''; // se actualizará luego con totales
+            }
+
+
+
+            $__row[] = array_merge($campos, $dates, ['opc' => 1]);
+
+
+
+            foreach ($productos as $_key) {
+                $campos = [
+                    'id'     => $sub['id'],
+                    'clave'  => $_key['idDishes'],
+                    'nombre' => $_key['nombre'],
                 ];
-          
 
-            // $__row[] = [
-            //     'id' => $key['id_Producto'],
-            //     'Producto' => htmlspecialchars($key['descripcion'] ?? '', ENT_QUOTES, 'UTF-8'),
-            //     'Ene' => [
-            //         'html' => number_format($key['cantidad_3_meses'] ?? 0, 0, '.', ','),
-            //         'class' => 'text-center'
-            //     ],
-            //     'Feb' => [
-            //         'html' => number_format($key['cantidad_3_meses'] ?? 0, 0, '.', ','),
-            //         'class' => 'text-center'
-            //     ],
-            //     'Mar' => [
-            //         'html' => number_format($key['cantidad_3_meses'] ?? 0, 0, '.', ','),
-            //         'class' => 'text-center'
-            //     ],
-            //     'Abr' => [
-            //         'html' => number_format($key['cantidad_6_meses'] ?? 0, 0, '.', ','),
-            //         'class' => 'text-center'
-            //     ],
-            //     'May' => [
-            //         'html' => number_format($key['cantidad_6_meses'] ?? 0, 0, '.', ','),
-            //         'class' => 'text-center'
-            //     ],
-            //     'Jun' => [
-            //         'html' => number_format($key['cantidad_6_meses'] ?? 0, 0, '.', ','),
-            //         'class' => 'text-center'
-            //     ],
-            //     'Jul' => [
-            //         'html' => number_format($key['cantidad_9_meses'] ?? 0, 0, '.', ','),
-            //         'class' => 'text-center'
-            //     ],
-            //     'Ago' => [
-            //         'html' => number_format($key['cantidad_9_meses'] ?? 0, 0, '.', ','),
-            //         'class' => 'text-center'
-            //     ],
-            //     'Sep' => [
-            //         'html' => number_format($key['cantidad_9_meses'] ?? 0, 0, '.', ','),
-            //         'class' => 'text-center'
-            //     ],
-            //     'Oct' => [
-            //         'html' => number_format($key['cantidad_12_meses'] ?? 0, 0, '.', ','),
-            //         'class' => 'text-center'
-            //     ],
-            //     'Nov' => [
-            //         'html' => number_format($key['cantidad_12_meses'] ?? 0, 0, '.', ','),
-            //         'class' => 'text-center'
-            //     ],
-            //     'Dic' => [
-            //         'html' => number_format($key['cantidad_12_meses'] ?? 0, 0, '.', ','),
-            //         'class' => 'text-center'
-            //     ],
-            //     'Total' => [
-            //         'html' => number_format($key['cantidad_total'] ?? 0, 0, '.', ','),
-            //         'class' => 'text-center font-semibold'
-            //     ],
-            //     'opc' => 0,
-            //     'subrow' => true
-            // ];
+                $dates = [];
+                $totalProducto = 0;
+
+
+                foreach ($fechas as $index => $fecha) {
+                      list($m, $y) = explode("/", $fecha);
+                    // $costo_potencial = $this->selectDatosCostoPotencial([$_key['idReceta'], $m, $y]);
+
+
+                    //    $valor                              = floatval($costo_potencial['desplazamiento'] ?? 0);
+                    //     $totalesGrupo[$fechasName[$index]] += $valor; // 🔵 Acumular total por grupo
+                    //      $mostrar_valor                      = ($valor == 0) ? '-' : $valor;  // 📌 Mostrar guion si es cero
+                        $dates[$fechasName[$index]] = [
+                            // 'html'  => $mostrar_valor,
+                            // 'val'   => $valor,
+                            'class' => 'text-end'
+                        ];
+
+                      
+
+                }
+
+
+
+                
+                $__row[] = array_merge($campos, $dates, ['opc' => 0]);
+          
+            }
         }
 
         return [
-            'thead' => $thead,
+            // 'thead' => $thead,
             'theadGroups' => $theadGroups,
             'row' => $__row,
             'ls' => $ls
@@ -152,7 +142,7 @@ class ctrl extends mdlConcentradoPeriodos {
     }
 
 
-      function getListSubClasificacion($type, $idClasificacion) {
+    function getListSubClasificacion($type, $idClasificacion) {
 
         // Realizar cambio de consulta por tipo
         switch ($type) {

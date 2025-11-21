@@ -1,3 +1,195 @@
+[ 2025-11-20 09:12:57 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT
+            recetas.idReceta,
+            recetas.nombre,
+            recetas.precioVenta,
+            recetas.rendimiento,
+            precio_propuesto,
+            desplazamiento,
+            costo,
+            costopotencial.iva,
+            recetas.ieps,
+            costopotencial.idcostopotencial AS idcostopotencial,
+            recetas.id_Clasificacion,
+            recetas.id_Subclasificacion,
+            id_menu,
+            dishes.idDishes
+        FROM
+            rfwsmqex_gvsl_finanzas.costopotencial,
+            rfwsmqex_gvsl_finanzas.recetas,
+            rfwsmqex_gvsl_finanzas.dishes
+        WHERE
+            receta = idReceta 
+        AND idReceta = dishes.id_receta
+        AND MONTH (fecha_costo)                  = ?
+        AND YEAR (fecha_costo)                   = ?
+        AND id_menu = ?
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_gvsl_finanzas.costopotencial' doesn't exist
+
+
+[ 2025-11-20 09:12:40 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT
+            recetas.idReceta,
+            recetas.nombre,
+            recetas.precioVenta,
+            recetas.rendimiento,
+            precio_propuesto,
+            desplazamiento,
+            costo,
+            costopotencial.iva,
+            recetas.ieps,
+            costopotencial.idcostopotencial AS idcostopotencial,
+            recetas.id_Clasificacion,
+            recetas.id_Subclasificacion,
+            id_menu,
+            dishes.idDishes
+        FROM
+            rfwsmqex_gvsl_finanzas.costopotencial,
+            rfwsmqex_gvsl_finanzas.recetas,
+            rfwsmqex_gvsl_finanzas.dishes
+        WHERE
+            receta = idReceta 
+        AND idReceta = dishes.id_receta
+        AND MONTH (fecha_costo)                  = ?
+        AND YEAR (fecha_costo)                   = ?
+        AND id_menu = ?
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_gvsl_finanzas.costopotencial' doesn't exist
+
+
+[ 2025-11-20 09:10:50 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT
+            recetas.idReceta,
+            recetas.nombre,
+            recetas.precioVenta,
+            recetas.rendimiento,
+            precio_propuesto,
+            desplazamiento,
+            costo,
+            costopotencial.iva,
+            recetas.ieps,
+            costopotencial.idcostopotencial AS idcostopotencial,
+            recetas.id_Clasificacion,
+            recetas.id_Subclasificacion,
+            id_menu,
+            dishes.idDishes
+        FROM
+            rfwsmqex_gvsl_finanzas.costopotencial,
+            rfwsmqex_gvsl_finanzas.recetas,
+            rfwsmqex_gvsl_finanzas.dishes
+        WHERE
+            receta = idReceta 
+        AND idReceta = dishes.id_receta
+        AND MONTH (fecha_costo)                  = ?
+        AND YEAR (fecha_costo)                   = ?
+        AND id_menu = ?
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_gvsl_finanzas.costopotencial' doesn't exist
+
+
+[ 2025-11-20 09:10:06 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT
+            recetas.idReceta,
+            recetas.nombre,
+            recetas.precioVenta,
+            recetas.rendimiento,
+            precio_propuesto,
+            desplazamiento,
+            costo,
+            costopotencial.iva,
+            recetas.ieps,
+            costopotencial.idcostopotencial AS idcostopotencial,
+            recetas.id_Clasificacion,
+            recetas.id_Subclasificacion,
+            id_menu,
+            dishes.idDishes
+        FROM
+            rfwsmqex_gvsl_finanzas.costopotencial,
+            rfwsmqex_gvsl_finanzas.recetas,
+            rfwsmqex_gvsl_finanzas.dishes
+        WHERE
+            receta = idReceta 
+        AND idReceta = dishes.id_receta
+        AND MONTH (fecha_costo)                  = ?
+        AND YEAR (fecha_costo)                   = ?
+        AND id_menu = ?
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_gvsl_finanzas.costopotencial' doesn't exist
+
+
+[ 2025-11-20 09:10:05 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT
+            recetas.idReceta,
+            recetas.nombre,
+            recetas.precioVenta,
+            recetas.rendimiento,
+            precio_propuesto,
+            desplazamiento,
+            costo,
+            costopotencial.iva,
+            recetas.ieps,
+            costopotencial.idcostopotencial AS idcostopotencial,
+            recetas.id_Clasificacion,
+            recetas.id_Subclasificacion,
+            id_menu,
+            dishes.idDishes
+        FROM
+            rfwsmqex_gvsl_finanzas.costopotencial,
+            rfwsmqex_gvsl_finanzas.recetas,
+            rfwsmqex_gvsl_finanzas.dishes
+        WHERE
+            receta = idReceta 
+        AND idReceta = dishes.id_receta
+        AND MONTH (fecha_costo)                  = ?
+        AND YEAR (fecha_costo)                   = ?
+        AND id_menu = ?
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_gvsl_finanzas.costopotencial' doesn't exist
+
+
+[ 2025-11-20 09:10:03 ]
+[ UNIX_USR ] :: nt authority\system
+[ WINDOWS_USR ] :: DESKTOP-FHJB2CN$
+[ INFO ] ::  SELECT
+            recetas.idReceta,
+            recetas.nombre,
+            recetas.precioVenta,
+            recetas.rendimiento,
+            precio_propuesto,
+            desplazamiento,
+            costo,
+            costopotencial.iva,
+            recetas.ieps,
+            costopotencial.idcostopotencial AS idcostopotencial,
+            recetas.id_Clasificacion,
+            recetas.id_Subclasificacion,
+            id_menu,
+            dishes.idDishes
+        FROM
+            rfwsmqex_gvsl_finanzas.costopotencial,
+            rfwsmqex_gvsl_finanzas.recetas,
+            rfwsmqex_gvsl_finanzas.dishes
+        WHERE
+            receta = idReceta 
+        AND idReceta = dishes.id_receta
+        AND MONTH (fecha_costo)                  = ?
+        AND YEAR (fecha_costo)                   = ?
+        AND id_menu = ?
+        
+[ ERROR READ] :: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'rfwsmqex_gvsl_finanzas.costopotencial' doesn't exist
+
+
 [ 2025-11-20 06:31:48 ]
 [ UNIX_USR ] :: nt authority\system
 [ WINDOWS_USR ] :: DESKTOP-O7AOGR9$
